@@ -1,23 +1,39 @@
 {
   "uuid": "46c353ef-21a8-4d3c-85d0-44553c30b77a",
-  "starterPrompted": false,
+  "starterPrompted": true,
   "starterLocked": false,
-  "starterSelected": false,
+  "starterSelected": true,
+  "starterUUID": "089d2b4d-3cac-4a25-8691-b357059f5ed7",
   "keyItems": [],
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 0,
+    "totalCaptureCount": 5,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 0,
-    "totalBattleVictoryCount": 0,
-    "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 0,
+    "totalBattleVictoryCount": 14,
+    "totalPvPBattleVictoryCount": 1,
+    "totalPvWBattleVictoryCount": 13,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
-    "totalTypeCaptureCounts": {},
-    "totalDefeatedCounts": {},
+    "totalTypeCaptureCounts": {
+      "grass": 1,
+      "fairy": 1,
+      "normal": 1,
+      "water": 2,
+      "fire": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:patrat": 1,
+      "cobblemon:caterpie": 1,
+      "cobblemon:eevee": 1,
+      "cobblemon:wooloo": 2,
+      "cobblemon:bunnelby": 1,
+      "cobblemon:oddish": 1,
+      "cobblemon:igglybuff": 1,
+      "cobblemon:fletchling": 1
+    },
     "aspectsCollected": {}
   }
 }

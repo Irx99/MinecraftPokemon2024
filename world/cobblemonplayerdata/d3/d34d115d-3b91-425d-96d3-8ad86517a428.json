@@ -1,0 +1,41 @@
+{
+  "uuid": "d34d115d-3b91-425d-96d3-8ad86517a428",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "15e56704-3b7b-45fa-9bda-dff015580722",
+  "keyItems": [],
+  "battleTheme": "cobblemon:battle.pvp.default",
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 8,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 1,
+    "totalBattleVictoryCount": 17,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 17,
+    "totalPvNBattleVictoryCount": 0,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {
+      "electric": 1,
+      "normal": 4,
+      "flying": 2,
+      "rock": 1,
+      "ground": 1,
+      "bug": 1,
+      "grass": 1,
+      "fairy": 1
+    },
+    "totalDefeatedCounts": {
+      "cobblemon:seedot": 2,
+      "cobblemon:bunnelby": 1,
+      "cobblemon:kakuna": 2,
+      "cobblemon:metapod": 1,
+      "cobblemon:pidgey": 2,
+      "cobblemon:fletchling": 1,
+      "cobblemon:elekid": 1
+    },
+    "aspectsCollected": {}
+  }
+}
