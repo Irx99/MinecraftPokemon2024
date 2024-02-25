@@ -1,5 +1,5 @@
-[02:55:17] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
-[02:55:17] [main/INFO]: Loading 66 mods:
+[12:09:05] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
+[12:09:06] [main/INFO]: Loading 66 mods:
 	- appleskin 2.5.1+mc1.20
 	   \-- cloth-config 11.0.99
 	        \-- cloth-basic-math 0.6.1
@@ -63,7 +63,7 @@
 	- fabricloader 0.15.3
 	   \-- mixinextras 0.3.2
 	- ferritecore 6.0.1
-	- java 18
+	- java 17
 	- krypton 0.2.3
 	   \-- com_velocitypowered_velocity-native 3.2.0-SNAPSHOT
 	- letmedespawn 1.2.0
@@ -79,143 +79,181 @@
 	- starlight 1.1.2+fabric.dbc156f
 	- superflatworldnoslimes 3.2
 	- threadtweak 1.20.2-0.1.1
-[02:55:20] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/D:/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
-[02:55:20] [main/INFO]: Compatibility level set to JAVA_17
-[02:55:20] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
-[02:55:20] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
-[02:55:20] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
-[02:55:20] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[02:55:20] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
-[02:55:20] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
-[02:55:20] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
-[02:55:21] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
-[02:55:21] [main/INFO]: ThreadTweak config initialized
-[02:55:26] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
-[02:55:26] [main/ERROR]: No data fixer registered for cobblemon:pokemon
-[02:55:26] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
-[02:55:26] [main/ERROR]: No data fixer registered for cobblemon:boat
-[02:55:26] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
-[02:55:27] [main/INFO]: Starting the Best Spawner...
-[02:55:27] [main/INFO]: Loaded 5 spawning condition types.
-[02:55:27] [main/INFO]: Loaded 5 spawning context types.
-[02:55:27] [main/INFO]: Loaded 1 spawn detail types.
-[02:55:27] [Cobblemon Showdown/INFO]: Starting showdown service...
-[02:55:30] [Cobblemon Showdown/INFO]: Showdown has been started!
-[02:55:30] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
-[02:55:30] [main/INFO]: Registered the cobblemon:species_features registry
-[02:55:30] [main/INFO]: Registered the cobblemon:global_species_features registry
-[02:55:30] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
-[02:55:30] [main/INFO]: Registered the cobblemon:moves registry
-[02:55:30] [main/INFO]: Registered the cobblemon:abilities registry
-[02:55:30] [main/INFO]: Registered the cobblemon:species registry
-[02:55:30] [main/INFO]: Registered the cobblemon:species_additions registry
-[02:55:30] [main/INFO]: Registered the cobblemon:pokeballs registry
-[02:55:30] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
-[02:55:30] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
-[02:55:30] [main/INFO]: Registered the cobblemon:mechanics registry
-[02:55:30] [main/INFO]: Registered the cobblemon:bag_items registry
-[02:55:30] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
-[02:55:30] [main/INFO]: Registered the cobblemon:berries registry
-[02:55:30] [main/INFO]: Loading Collective version 7.26.
-[02:55:30] [main/INFO]: Compression will use Java, encryption will use Java
-[02:55:30] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
-[02:55:30] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
-[02:55:30] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[02:55:31] [main/INFO]: Loaded 7 recipes
-[02:55:31] [main/INFO]: Loaded 1558 advancements
-[02:55:33] [main/INFO]: Loaded 921 moves
-[02:55:33] [main/INFO]: Loaded 310 abilities
-[02:55:33] [main/INFO]: Finished additions
-[02:55:34] [main/INFO]: Imported 185 held item IDs from showdown
-[02:55:34] [main/INFO]: Loaded 1017 Pokémon species
-[02:55:34] [main/INFO]: Loaded 32 spawn detail presets.
-[02:55:34] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
-[02:55:34] [main/INFO]: Loaded 69 berries
-[02:55:35] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 8.992 ms
-[02:55:35] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[02:55:35] [Server thread/INFO]: Loading properties
-[02:55:35] [Server thread/INFO]: Default game type: SURVIVAL
-[02:55:35] [Server thread/INFO]: Generating keypair
-[02:55:35] [Server thread/INFO]: Starting Minecraft server on *:25565
-[02:55:35] [Server thread/INFO]: Using default channel type
-[02:55:35] [Server thread/INFO]: Preparing level "world"
-[02:55:36] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[02:55:36] [Worker-Main-5/INFO]: Preparing spawn area: 0%
-[02:55:36] [Worker-Main-19/INFO]: Preparing spawn area: 0%
-[02:55:37] [Worker-Main-14/INFO]: Preparing spawn area: 0%
-[02:55:37] [Worker-Main-22/INFO]: Preparing spawn area: 9%
-[02:55:38] [Worker-Main-15/INFO]: Preparing spawn area: 86%
-[02:55:38] [Server thread/INFO]: Time elapsed: 2041 ms
-[02:55:38] [Server thread/INFO]: Done (2.785s)! For help, type "help"
-[02:59:45] [User Authenticator #1/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
-[03:00:14] [Server thread/INFO]: Disconnecting com.mojang.authlib.GameProfile@598a0f47[id=d34d115d-3b91-425d-96d3-8ad86517a428,name=5ambero,properties={textures=[com.mojang.authlib.properties.Property@2e6a09ee]},legacy=false] (/192.168.1.67:55362): Took too long to log in
-[03:00:27] [Server thread/INFO]: com.mojang.authlib.GameProfile@598a0f47[id=d34d115d-3b91-425d-96d3-8ad86517a428,name=5ambero,properties={textures=[com.mojang.authlib.properties.Property@2e6a09ee]},legacy=false] (/192.168.1.67:55362) lost connection: Disconnected
-[03:00:27] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 13110ms or 262 ticks behind
-[03:00:27] [Server thread/WARN]: handleDisconnection() called twice
-[03:00:28] [User Authenticator #2/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
-[03:00:28] [Server thread/INFO]: 5ambero[/192.168.1.67:46584] logged in with entity id 41 at (246.5786384492284, 64.0, -599.8213869609608)
-[03:00:28] [Netty Server IO #2/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
-[03:00:28] [Server thread/INFO]: 5ambero joined the game
-[03:00:40] [Server thread/INFO]: 5ambero lost connection: Disconnected
-[03:00:40] [Server thread/INFO]: 5ambero left the game
-[03:01:08] [User Authenticator #3/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
-[03:01:08] [Server thread/INFO]: LucNaril[/127.0.0.1:51004] logged in with entity id 577 at (106.85962910933739, 73.0, -676.253509216279)
-[03:01:08] [Netty Server IO #5/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
-[03:01:08] [Server thread/INFO]: LucNaril joined the game
-[03:01:50] [User Authenticator #4/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
-[03:01:50] [Server thread/INFO]: 5ambero[/192.168.1.67:50376] logged in with entity id 1156 at (244.17770227876602, 64.0, -595.5560629176462)
-[03:01:50] [Netty Server IO #6/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
-[03:01:50] [Server thread/INFO]: 5ambero joined the game
-[03:01:53] [Server thread/INFO]: 5ambero lost connection: Disconnected
-[03:01:53] [Server thread/INFO]: 5ambero left the game
-[03:02:26] [User Authenticator #5/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
-[03:02:26] [Server thread/INFO]: Tactical_July[/192.168.1.79:49250] logged in with entity id 1363 at (128.76518935358916, -59.0, -450.69999998807907)
-[03:02:26] [Netty Server IO #8/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
-[03:02:26] [Server thread/INFO]: Tactical_July joined the game
-[03:03:06] [User Authenticator #6/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
-[03:03:06] [Server thread/INFO]: 5ambero[/192.168.1.67:47270] logged in with entity id 1588 at (244.17770227876602, 64.0, -595.5560629176462)
-[03:03:06] [Netty Server IO #9/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
-[03:03:06] [Server thread/INFO]: 5ambero joined the game
-[03:14:18] [Server thread/INFO]: [STDOUT]: null
-[03:14:24] [Server thread/INFO]: [STDOUT]: null
-[03:15:58] [Server thread/INFO]: LucNaril has made the advancement [Bee Our Guest]
-[03:34:27] [Server thread/INFO]: 5ambero has made the advancement [Oki-Doki Vivichokey]
-[03:41:14] [Server thread/INFO]: 5ambero has made the advancement [Ice Bucket Challenge]
-[03:43:47] [Server thread/INFO]: 5ambero has made the advancement [Who is Cutting Onions?]
-[03:47:59] [Server thread/INFO]: 5ambero has made the advancement [We Need to Go Deeper]
-[03:48:05] [Server thread/INFO]: LucNaril burned to death
-[03:48:08] [Server thread/WARN]: LucNaril moved too quickly! -137.98308922147675,6.0,-64.54332406256935
-[03:50:17] [Server thread/INFO]: LucNaril has made the advancement [We Need to Go Deeper]
-[03:50:47] [Server thread/INFO]: 5ambero has completed the challenge [Return to Sender]
-[03:57:08] [Server thread/INFO]: 5ambero has made the advancement [A Terrible Fortress]
-[03:57:17] [Server thread/INFO]: LucNaril has made the advancement [A Terrible Fortress]
-[04:04:32] [Server thread/INFO]: 5ambero has made the advancement [Spooky Scary Skeleton]
-[04:10:03] [Server thread/INFO]: Tactical_July lost connection: Disconnected
-[04:10:03] [Server thread/INFO]: Tactical_July left the game
-[04:10:57] [Server thread/INFO]: LucNaril was slain by Hoglin
-[04:11:26] [User Authenticator #7/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
-[04:11:26] [Server thread/INFO]: Tactical_July[/192.168.1.79:51316] logged in with entity id 27682 at (-6.588693269753926, 75.0, -434.56650142546994)
-[04:11:26] [Netty Server IO #11/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
-[04:11:26] [Server thread/INFO]: Tactical_July joined the game
-[04:11:45] [Server thread/INFO]: 5ambero was slain by Hoglin
-[04:14:51] [Server thread/INFO]: LucNaril was slain by Piglin
-[04:18:21] [Server thread/INFO]: LucNaril was slain by Piglin
-[04:18:25] [Server thread/WARN]: LucNaril moved too quickly! -11.883837332451634,6.0,-502.5885538945551
-[04:28:19] [Server thread/INFO]: [STDOUT]: null
-[04:28:51] [Server thread/INFO]: [STDOUT]: null
-[04:40:38] [Server thread/INFO]: 5ambero was doomed to fall by Ghast
-[04:52:54] [Server thread/INFO]: 5ambero has made the advancement [Healing Power]
-[04:57:08] [Server thread/INFO]: LucNaril has made the advancement [Healing Power]
-[05:01:47] [Server thread/INFO]: LucNaril has made the advancement [Where's my Victory Music?]
-[05:24:21] [Server thread/INFO]: LucNaril was blown up by Creeper
-[05:24:24] [Server thread/WARN]: LucNaril moved too quickly! -330.20000252735235,2.0,53.96580104908662
-[05:25:22] [Server thread/INFO]: [STDOUT]: null
-[05:25:31] [Server thread/INFO]: [STDOUT]: null
-[05:45:34] [Server thread/INFO]: 5ambero has made the advancement [Free Roam: Enabled]
-[05:47:36] [Server thread/INFO]: LucNaril has made the advancement [Free Roam: Enabled]
-[05:57:01] [Server thread/INFO]: 5ambero lost connection: Disconnected
-[05:57:01] [Server thread/INFO]: 5ambero left the game
-[05:58:34] [Server thread/INFO]: Tactical_July lost connection: Disconnected
-[05:58:34] [Server thread/INFO]: Tactical_July left the game
-[06:01:35] [Server thread/INFO]: LucNaril lost connection: Disconnected
-[06:01:35] [Server thread/INFO]: LucNaril left the game
+[12:09:08] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/D:/Repositorios/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
+[12:09:08] [main/INFO]: Compatibility level set to JAVA_17
+[12:09:08] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
+[12:09:08] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
+[12:09:08] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
+[12:09:09] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[12:09:09] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
+[12:09:09] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
+[12:09:09] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
+[12:09:09] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
+[12:09:09] [main/INFO]: ThreadTweak config initialized
+[12:09:16] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
+[12:09:16] [main/ERROR]: No data fixer registered for cobblemon:pokemon
+[12:09:16] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
+[12:09:16] [main/ERROR]: No data fixer registered for cobblemon:boat
+[12:09:16] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
+[12:09:17] [main/INFO]: Starting the Best Spawner...
+[12:09:17] [main/INFO]: Loaded 5 spawning condition types.
+[12:09:17] [main/INFO]: Loaded 5 spawning context types.
+[12:09:17] [main/INFO]: Loaded 1 spawn detail types.
+[12:09:17] [Cobblemon Showdown/INFO]: Starting showdown service...
+[12:09:19] [Cobblemon Showdown/INFO]: Showdown has been started!
+[12:09:19] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
+[12:09:19] [main/INFO]: Registered the cobblemon:species_features registry
+[12:09:19] [main/INFO]: Registered the cobblemon:global_species_features registry
+[12:09:19] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
+[12:09:19] [main/INFO]: Registered the cobblemon:moves registry
+[12:09:19] [main/INFO]: Registered the cobblemon:abilities registry
+[12:09:19] [main/INFO]: Registered the cobblemon:species registry
+[12:09:19] [main/INFO]: Registered the cobblemon:species_additions registry
+[12:09:19] [main/INFO]: Registered the cobblemon:pokeballs registry
+[12:09:19] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
+[12:09:19] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
+[12:09:19] [main/INFO]: Registered the cobblemon:mechanics registry
+[12:09:19] [main/INFO]: Registered the cobblemon:bag_items registry
+[12:09:19] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
+[12:09:19] [main/INFO]: Registered the cobblemon:berries registry
+[12:09:19] [main/INFO]: Loading Collective version 7.26.
+[12:09:19] [main/INFO]: Compression will use Java, encryption will use Java
+[12:09:19] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
+[12:09:19] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
+[12:09:20] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[12:09:21] [main/INFO]: Loaded 7 recipes
+[12:09:21] [main/INFO]: Loaded 1558 advancements
+[12:09:23] [main/INFO]: Loaded 921 moves
+[12:09:23] [main/INFO]: Loaded 310 abilities
+[12:09:24] [main/INFO]: Finished additions
+[12:09:24] [main/INFO]: Imported 185 held item IDs from showdown
+[12:09:24] [main/INFO]: Loaded 1017 Pokémon species
+[12:09:24] [main/INFO]: Loaded 32 spawn detail presets.
+[12:09:24] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
+[12:09:25] [main/INFO]: Loaded 69 berries
+[12:09:25] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 10.95 ms
+[12:09:25] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[12:09:25] [Server thread/INFO]: Loading properties
+[12:09:25] [Server thread/INFO]: Default game type: SURVIVAL
+[12:09:25] [Server thread/INFO]: Generating keypair
+[12:09:25] [Server thread/INFO]: Starting Minecraft server on *:25565
+[12:09:25] [Server thread/INFO]: Using default channel type
+[12:09:25] [Server thread/INFO]: Preparing level "world"
+[12:09:26] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[12:09:28] [Worker-Main-8/INFO]: Preparing spawn area: 0%
+[12:09:28] [Worker-Main-11/INFO]: Preparing spawn area: 0%
+[12:09:28] [Worker-Main-8/INFO]: Preparing spawn area: 0%
+[12:09:28] [Worker-Main-11/INFO]: Preparing spawn area: 0%
+[12:09:28] [Worker-Main-10/INFO]: Preparing spawn area: 26%
+[12:09:28] [Server thread/INFO]: Time elapsed: 2239 ms
+[12:09:28] [Server thread/INFO]: Done (2.908s)! For help, type "help"
+[12:10:38] [User Authenticator #1/INFO]: UUID of player Irx99 is 46c353ef-21a8-4d3c-85d0-44553c30b77a
+[12:10:38] [Server thread/INFO]: Irx99[/81.34.60.106:55112] logged in with entity id 40 at (92.60776007467842, 65.0, -584.2568400507878)
+[12:10:39] [Netty Server IO #3/INFO]: [showmeyourskin] Client of Irx99 accepted server config.
+[12:10:39] [Server thread/INFO]: Irx99 joined the game
+[12:56:53] [User Authenticator #2/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[12:56:53] [Server thread/INFO]: Tactical_July[/90.163.116.184:63282] logged in with entity id 8400 at (-16.47718921125444, 91.0, -456.9172930587259)
+[12:56:53] [Netty Server IO #7/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[12:56:53] [Server thread/INFO]: Tactical_July joined the game
+[12:57:00] [Server thread/INFO]: <Irx99> holo
+[13:01:29] [User Authenticator #3/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[13:01:30] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:65223] logged in with entity id 9505 at (-64.08005492204421, 107.0, -723.9388636073907)
+[13:01:30] [Server thread/INFO]: SrVictorVaz joined the game
+[13:01:30] [Netty Server IO #9/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[13:34:03] [Server thread/INFO]: SrVictorVaz was blown up by Creeper
+[14:01:54] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[14:01:54] [Server thread/INFO]: SrVictorVaz left the game
+[14:06:10] [User Authenticator #4/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[14:06:10] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:52584] logged in with entity id 39348 at (-52.70575875926542, 124.0, -724.0078645926832)
+[14:06:10] [Server thread/INFO]: SrVictorVaz joined the game
+[14:06:10] [Netty Server IO #14/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[14:07:21] [Server thread/INFO]: [STDOUT]: null
+[14:12:31] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[14:12:31] [Server thread/INFO]: SrVictorVaz left the game
+[14:15:04] [User Authenticator #5/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[14:15:04] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:50168] logged in with entity id 44106 at (-92.01728741285831, 106.0, -723.7064627157505)
+[14:15:04] [Server thread/INFO]: SrVictorVaz joined the game
+[14:15:04] [Netty Server IO #16/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[14:16:23] [Server thread/INFO]: Irx99 has made the advancement [Healing Power]
+[14:17:33] [User Authenticator #6/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[14:17:33] [Server thread/INFO]: 5ambero[/90.163.116.184:34094] logged in with entity id 45306 at (76.6234510955027, 62.9375, -656.3453773508229)
+[14:17:33] [Server thread/INFO]: 5ambero joined the game
+[14:17:33] [Netty Server IO #18/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[14:19:43] [User Authenticator #7/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[14:19:43] [Server thread/INFO]: LucNaril[/90.163.116.184:52853] logged in with entity id 46221 at (106.26183316391878, 73.0, -676.3957297568329)
+[14:19:43] [Server thread/INFO]: LucNaril joined the game
+[14:19:43] [Netty Server IO #20/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[14:24:39] [Server thread/INFO]: LucNaril has reached the goal [An Unexpected Result]
+[14:25:54] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[14:25:54] [Server thread/INFO]: SrVictorVaz left the game
+[14:36:10] [Server thread/INFO]: LucNaril fell from a high place
+[14:36:56] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[14:36:56] [Server thread/INFO]: Tactical_July left the game
+[14:37:12] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[14:37:12] [Server thread/INFO]: 5ambero left the game
+[14:57:22] [Server thread/INFO]: Irx99 lost connection: Disconnected
+[14:57:22] [Server thread/INFO]: Irx99 left the game
+[15:05:08] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[15:05:08] [Server thread/INFO]: LucNaril left the game
+[15:57:48] [User Authenticator #8/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[15:57:48] [Server thread/INFO]: Tactical_July[/90.163.116.184:52038] logged in with entity id 60094 at (-20.08581101856639, 93.0, -492.6281343422609)
+[15:57:48] [Server thread/INFO]: Tactical_July joined the game
+[15:57:48] [Netty Server IO #32/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[15:59:42] [User Authenticator #9/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[15:59:42] [Server thread/INFO]: LucNaril[/90.163.116.184:53375] logged in with entity id 60898 at (106.79116031405324, 73.0, -678.2406279838249)
+[15:59:42] [Server thread/INFO]: LucNaril joined the game
+[15:59:42] [Netty Server IO #33/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[16:01:54] [User Authenticator #10/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[16:01:54] [Server thread/INFO]: 5ambero[/90.163.116.184:43804] logged in with entity id 61761 at (75.75675804324715, 64.0, -661.1579762664995)
+[16:01:54] [Server thread/INFO]: 5ambero joined the game
+[16:01:54] [Netty Server IO #35/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[16:10:00] [User Authenticator #11/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[16:10:00] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:53629] logged in with entity id 64203 at (-59.815501828721054, 108.0, -728.3979279103525)
+[16:10:00] [Server thread/INFO]: SrVictorVaz joined the game
+[16:10:00] [Netty Server IO #37/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[16:10:13] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[16:10:13] [Server thread/INFO]: SrVictorVaz left the game
+[16:10:49] [User Authenticator #12/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[16:10:49] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:53669] logged in with entity id 64621 at (-59.815501828721054, 108.0, -728.3979279103525)
+[16:10:49] [Server thread/INFO]: SrVictorVaz joined the game
+[16:10:49] [Netty Server IO #39/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[16:31:51] [User Authenticator #13/INFO]: UUID of player Irx99 is 46c353ef-21a8-4d3c-85d0-44553c30b77a
+[16:31:51] [Server thread/INFO]: Irx99[/81.34.60.106:63568] logged in with entity id 79030 at (76.3650290061705, 64.0, -575.4045602828836)
+[16:31:51] [Netty Server IO #43/INFO]: [showmeyourskin] Client of Irx99 accepted server config.
+[16:31:51] [Server thread/INFO]: Irx99 joined the game
+[16:46:51] [Server thread/INFO]: [STDOUT]: null
+[16:48:53] [Server thread/INFO]: rotation: 54.132935
+[17:00:45] [Server thread/INFO]: [STDOUT]: null
+[17:20:45] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[17:20:45] [Server thread/INFO]: 5ambero left the game
+[17:42:28] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[17:42:28] [Server thread/INFO]: SrVictorVaz left the game
+[17:53:35] [Server thread/INFO]: Irx99 has made the advancement [The Parrots and the Bats]
+[17:53:54] [User Authenticator #14/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[17:53:54] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:54815] logged in with entity id 122646 at (-44.14872872632188, 63.0, -601.5000561113274)
+[17:53:54] [Netty Server IO #2/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[17:53:54] [Server thread/INFO]: SrVictorVaz joined the game
+[17:55:57] [User Authenticator #15/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[17:55:57] [Server thread/INFO]: 5ambero[/90.163.116.184:51468] logged in with entity id 123264 at (42.224648437725385, 64.0, -703.8159327037708)
+[17:55:57] [Server thread/INFO]: 5ambero joined the game
+[17:55:57] [Netty Server IO #4/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[17:58:21] [Server thread/INFO]: LucNaril fell from a high place
+[18:04:29] [Server thread/INFO]: Irx99 fell from a high place
+[18:04:33] [Server thread/WARN]: Irx99 moved too quickly! 28.451037147580294,0.0,-21.193401538139597
+[18:09:30] [Server thread/WARN]: SrVictorVaz moved too quickly! -1.0022854524456406,-10.406598442182428,-0.5229132290915004
+[18:09:31] [Server thread/INFO]: SrVictorVaz was doomed to fall by Phantom
+[18:18:09] [Server thread/INFO]: 5ambero hit the ground too hard
+[18:18:40] [Server thread/INFO]: LucNaril fell from a high place
+[18:20:36] [Server thread/INFO]: <SrVictorVaz> zZzZz
+[18:20:43] [Server thread/INFO]: [STDOUT]: null
+[18:20:44] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[18:20:44] [Server thread/INFO]: 5ambero left the game
+[18:21:15] [Server thread/INFO]: [STDOUT]: null
+[18:28:50] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[18:28:50] [Server thread/INFO]: LucNaril left the game
+[18:38:11] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[18:38:11] [Server thread/INFO]: Tactical_July left the game
+[18:41:18] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[18:41:18] [Server thread/INFO]: SrVictorVaz left the game
+[18:50:36] [Server thread/INFO]: Irx99 lost connection: Disconnected
+[18:50:36] [Server thread/INFO]: Irx99 left the game

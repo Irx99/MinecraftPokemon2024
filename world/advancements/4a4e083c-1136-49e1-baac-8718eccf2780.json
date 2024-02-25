@@ -293,7 +293,8 @@
       "cooked_beef": "2024-02-24 01:00:00 +0100",
       "baked_potato": "2024-02-25 00:07:10 +0100",
       "bread": "2024-02-23 23:50:14 +0100",
-      "cooked_chicken": "2024-02-24 01:07:01 +0100"
+      "cooked_chicken": "2024-02-24 01:07:01 +0100",
+      "carrot": "2024-02-25 13:01:59 +0100"
     },
     "done": false
   },
@@ -2438,6 +2439,42 @@
   "minecraft:recipes/misc/iron_ingot_from_nuggets": {
     "criteria": {
       "has_iron_nugget": "2024-02-25 00:46:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_stairs_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_slab": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_stairs": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_cobblestone_wall": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_slab_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_cobblestone_wall_from_mossy_cobblestone_stonecutting": {
+    "criteria": {
+      "has_mossy_cobblestone": "2024-02-25 13:30:09 +0100"
     },
     "done": true
   },
