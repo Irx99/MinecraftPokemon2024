@@ -8,19 +8,19 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 8,
+    "totalCaptureCount": 9,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 1,
-    "totalBattleVictoryCount": 19,
+    "totalBattleVictoryCount": 24,
     "totalPvPBattleVictoryCount": 1,
-    "totalPvWBattleVictoryCount": 18,
+    "totalPvWBattleVictoryCount": 23,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
     "totalTypeCaptureCounts": {
       "grass": 1,
       "fairy": 1,
-      "normal": 2,
+      "normal": 3,
       "water": 2,
       "fire": 1,
       "electric": 1,
@@ -36,7 +36,10 @@
       "cobblemon:igglybuff": 1,
       "cobblemon:fletchling": 1,
       "cobblemon:lechonk": 2,
-      "cobblemon:metapod": 1
+      "cobblemon:metapod": 2,
+      "cobblemon:joltik": 1,
+      "cobblemon:maschiff": 1,
+      "cobblemon:mareep": 1
     },
     "aspectsCollected": {}
   }
