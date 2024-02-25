@@ -8,27 +8,28 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 13,
+    "totalCaptureCount": 25,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 3,
-    "totalBattleVictoryCount": 41,
-    "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 41,
+    "totalEvolvedCount": 4,
+    "totalBattleVictoryCount": 58,
+    "totalPvPBattleVictoryCount": 1,
+    "totalPvWBattleVictoryCount": 57,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
     "totalTypeCaptureCounts": {
-      "normal": 5,
-      "fire": 2,
-      "flying": 2,
-      "bug": 2,
-      "electric": 1,
+      "normal": 8,
+      "fire": 3,
+      "flying": 3,
+      "bug": 4,
+      "electric": 5,
       "psychic": 1,
       "ghost": 1,
-      "poison": 1,
-      "grass": 1,
-      "water": 1,
-      "ground": 1
+      "poison": 2,
+      "grass": 2,
+      "water": 2,
+      "ground": 2,
+      "rock": 1
     },
     "totalDefeatedCounts": {
       "cobblemon:buneary": 1,
@@ -51,7 +52,11 @@
       "cobblemon:meowth": 1,
       "cobblemon:arcanine": 1,
       "cobblemon:drowzee": 1,
-      "cobblemon:bouffalant": 1
+      "cobblemon:bouffalant": 1,
+      "cobblemon:tauros": 1,
+      "cobblemon:kakuna": 1,
+      "cobblemon:hoothoot": 1,
+      "cobblemon:caterpie": 1
     },
     "aspectsCollected": {
       "cobblemon:vivillon": [
