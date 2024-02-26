@@ -1,0 +1,18 @@
+{
+    "species": "cobblemon:aska",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:aska",
+        "model": "cobblemon:aska.geo",
+        "texture": "cobblemon:textures/pokemon/aska/aska.png",
+        "layers": []
+      },
+      {
+        "aspects": [ "shiny" ],
+        "texture": "cobblemon:textures/pokemon/aska/aska.png"
+      }
+    ]
+  }
+  
