@@ -9,24 +9,42 @@
     "criteria": {
       "minecraft:snowy_slopes": "2024-02-25 23:24:25 +0100",
       "minecraft:old_growth_pine_taiga": "2024-02-25 23:49:41 +0100",
+      "minecraft:taiga": "2024-02-26 10:58:56 +0100",
       "minecraft:deep_ocean": "2024-02-23 23:47:02 +0100",
+      "minecraft:frozen_river": "2024-02-26 11:19:50 +0100",
       "minecraft:sunflower_plains": "2024-02-24 00:37:15 +0100",
       "minecraft:cherry_grove": "2024-02-24 20:01:23 +0100",
       "minecraft:birch_forest": "2024-02-24 19:17:59 +0100",
+      "minecraft:windswept_hills": "2024-02-26 17:22:32 +0100",
+      "minecraft:bamboo_jungle": "2024-02-26 17:40:08 +0100",
+      "minecraft:wooded_badlands": "2024-02-26 17:45:01 +0100",
+      "minecraft:badlands": "2024-02-26 17:45:35 +0100",
       "minecraft:beach": "2024-02-23 23:25:38 +0100",
       "minecraft:dark_forest": "2024-02-24 19:15:26 +0100",
+      "minecraft:mangrove_swamp": "2024-02-26 17:23:59 +0100",
+      "minecraft:sparse_jungle": "2024-02-26 17:35:54 +0100",
       "minecraft:river": "2024-02-23 23:37:01 +0100",
+      "minecraft:lukewarm_ocean": "2024-02-26 17:52:28 +0100",
       "minecraft:stony_shore": "2024-02-23 23:25:40 +0100",
+      "minecraft:snowy_plains": "2024-02-26 11:18:54 +0100",
       "minecraft:dripstone_caves": "2024-02-25 21:01:23 +0100",
+      "minecraft:swamp": "2024-02-26 17:27:54 +0100",
       "minecraft:cold_ocean": "2024-02-23 23:37:59 +0100",
       "minecraft:forest": "2024-02-23 23:54:39 +0100",
       "minecraft:lush_caves": "2024-02-25 23:52:20 +0100",
       "minecraft:deep_cold_ocean": "2024-02-23 23:46:43 +0100",
+      "minecraft:ice_spikes": "2024-02-26 11:19:53 +0100",
+      "minecraft:frozen_ocean": "2024-02-26 11:19:40 +0100",
+      "minecraft:desert": "2024-02-26 17:42:39 +0100",
+      "minecraft:deep_frozen_ocean": "2024-02-26 11:17:47 +0100",
       "minecraft:ocean": "2024-02-23 23:47:09 +0100",
+      "minecraft:jungle": "2024-02-26 17:33:07 +0100",
       "minecraft:old_growth_spruce_taiga": "2024-02-23 20:59:36 +0100",
+      "minecraft:warm_ocean": "2024-02-26 17:46:24 +0100",
       "minecraft:flower_forest": "2024-02-24 00:37:40 +0100",
       "minecraft:old_growth_birch_forest": "2024-02-24 19:15:08 +0100",
       "minecraft:meadow": "2024-02-25 21:01:25 +0100",
+      "minecraft:savanna": "2024-02-26 17:26:40 +0100",
       "minecraft:plains": "2024-02-23 23:47:32 +0100"
     },
     "done": false
@@ -1448,9 +1466,10 @@
   },
   "cobblemon:recipes/consumables/modest_mint": {
     "criteria": {
-      "has_benefit_mint": "2024-02-24 01:02:53 +0100"
+      "has_benefit_mint": "2024-02-24 01:02:53 +0100",
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/held/power_lens": {
     "criteria": {
@@ -1497,15 +1516,17 @@
   "cobblemon:obtain_all_mints": {
     "criteria": {
       "obtain_cyan_mint_leaf": "2024-02-24 01:02:53 +0100",
-      "obtain_white_mint_leaf": "2024-02-24 01:19:47 +0100"
+      "obtain_white_mint_leaf": "2024-02-24 01:19:47 +0100",
+      "obtain_red_mint_leaf": "2024-02-26 17:34:34 +0100"
     },
     "done": false
   },
   "cobblemon:recipes/consumables/adamant_mint": {
     "criteria": {
+      "has_benefit_mint": "2024-02-26 17:34:34 +0100",
       "has_detriment_mint": "2024-02-24 01:02:53 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/balls/heal_ball": {
     "criteria": {
@@ -1580,6 +1601,7 @@
       "obtain_coba_berry": "2024-02-24 01:19:04 +0100",
       "obtain_persim_berry": "2024-02-24 01:30:01 +0100",
       "obtain_razz_berry": "2024-02-24 01:17:50 +0100",
+      "obtain_pecha_berry": "2024-02-26 17:31:08 +0100",
       "obtain_oran_berry": "2024-02-24 01:18:31 +0100",
       "obtain_wepear_berry": "2024-02-24 01:07:56 +0100"
     },
@@ -3414,21 +3436,45 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/sandstone_slab": {
+  "cobblemon:recipes/held/weakness_policy": {
     "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
+      "has_paper": "2024-02-25 23:11:29 +0100"
     },
     "done": true
   },
-  "cobblemon:obtain_revival_herb": {
+  "cobblemon:recipes/held/red_card": {
     "criteria": {
-      "check_inv": "2024-02-25 23:52:27 +0100"
+      "has_paper": "2024-02-25 23:11:29 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/stone_brick_wall": {
+  "cobblemon:recipes/held/spell_tag": {
     "criteria": {
-      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+      "has_item": "2024-02-25 23:11:29 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2024-02-25 23:11:29 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/blunder_policy": {
+    "criteria": {
+      "has_paper": "2024-02-25 23:11:29 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coast_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2024-02-25 23:11:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coast_armor_trim_smithing_template": {
+    "criteria": {
+      "has_coast_armor_trim_smithing_template": "2024-02-25 23:11:31 +0100"
     },
     "done": true
   },
@@ -3444,99 +3490,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cracked_stone_bricks": {
-    "criteria": {
-      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
-    "criteria": {
-      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/smooth_sandstone": {
-    "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_nuggets": {
-    "criteria": {
-      "has_gold_nugget": "2024-02-25 23:11:44 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/sandstone_wall_from_sandstone_stonecutting": {
-    "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_brick_stairs": {
-    "criteria": {
-      "has_stone_bricks": "2024-02-25 23:28:19 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cut_sandstone": {
-    "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
-    "criteria": {
-      "has_tag": "2024-02-25 23:28:19 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/dark_oak_button": {
     "criteria": {
       "has_planks": "2024-02-25 23:11:40 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/emerald_block": {
-    "criteria": {
-      "has_emerald": "2024-02-25 23:27:20 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/golden_carrot": {
-    "criteria": {
-      "has_gold_nugget": "2024-02-25 23:11:44 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/mossy_stone_brick_wall": {
-    "criteria": {
-      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/sandstone_stairs_from_sandstone_stonecutting": {
-    "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/consumables/heal_powder": {
-    "criteria": {
-      "has_herb": "2024-02-25 23:52:27 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/mossy_stone_brick_slab": {
-    "criteria": {
-      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/coast_armor_trim_smithing_template_smithing_trim": {
-    "criteria": {
-      "has_smithing_trim_template": "2024-02-25 23:11:31 +0100"
     },
     "done": true
   },
@@ -3546,27 +3502,9 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/weakness_policy": {
-    "criteria": {
-      "has_paper": "2024-02-25 23:11:29 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting": {
-    "criteria": {
-      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/dark_oak_pressure_plate": {
     "criteria": {
       "has_planks": "2024-02-25 23:11:40 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/decorated_pot_simple": {
-    "criteria": {
-      "has_brick": "2024-02-25 23:29:19 +0100"
     },
     "done": true
   },
@@ -3582,57 +3520,64 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/red_card": {
-    "criteria": {
-      "has_paper": "2024-02-25 23:11:29 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/sandstone_stairs": {
-    "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/dark_oak_door": {
     "criteria": {
       "has_planks": "2024-02-25 23:11:40 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/held/spell_tag": {
+  "minecraft:recipes/decorations/dark_oak_sign": {
     "criteria": {
-      "has_item": "2024-02-25 23:11:29 +0100"
+      "has_planks": "2024-02-25 23:11:40 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/cut_sandstone_from_sandstone_stonecutting": {
+  "minecraft:recipes/misc/gold_ingot_from_nuggets": {
     "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
+      "has_gold_nugget": "2024-02-25 23:11:44 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting": {
+  "minecraft:recipes/brewing/golden_carrot": {
     "criteria": {
-      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+      "has_gold_nugget": "2024-02-25 23:11:44 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/evolution/kings_rock": {
+  "minecraft:adventure/salvage_sherd": {
     "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
+      "has_sherd": "2024-02-25 23:29:19 +0100",
+      "ocean_ruin_cold": "2024-02-25 23:27:16 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/chiseled_sandstone_from_sandstone_stonecutting": {
+  "minecraft:recipes/building_blocks/emerald_block": {
     "criteria": {
-      "has_sandstone": "2024-02-26 00:14:18 +0100"
+      "has_emerald": "2024-02-25 23:27:20 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/consumables/revive": {
+  "minecraft:recipes/building_blocks/stone_brick_stairs": {
     "criteria": {
-      "has_herb": "2024-02-25 23:52:27 +0100"
+      "has_stone_bricks": "2024-02-25 23:28:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
+    "criteria": {
+      "has_tag": "2024-02-25 23:28:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/mossy_stone_brick_wall": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
     },
     "done": true
   },
@@ -3648,22 +3593,135 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/coast_armor_trim_smithing_template": {
+  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_brick_stonecutting": {
     "criteria": {
-      "has_coast_armor_trim_smithing_template": "2024-02-25 23:11:31 +0100"
+      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
     },
     "done": true
   },
-  "minecraft:adventure/salvage_sherd": {
+  "minecraft:recipes/decorations/mossy_stone_brick_wall_from_mossy_stone_brick_stonecutting": {
     "criteria": {
-      "has_sherd": "2024-02-25 23:29:19 +0100",
-      "ocean_ruin_cold": "2024-02-25 23:27:16 +0100"
+      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_brick_slab_from_mossy_stone_brick_stonecutting": {
+    "criteria": {
+      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/decorated_pot_simple": {
+    "criteria": {
+      "has_brick": "2024-02-25 23:29:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cracked_stone_bricks": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-25 23:30:42 +0100"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting": {
     "criteria": {
       "has_stone_bricks": "2024-02-25 23:30:42 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:obtain_revival_herb": {
+    "criteria": {
+      "check_inv": "2024-02-25 23:52:27 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/heal_powder": {
+    "criteria": {
+      "has_herb": "2024-02-25 23:52:27 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/revive": {
+    "criteria": {
+      "has_herb": "2024-02-25 23:52:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_slab": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_sandstone": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/sandstone_wall_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_stairs_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/sandstone_stairs": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cut_sandstone_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/evolution/kings_rock": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_sandstone_from_sandstone_stonecutting": {
+    "criteria": {
+      "has_sandstone": "2024-02-26 00:14:18 +0100"
     },
     "done": true
   },
@@ -3679,51 +3737,297 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/sea_lantern": {
-    "criteria": {
-      "has_prismarine_crystals": "2024-02-26 00:25:20 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/cartography_table": {
-    "criteria": {
-      "has_paper": "2024-02-25 23:11:29 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/sandstone_wall": {
     "criteria": {
       "has_sandstone": "2024-02-26 00:14:18 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/mossy_stone_brick_stairs_from_mossy_stone_brick_stonecutting": {
+  "minecraft:recipes/building_blocks/sea_lantern": {
     "criteria": {
-      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+      "has_prismarine_crystals": "2024-02-26 00:25:20 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/dark_oak_sign": {
+  "minecraft:recipes/misc/iron_ingot_from_iron_block": {
     "criteria": {
-      "has_planks": "2024-02-25 23:11:40 +0100"
+      "has_iron_block": "2024-02-26 10:28:35 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/mossy_stone_brick_wall_from_mossy_stone_brick_stonecutting": {
+  "minecraft:recipes/decorations/anvil": {
     "criteria": {
-      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+      "has_iron_block": "2024-02-26 10:28:35 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/held/blunder_policy": {
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
     "criteria": {
-      "has_paper": "2024-02-25 23:11:29 +0100"
+      "has_lilac": "2024-02-26 10:42:27 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/mossy_stone_brick_slab_from_mossy_stone_brick_stonecutting": {
+  "minecraft:recipes/misc/gold_ingot_from_gold_block": {
     "criteria": {
-      "has_mossy_stone_bricks": "2024-02-25 23:28:19 +0100"
+      "has_gold_block": "2024-02-26 10:50:47 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/amulet_coin": {
+    "criteria": {
+      "is_rich": "2024-02-26 10:50:47 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/heavy_duty_boots": {
+    "criteria": {
+      "has_leather": "2024-02-26 11:20:50 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_oak_planks": {
+    "criteria": {
+      "has_log": "2024-02-26 11:26:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_oak_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 11:26:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick_from_bamboo_item": {
+    "criteria": {
+      "has_bamboo": "2024-02-26 12:09:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bamboo_block": {
+    "criteria": {
+      "has_bamboo": "2024-02-26 12:09:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/scaffolding": {
+    "criteria": {
+      "has_bamboo": "2024-02-26 12:09:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_from_moss_block": {
+    "criteria": {
+      "has_moss_block": "2024-02-26 12:09:30 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/luminous_moss": {
+    "criteria": {
+      "has_moss": "2024-02-26 12:09:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/moss_carpet": {
+    "criteria": {
+      "has_moss_block": "2024-02-26 12:09:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_stone_bricks_from_moss_block": {
+    "criteria": {
+      "has_moss_block": "2024-02-26 12:09:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_button": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/melon_seeds": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/bold_mint": {
+    "criteria": {
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/mangrove_planks": {
+    "criteria": {
+      "has_logs": "2024-02-26 17:24:09 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/evolution/peat_block": {
+    "criteria": {
+      "has_mud": "2024-02-26 17:25:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_pressure_plate": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:33:12 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brown_dye": {
+    "criteria": {
+      "has_cocoa_beans": "2024-02-26 17:33:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_slab": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/brave_mint": {
+    "criteria": {
+      "has_benefit_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/redstone/acacia_trapdoor": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/calm_mint": {
+    "criteria": {
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/packed_mud": {
+    "criteria": {
+      "has_mud": "2024-02-26 17:25:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cookie": {
+    "criteria": {
+      "has_cocoa": "2024-02-26 17:33:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_stairs": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/green_dye": {
+    "criteria": {
+      "has_cactus": "2024-02-26 17:43:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_door": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_fence_gate": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/glistering_melon_slice": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lime_dye_from_smelting": {
+    "criteria": {
+      "has_sea_pickle": "2024-02-26 17:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_planks": {
+    "criteria": {
+      "has_logs": "2024-02-26 17:33:12 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/acacia_sign": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/power_bracer": {
+    "criteria": {
+      "has_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/naughty_mint": {
+    "criteria": {
+      "has_benefit_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/consumables/timid_mint": {
+    "criteria": {
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
+    "criteria": {
+      "has_mangrove_roots": "2024-02-26 17:24:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/melon": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mangrove_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:24:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/acacia_fence": {
+    "criteria": {
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:26:38 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/lonely_mint": {
+    "criteria": {
+      "has_benefit_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "minecraft:recipes/building_blocks/acacia_planks": {
+    "criteria": {
+      "has_log": "2024-02-26 17:26:38 +0100"
     },
     "done": true
   },

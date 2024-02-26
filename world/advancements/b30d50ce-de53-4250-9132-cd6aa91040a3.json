@@ -3217,6 +3217,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/composter": {
+    "criteria": {
+      "has_wood_slab": "2024-02-25 16:08:55 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/dried_kelp_from_smelting": {
     "criteria": {
       "has_kelp": "2024-02-25 16:18:20 +0100"
@@ -3229,19 +3235,43 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/dried_kelp_from_smoking": {
+    "criteria": {
+      "has_kelp": "2024-02-25 16:18:20 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/evolution/whipped_dream": {
+    "criteria": {
+      "has_sweet_berry": "2024-02-25 16:32:28 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/snow": {
     "criteria": {
       "has_snowball": "2024-02-25 16:40:36 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/composter": {
+  "minecraft:recipes/building_blocks/snow_block": {
     "criteria": {
-      "has_wood_slab": "2024-02-25 16:08:55 +0100"
+      "has_snowball": "2024-02-25 16:40:36 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dripstone_block": {
+    "criteria": {
+      "has_pointed_dripstone": "2024-02-25 16:51:18 +0100"
     },
     "done": true
   },
   "minecraft:recipes/decorations/beehive": {
+    "criteria": {
+      "has_honeycomb": "2024-02-25 17:08:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/honeycomb_block": {
     "criteria": {
       "has_honeycomb": "2024-02-25 17:08:24 +0100"
     },
@@ -3253,33 +3283,21 @@
     },
     "done": true
   },
-  "cobblemon:recipes/evolution/whipped_dream": {
+  "cobblemon:recipes/held/black_belt": {
     "criteria": {
-      "has_sweet_berry": "2024-02-25 16:32:28 +0100"
+      "has_kelp": "2024-02-26 19:38:36 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/food/dried_kelp_from_smoking": {
+  "minecraft:recipes/building_blocks/dried_kelp_block": {
     "criteria": {
-      "has_kelp": "2024-02-25 16:18:20 +0100"
+      "has_dried_kelp": "2024-02-26 19:38:36 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/dripstone_block": {
+  "minecraft:recipes/food/dried_kelp": {
     "criteria": {
-      "has_pointed_dripstone": "2024-02-25 16:51:18 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/snow_block": {
-    "criteria": {
-      "has_snowball": "2024-02-25 16:40:36 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/honeycomb_block": {
-    "criteria": {
-      "has_honeycomb": "2024-02-25 17:08:24 +0100"
+      "has_dried_kelp_block": "2024-02-26 19:38:43 +0100"
     },
     "done": true
   },
