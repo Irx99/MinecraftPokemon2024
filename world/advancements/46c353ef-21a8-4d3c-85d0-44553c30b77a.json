@@ -359,6 +359,7 @@
       "bread": "2024-02-24 18:59:51 +0100",
       "rotten_flesh": "2024-02-23 23:34:16 +0100",
       "dried_kelp": "2024-02-23 23:59:39 +0100",
+      "golden_carrot": "2024-02-26 23:37:21 +0100",
       "cooked_chicken": "2024-02-24 17:57:53 +0100",
       "mushroom_stew": "2024-02-24 19:42:38 +0100",
       "cooked_salmon": "2024-02-23 23:40:01 +0100"
@@ -3839,27 +3840,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/acacia_button": {
+  "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
     "criteria": {
-      "has_planks": "2024-02-26 17:30:48 +0100"
+      "has_mangrove_roots": "2024-02-26 17:24:00 +0100"
     },
     "done": true
-  },
-  "minecraft:recipes/misc/melon_seeds": {
-    "criteria": {
-      "has_melon": "2024-02-26 17:33:28 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/consumables/bold_mint": {
-    "criteria": {
-      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
-    },
-    "done": false
   },
   "minecraft:recipes/building_blocks/mangrove_planks": {
     "criteria": {
       "has_logs": "2024-02-26 17:24:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mangrove_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:24:09 +0100"
     },
     "done": true
   },
@@ -3869,21 +3864,33 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/acacia_pressure_plate": {
+  "minecraft:recipes/building_blocks/packed_mud": {
+    "criteria": {
+      "has_mud": "2024-02-26 17:25:37 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:26:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/acacia_planks": {
+    "criteria": {
+      "has_log": "2024-02-26 17:26:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/acacia_button": {
     "criteria": {
       "has_planks": "2024-02-26 17:30:48 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/jungle_wood": {
+  "minecraft:recipes/redstone/acacia_pressure_plate": {
     "criteria": {
-      "has_log": "2024-02-26 17:33:12 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/brown_dye": {
-    "criteria": {
-      "has_cocoa_beans": "2024-02-26 17:33:22 +0100"
+      "has_planks": "2024-02-26 17:30:48 +0100"
     },
     "done": true
   },
@@ -3893,45 +3900,15 @@
     },
     "done": true
   },
-  "cobblemon:recipes/consumables/brave_mint": {
-    "criteria": {
-      "has_benefit_mint": "2024-02-26 17:34:34 +0100"
-    },
-    "done": false
-  },
   "minecraft:recipes/redstone/acacia_trapdoor": {
     "criteria": {
       "has_planks": "2024-02-26 17:30:48 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/consumables/calm_mint": {
-    "criteria": {
-      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
-    },
-    "done": false
-  },
-  "minecraft:recipes/building_blocks/packed_mud": {
-    "criteria": {
-      "has_mud": "2024-02-26 17:25:37 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/food/cookie": {
-    "criteria": {
-      "has_cocoa": "2024-02-26 17:33:22 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/acacia_stairs": {
     "criteria": {
       "has_planks": "2024-02-26 17:30:48 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/green_dye": {
-    "criteria": {
-      "has_cactus": "2024-02-26 17:43:41 +0100"
     },
     "done": true
   },
@@ -3947,15 +3924,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/brewing/glistering_melon_slice": {
+  "minecraft:recipes/decorations/acacia_sign": {
     "criteria": {
-      "has_melon": "2024-02-26 17:33:28 +0100"
+      "has_planks": "2024-02-26 17:30:48 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/lime_dye_from_smelting": {
+  "minecraft:recipes/decorations/acacia_fence": {
     "criteria": {
-      "has_sea_pickle": "2024-02-26 17:46:41 +0100"
+      "has_planks": "2024-02-26 17:30:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/jungle_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 17:33:12 +0100"
     },
     "done": true
   },
@@ -3965,11 +3948,53 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/acacia_sign": {
+  "minecraft:recipes/misc/brown_dye": {
     "criteria": {
-      "has_planks": "2024-02-26 17:30:48 +0100"
+      "has_cocoa_beans": "2024-02-26 17:33:22 +0100"
     },
     "done": true
+  },
+  "minecraft:recipes/food/cookie": {
+    "criteria": {
+      "has_cocoa": "2024-02-26 17:33:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/melon_seeds": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/glistering_melon_slice": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/melon": {
+    "criteria": {
+      "has_melon": "2024-02-26 17:33:28 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/consumables/bold_mint": {
+    "criteria": {
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/consumables/brave_mint": {
+    "criteria": {
+      "has_benefit_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/consumables/calm_mint": {
+    "criteria": {
+      "has_detriment_mint": "2024-02-26 17:34:34 +0100"
+    },
+    "done": false
   },
   "cobblemon:recipes/held/power_bracer": {
     "criteria": {
@@ -3989,45 +4014,327 @@
     },
     "done": false
   },
-  "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
-    "criteria": {
-      "has_mangrove_roots": "2024-02-26 17:24:00 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/melon": {
-    "criteria": {
-      "has_melon": "2024-02-26 17:33:28 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/mangrove_wood": {
-    "criteria": {
-      "has_log": "2024-02-26 17:24:09 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/acacia_fence": {
-    "criteria": {
-      "has_planks": "2024-02-26 17:30:48 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/acacia_wood": {
-    "criteria": {
-      "has_log": "2024-02-26 17:26:38 +0100"
-    },
-    "done": true
-  },
   "cobblemon:recipes/consumables/lonely_mint": {
     "criteria": {
       "has_benefit_mint": "2024-02-26 17:34:34 +0100"
     },
     "done": false
   },
-  "minecraft:recipes/building_blocks/acacia_planks": {
+  "minecraft:recipes/misc/green_dye": {
     "criteria": {
-      "has_log": "2024-02-26 17:26:38 +0100"
+      "has_cactus": "2024-02-26 17:43:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lime_dye_from_smelting": {
+    "criteria": {
+      "has_sea_pickle": "2024-02-26 17:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:32:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_green_dye": "2024-02-26 20:32:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_candle": {
+    "criteria": {
+      "has_green_dye": "2024-02-26 20:32:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:32:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:32:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_blue_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_light_blue_dye": "2024-02-26 20:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_light_blue_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_light_blue_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_light_blue_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_blue_candle": {
+    "criteria": {
+      "has_light_blue_dye": "2024-02-26 20:35:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_cyan_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:40:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_cyan_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:40:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cyan_candle": {
+    "criteria": {
+      "has_cyan_dye": "2024-02-26 20:40:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cyan_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_cyan_dye": "2024-02-26 20:40:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_cyan_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:40:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_candle": {
+    "criteria": {
+      "has_yellow_dye": "2024-02-26 20:48:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:48:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:48:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_yellow_dye": "2024-02-26 20:48:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:48:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_candle": {
+    "criteria": {
+      "has_orange_dye": "2024-02-26 20:49:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:49:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_orange_dye": "2024-02-26 20:49:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:49:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:49:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_lime_dye": "2024-02-26 20:54:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:54:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_candle": {
+    "criteria": {
+      "has_lime_dye": "2024-02-26 20:54:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:54:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-02-26 20:54:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brown_banner": {
+    "criteria": {
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brown_bed": {
+    "criteria": {
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brown_carpet": {
+    "criteria": {
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/tnt_minecart": {
+    "criteria": {
+      "has_minecart": "2024-02-26 23:15:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2024-02-26 23:10:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/repeater": {
+    "criteria": {
+      "has_redstone_torch": "2024-02-26 23:17:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2024-02-26 23:10:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/chest_minecart": {
+    "criteria": {
+      "has_minecart": "2024-02-26 23:15:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_bed": {
+    "criteria": {
+      "has_light_gray_wool": "2024-02-27 00:19:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/furnace_minecart": {
+    "criteria": {
+      "has_minecart": "2024-02-26 23:15:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/hopper_minecart": {
+    "criteria": {
+      "has_minecart": "2024-02-26 23:15:49 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/room_service": {
+    "criteria": {
+      "has_cart": "2024-02-26 23:15:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brown_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/magenta_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_banner": {
+    "criteria": {
+      "has_light_gray_wool": "2024-02-27 00:19:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_carpet": {
+    "criteria": {
+      "has_light_gray_wool": "2024-02-27 00:19:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp": {
+    "criteria": {
+      "has_dried_kelp_block": "2024-02-27 00:09:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/powered_rail": {
+    "criteria": {
+      "has_the_recipe": "2024-02-26 23:09:46 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/rail": {
+    "criteria": {
+      "has_the_recipe": "2024-02-26 23:10:05 +0100"
     },
     "done": true
   },

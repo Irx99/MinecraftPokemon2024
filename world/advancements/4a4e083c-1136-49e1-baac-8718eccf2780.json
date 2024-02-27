@@ -777,6 +777,7 @@
       "minecraft:skeleton": "2024-02-24 00:40:06 +0100",
       "minecraft:spider": "2024-02-24 00:24:45 +0100",
       "minecraft:creeper": "2024-02-24 01:18:24 +0100",
+      "minecraft:phantom": "2024-02-26 20:26:55 +0100",
       "minecraft:enderman": "2024-02-26 00:14:15 +0100",
       "minecraft:zombie": "2024-02-24 00:21:29 +0100",
       "minecraft:zombie_villager": "2024-02-24 01:37:33 +0100"
@@ -1889,13 +1890,15 @@
   },
   "cobblemon:recipes/balls/dive_ball": {
     "criteria": {
-      "has_blue_apricorn": "2024-02-24 18:45:51 +0100"
+      "has_blue_apricorn": "2024-02-24 18:45:51 +0100",
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/balls/dream_ball": {
     "criteria": {
-      "has_blue_apricorn": "2024-02-24 18:45:51 +0100"
+      "has_blue_apricorn": "2024-02-24 18:45:51 +0100",
+      "has_pink_apricorn": "2024-02-26 20:28:15 +0100"
     },
     "done": false
   },
@@ -1907,7 +1910,9 @@
   },
   "cobblemon:recipes/balls/moon_ball": {
     "criteria": {
-      "has_blue_apricorn": "2024-02-24 18:45:51 +0100"
+      "has_blue_apricorn": "2024-02-24 18:45:51 +0100",
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
     },
     "done": false
   },
@@ -1925,15 +1930,17 @@
   },
   "cobblemon:recipes/balls/net_ball": {
     "criteria": {
-      "has_blue_apricorn": "2024-02-24 18:45:51 +0100"
+      "has_blue_apricorn": "2024-02-24 18:45:51 +0100",
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100"
     },
     "done": false
   },
   "cobblemon:recipes/balls/quick_ball": {
     "criteria": {
-      "has_blue_apricorn": "2024-02-24 18:45:51 +0100"
+      "has_blue_apricorn": "2024-02-24 18:45:51 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/balls/azure_ball": {
     "criteria": {
@@ -2049,19 +2056,23 @@
   },
   "cobblemon:recipes/balls/nest_ball": {
     "criteria": {
-      "has_green_apricorn": "2024-02-24 19:10:35 +0100"
+      "has_green_apricorn": "2024-02-24 19:10:35 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/balls/safari_ball": {
     "criteria": {
-      "has_green_apricorn": "2024-02-24 19:10:35 +0100"
+      "has_green_apricorn": "2024-02-24 19:10:35 +0100",
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
     },
-    "done": false
+    "done": true
   },
   "cobblemon:recipes/balls/friend_ball": {
     "criteria": {
-      "has_green_apricorn": "2024-02-24 19:10:35 +0100"
+      "has_green_apricorn": "2024-02-24 19:10:35 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
     },
     "done": false
   },
@@ -2599,12 +2610,6 @@
     },
     "done": true
   },
-  "minecraft:adventure/shoot_arrow": {
-    "criteria": {
-      "shot_arrow": "2024-02-26 19:28:41 +0100"
-    },
-    "done": true
-  },
   "cobblemon:recipes/held/toxic_orb": {
     "criteria": {
       "has_orb": "2024-02-26 19:13:49 +0100"
@@ -2614,6 +2619,210 @@
   "cobblemon:recipes/held/life_orb": {
     "criteria": {
       "has_orb": "2024-02-26 19:13:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2024-02-26 19:28:41 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:craft_base_balls": {
+    "criteria": {
+      "poke_ball": "2024-02-26 20:21:27 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:craft_all_balls": {
+    "criteria": {
+      "safari_ball": "2024-02-26 20:33:07 +0100",
+      "poke_ball": "2024-02-26 20:21:27 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:craft_poke_ball": {
+    "criteria": {
+      "requirement": "2024-02-26 20:21:27 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/covert_cloak": {
+    "criteria": {
+      "has_membrane": "2024-02-26 20:26:55 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/evolution/reaper_cloth": {
+    "criteria": {
+      "has_membrane": "2024-02-26 20:26:55 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/heal_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100",
+      "has_pink_apricorn": "2024-02-26 20:28:15 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/love_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100",
+      "has_pink_apricorn": "2024-02-26 20:28:15 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/level_ball": {
+    "criteria": {
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100",
+      "has_pink_apricorn": "2024-02-26 20:28:15 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/balls/roseate_ball": {
+    "criteria": {
+      "has_pink_apricorn": "2024-02-26 20:28:15 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/agriculture/pink_apricorn_smelt_to_dye": {
+    "criteria": {
+      "has_apricorn": "2024-02-26 20:28:15 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/premier_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/fast_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100",
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/agriculture/white_apricorn_smelt_to_dye": {
+    "criteria": {
+      "has_apricorn": "2024-02-26 20:28:38 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/sport_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/balls/timer_ball": {
+    "criteria": {
+      "has_white_apricorn": "2024-02-26 20:28:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/balls/repeat_ball": {
+    "criteria": {
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/balls/ultra_ball": {
+    "criteria": {
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/agriculture/yellow_apricorn_smelt_to_dye": {
+    "criteria": {
+      "has_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/citrine_ball": {
+    "criteria": {
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/luxury_ball": {
+    "criteria": {
+      "has_yellow_apricorn": "2024-02-26 20:29:38 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:rainbow_apricorns": {
+    "criteria": {
+      "place_green": "2024-02-26 20:31:27 +0100",
+      "place_yellow": "2024-02-26 20:31:22 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:first_catch": {
+    "criteria": {
+      "catch": "2024-02-26 20:34:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cracked_stone_bricks": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks": {
+    "criteria": {
+      "has_tag": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2024-02-26 22:19:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/grindstone": {
+    "criteria": {
+      "has_stone_slab": "2024-02-26 22:22:41 +0100"
     },
     "done": true
   },

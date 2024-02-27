@@ -3074,5 +3074,35 @@
     },
     "done": true
   },
+  "cobblemon:first_catch": {
+    "criteria": {
+      "catch": "2024-02-26 20:14:54 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:trade_pokemon": {
+    "criteria": {
+      "trade": "2024-02-26 20:28:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_oak_planks": {
+    "criteria": {
+      "has_log": "2024-02-26 22:29:11 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_oak_wood": {
+    "criteria": {
+      "has_log": "2024-02-26 22:29:11 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:full_party": {
+    "criteria": {
+      "full_party": "2024-02-26 23:06:28 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
