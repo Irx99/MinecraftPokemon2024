@@ -8,12 +8,12 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 45,
+    "totalCaptureCount": 46,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 10,
-    "totalBattleVictoryCount": 220,
+    "totalEvolvedCount": 11,
+    "totalBattleVictoryCount": 225,
     "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 220,
+    "totalPvWBattleVictoryCount": 225,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
@@ -30,7 +30,7 @@
       "fire": 4,
       "water": 3,
       "dark": 1,
-      "ghost": 2,
+      "ghost": 3,
       "psychic": 1
     },
     "totalDefeatedCounts": {
@@ -49,12 +49,12 @@
       "cobblemon:squawkabilly": 1,
       "cobblemon:meowth": 11,
       "cobblemon:gastly": 1,
-      "cobblemon:zubat": 3,
+      "cobblemon:zubat": 4,
       "cobblemon:pidove": 4,
       "cobblemon:granbull": 1,
       "cobblemon:growlithe": 5,
       "cobblemon:dachsbun": 1,
-      "cobblemon:taillow": 5,
+      "cobblemon:taillow": 6,
       "cobblemon:linoone": 2,
       "cobblemon:nosepass": 1,
       "cobblemon:mawile": 1,
@@ -107,7 +107,9 @@
       "cobblemon:rattata": 1,
       "cobblemon:vivillon": 1,
       "cobblemon:ditto": 1,
-      "cobblemon:gurdurr": 1
+      "cobblemon:gurdurr": 1,
+      "cobblemon:haunter": 1,
+      "cobblemon:murkrow": 1
     },
     "aspectsCollected": {}
   }

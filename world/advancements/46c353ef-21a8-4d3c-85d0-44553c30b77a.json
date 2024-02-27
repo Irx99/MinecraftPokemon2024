@@ -4212,33 +4212,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/brown_banner": {
+  "minecraft:recipes/transportation/powered_rail": {
     "criteria": {
-      "has_brown_wool": "2024-02-27 00:19:39 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/brown_bed": {
-    "criteria": {
-      "has_brown_wool": "2024-02-27 00:19:39 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/brown_carpet": {
-    "criteria": {
-      "has_brown_wool": "2024-02-27 00:19:39 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane": {
-    "criteria": {
-      "has_glass_pane": "2024-02-26 23:48:31 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/tnt_minecart": {
-    "criteria": {
-      "has_minecart": "2024-02-26 23:15:49 +0100"
+      "has_the_recipe": "2024-02-26 23:09:46 +0100"
     },
     "done": true
   },
@@ -4248,33 +4224,27 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/repeater": {
-    "criteria": {
-      "has_redstone_torch": "2024-02-26 23:17:56 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
-    "criteria": {
-      "has_glass_pane": "2024-02-26 23:48:31 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/detector_rail": {
     "criteria": {
       "has_rail": "2024-02-26 23:10:05 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/chest_minecart": {
+  "minecraft:recipes/transportation/rail": {
+    "criteria": {
+      "has_the_recipe": "2024-02-26 23:10:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/tnt_minecart": {
     "criteria": {
       "has_minecart": "2024-02-26 23:15:49 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/light_gray_bed": {
+  "minecraft:recipes/transportation/chest_minecart": {
     "criteria": {
-      "has_light_gray_wool": "2024-02-27 00:19:38 +0100"
+      "has_minecart": "2024-02-26 23:15:49 +0100"
     },
     "done": true
   },
@@ -4296,6 +4266,24 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/repeater": {
+    "criteria": {
+      "has_redstone_torch": "2024-02-26 23:17:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/brown_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_glass_pane": "2024-02-26 23:48:31 +0100"
@@ -4305,6 +4293,18 @@
   "minecraft:recipes/decorations/magenta_stained_glass_pane_from_glass_pane": {
     "criteria": {
       "has_glass_pane": "2024-02-26 23:48:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp": {
+    "criteria": {
+      "has_dried_kelp_block": "2024-02-27 00:09:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_gray_bed": {
+    "criteria": {
+      "has_light_gray_wool": "2024-02-27 00:19:38 +0100"
     },
     "done": true
   },
@@ -4320,21 +4320,93 @@
     },
     "done": true
   },
-  "minecraft:recipes/food/dried_kelp": {
+  "minecraft:recipes/decorations/brown_banner": {
     "criteria": {
-      "has_dried_kelp_block": "2024-02-27 00:09:09 +0100"
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/powered_rail": {
+  "minecraft:recipes/decorations/brown_bed": {
     "criteria": {
-      "has_the_recipe": "2024-02-26 23:09:46 +0100"
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/transportation/rail": {
+  "minecraft:recipes/decorations/brown_carpet": {
     "criteria": {
-      "has_the_recipe": "2024-02-26 23:10:05 +0100"
+      "has_brown_wool": "2024-02-27 00:19:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/clay": {
+    "criteria": {
+      "has_clay_ball": "2024-02-27 20:58:21 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/light_clay": {
+    "criteria": {
+      "has_clay": "2024-02-27 20:58:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brick": {
+    "criteria": {
+      "has_clay_ball": "2024-02-27 20:58:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bricks": {
+    "criteria": {
+      "has_brick": "2024-02-27 21:10:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/flower_pot": {
+    "criteria": {
+      "has_brick": "2024-02-27 21:10:24 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/apricorn_planks": {
+    "criteria": {
+      "has_apricorn_log": "2024-02-27 22:03:06 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/apricorn_wood": {
+    "criteria": {
+      "has_log": "2024-02-27 22:03:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2024-02-27 22:08:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2024-02-27 22:08:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2024-02-27 22:08:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enchant_item": {
+    "criteria": {
+      "enchanted_item": "2024-02-27 23:23:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/armor_stand": {
+    "criteria": {
+      "has_stone_slab": "2024-02-27 23:47:04 +0100"
     },
     "done": true
   },

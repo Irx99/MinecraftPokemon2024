@@ -1,10 +1,27 @@
-[00:08:40] [Server thread/INFO]: Tactical_July lost connection: Disconnected
-[00:08:40] [Server thread/INFO]: Tactical_July left the game
-[00:16:20] [Server thread/INFO]: 5ambero lost connection: Disconnected
-[00:16:20] [Server thread/INFO]: 5ambero left the game
-[00:28:08] [Server thread/INFO]: [STDOUT]: null
-[00:28:12] [Server thread/INFO]: [STDOUT]: null
-[01:04:19] [Server thread/INFO]: LucNaril lost connection: Disconnected
-[01:04:19] [Server thread/INFO]: LucNaril left the game
-[01:04:22] [Server thread/INFO]: Irx99 lost connection: Disconnected
-[01:04:22] [Server thread/INFO]: Irx99 left the game
+[00:02:17] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[00:02:17] [Server thread/INFO]: SrVictorVaz left the game
+[00:02:57] [User Authenticator #18/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[00:02:57] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:60988] logged in with entity id 70678 at (-67.33859061447727, 107.1212968405392, -754.3214123404767)
+[00:02:57] [Server thread/INFO]: SrVictorVaz joined the game
+[00:02:57] [Netty Server IO #27/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[00:07:13] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[00:07:13] [Server thread/INFO]: SrVictorVaz left the game
+[00:07:37] [User Authenticator #19/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[00:07:37] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:61010] logged in with entity id 73663 at (-59.74296061243946, 114.5, -748.8444891325089)
+[00:07:37] [Server thread/INFO]: SrVictorVaz joined the game
+[00:07:37] [Netty Server IO #30/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[00:10:20] [Server thread/INFO]: 5ambero has made the advancement [The Cutest Predator]
+[00:21:55] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[00:21:55] [Server thread/INFO]: SrVictorVaz left the game
+[00:23:25] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[00:23:25] [Server thread/INFO]: 5ambero left the game
+[00:23:35] [User Authenticator #20/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[00:23:35] [Server thread/INFO]: 5ambero[/90.163.116.184:63500] logged in with entity id 82911 at (658.2375000119209, 33.0625, -613.2988669266609)
+[00:23:35] [Server thread/INFO]: 5ambero joined the game
+[00:23:35] [Netty Server IO #35/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[00:23:46] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[00:23:46] [Server thread/INFO]: 5ambero left the game
+[00:23:51] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[00:23:51] [Server thread/INFO]: LucNaril left the game
+[00:26:06] [Server thread/INFO]: Irx99 lost connection: Disconnected
+[00:26:06] [Server thread/INFO]: Irx99 left the game
