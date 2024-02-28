@@ -11,9 +11,9 @@
     "totalCaptureCount": 46,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 11,
-    "totalBattleVictoryCount": 225,
+    "totalBattleVictoryCount": 226,
     "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 225,
+    "totalPvWBattleVictoryCount": 226,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
@@ -109,7 +109,8 @@
       "cobblemon:ditto": 1,
       "cobblemon:gurdurr": 1,
       "cobblemon:haunter": 1,
-      "cobblemon:murkrow": 1
+      "cobblemon:murkrow": 1,
+      "cobblemon:golem": 1
     },
     "aspectsCollected": {}
   }

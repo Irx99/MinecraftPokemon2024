@@ -826,6 +826,7 @@
       "cooked_mutton": "2024-02-24 00:26:37 +0100",
       "cooked_beef": "2024-02-23 23:59:22 +0100",
       "baked_potato": "2024-02-24 20:31:02 +0100",
+      "tropical_fish": "2024-02-28 01:06:49 +0100",
       "apple": "2024-02-25 01:54:14 +0100",
       "bread": "2024-02-24 01:53:49 +0100",
       "golden_apple": "2024-02-24 01:53:59 +0100",
@@ -848,6 +849,7 @@
       "obtain_chilan_berry": "2024-02-24 00:01:35 +0100",
       "obtain_leppa_berry": "2024-02-26 20:22:26 +0100",
       "obtain_persim_berry": "2024-02-25 02:08:09 +0100",
+      "obtain_rindo_berry": "2024-02-28 01:02:34 +0100",
       "obtain_razz_berry": "2024-02-25 05:28:22 +0100",
       "obtain_oran_berry": "2024-02-24 00:38:20 +0100",
       "obtain_cheri_berry": "2024-02-25 01:09:24 +0100",
@@ -3170,6 +3172,48 @@
   "minecraft:husbandry/axolotl_in_a_bucket": {
     "criteria": {
       "axolotl_bucket": "2024-02-28 00:10:20 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/smooth_rock": {
+    "criteria": {
+      "has_stone": "2024-02-28 00:35:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2024-02-28 00:35:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2024-02-28 00:35:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/powered_rail": {
+    "criteria": {
+      "has_rail": "2024-02-28 00:35:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/terracotta": {
+    "criteria": {
+      "has_clay_block": "2024-02-28 00:36:16 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/augurite_axe": {
+    "criteria": {
+      "has_augurite": "2024-02-28 01:02:34 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/augurite_block": {
+    "criteria": {
+      "has_augurite": "2024-02-28 01:02:34 +0100"
     },
     "done": true
   },

@@ -712,6 +712,7 @@
       "cooked_mutton": "2024-02-24 00:34:35 +0100",
       "cooked_beef": "2024-02-27 23:41:50 +0100",
       "baked_potato": "2024-02-24 23:16:53 +0100",
+      "tropical_fish": "2024-02-28 00:53:43 +0100",
       "bread": "2024-02-24 20:03:20 +0100",
       "beetroot": "2024-02-24 20:49:52 +0100",
       "cooked_rabbit": "2024-02-23 23:45:22 +0100",
@@ -3358,6 +3359,30 @@
     },
     "done": true
   },
+  "cobblemon:recipes/consumables/heal_powder": {
+    "criteria": {
+      "has_herb": "2024-02-27 23:56:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/clay": {
+    "criteria": {
+      "has_clay_ball": "2024-02-27 23:58:06 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/light_clay": {
+    "criteria": {
+      "has_clay": "2024-02-27 23:58:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/brick": {
+    "criteria": {
+      "has_clay_ball": "2024-02-27 23:58:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/birch_button": {
     "criteria": {
       "has_planks": "2024-02-27 23:59:47 +0100"
@@ -3382,21 +3407,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/clay": {
-    "criteria": {
-      "has_clay_ball": "2024-02-27 23:58:06 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/birch_fence_gate": {
     "criteria": {
       "has_planks": "2024-02-27 23:59:47 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/consumables/heal_powder": {
-    "criteria": {
-      "has_herb": "2024-02-27 23:56:25 +0100"
     },
     "done": true
   },
@@ -3406,33 +3419,9 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/light_clay": {
-    "criteria": {
-      "has_clay": "2024-02-27 23:58:06 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/mossy_cobblestone_from_moss_block": {
-    "criteria": {
-      "has_moss_block": "2024-02-28 00:00:44 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/birch_stairs": {
     "criteria": {
       "has_planks": "2024-02-27 23:59:47 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/held/luminous_moss": {
-    "criteria": {
-      "has_moss": "2024-02-28 00:00:44 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/terracotta": {
-    "criteria": {
-      "has_clay_block": "2024-02-28 00:01:57 +0100"
     },
     "done": true
   },
@@ -3442,9 +3431,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/brick": {
+  "minecraft:recipes/redstone/birch_pressure_plate": {
     "criteria": {
-      "has_clay_ball": "2024-02-27 23:58:06 +0100"
+      "has_planks": "2024-02-27 23:59:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mossy_cobblestone_from_moss_block": {
+    "criteria": {
+      "has_moss_block": "2024-02-28 00:00:44 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/luminous_moss": {
+    "criteria": {
+      "has_moss": "2024-02-28 00:00:44 +0100"
     },
     "done": true
   },
@@ -3454,21 +3455,21 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/smooth_rock": {
-    "criteria": {
-      "has_stone": "2024-02-28 00:23:06 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/birch_pressure_plate": {
-    "criteria": {
-      "has_planks": "2024-02-27 23:59:47 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/mossy_stone_bricks_from_moss_block": {
     "criteria": {
       "has_moss_block": "2024-02-28 00:00:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/terracotta": {
+    "criteria": {
+      "has_clay_block": "2024-02-28 00:01:57 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/smooth_rock": {
+    "criteria": {
+      "has_stone": "2024-02-28 00:23:06 +0100"
     },
     "done": true
   },
