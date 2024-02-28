@@ -2826,5 +2826,11 @@
     },
     "done": true
   },
+  "cobblemon:recipes/held/miracle_seed": {
+    "criteria": {
+      "has_leaf": "2024-02-28 22:42:05 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
