@@ -3152,15 +3152,21 @@
     },
     "done": true
   },
+  "cobblemon:first_evolution": {
+    "criteria": {
+      "evolve": "2024-02-28 23:50:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:story/shiny_gear": {
     "criteria": {
       "diamond_boots": "2024-02-28 23:55:03 +0100"
     },
     "done": true
   },
-  "cobblemon:first_evolution": {
+  "minecraft:adventure/voluntary_exile": {
     "criteria": {
-      "evolve": "2024-02-28 23:50:06 +0100"
+      "voluntary_exile": "2024-03-02 03:04:33 +0100"
     },
     "done": true
   },
