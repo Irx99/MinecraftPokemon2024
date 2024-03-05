@@ -4974,5 +4974,11 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/chiseled_polished_blackstone": {
+    "criteria": {
+      "has_polished_blackstone_slab": "2024-03-05 13:38:40 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
