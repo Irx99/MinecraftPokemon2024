@@ -1,5 +1,5 @@
-[21:40:52] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
-[21:40:52] [main/INFO]: Loading 66 mods:
+[19:58:44] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
+[19:58:45] [main/INFO]: Loading 66 mods:
 	- appleskin 2.5.1+mc1.20
 	   \-- cloth-config 11.0.99
 	        \-- cloth-basic-math 0.6.1
@@ -79,78 +79,78 @@
 	- starlight 1.1.2+fabric.dbc156f
 	- superflatworldnoslimes 3.2
 	- threadtweak 1.20.2-0.1.1
-[21:40:52] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/D:/Repositorios/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
-[21:40:52] [main/INFO]: Compatibility level set to JAVA_17
-[21:40:53] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
-[21:40:53] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
-[21:40:53] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
-[21:40:53] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[21:40:53] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
-[21:40:53] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
-[21:40:53] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
-[21:40:53] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
-[21:40:53] [main/INFO]: ThreadTweak config initialized
-[21:40:59] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
-[21:40:59] [main/ERROR]: No data fixer registered for cobblemon:pokemon
-[21:40:59] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
-[21:40:59] [main/ERROR]: No data fixer registered for cobblemon:boat
-[21:40:59] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
-[21:41:00] [main/INFO]: Starting the Best Spawner...
-[21:41:00] [main/INFO]: Loaded 5 spawning condition types.
-[21:41:00] [main/INFO]: Loaded 5 spawning context types.
-[21:41:00] [main/INFO]: Loaded 1 spawn detail types.
-[21:41:00] [Cobblemon Showdown/INFO]: Starting showdown service...
-[21:41:02] [Cobblemon Showdown/INFO]: Showdown has been started!
-[21:41:02] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
-[21:41:02] [main/INFO]: Registered the cobblemon:species_features registry
-[21:41:02] [main/INFO]: Registered the cobblemon:global_species_features registry
-[21:41:02] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
-[21:41:02] [main/INFO]: Registered the cobblemon:moves registry
-[21:41:02] [main/INFO]: Registered the cobblemon:abilities registry
-[21:41:02] [main/INFO]: Registered the cobblemon:species registry
-[21:41:02] [main/INFO]: Registered the cobblemon:species_additions registry
-[21:41:02] [main/INFO]: Registered the cobblemon:pokeballs registry
-[21:41:02] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
-[21:41:02] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
-[21:41:02] [main/INFO]: Registered the cobblemon:mechanics registry
-[21:41:02] [main/INFO]: Registered the cobblemon:bag_items registry
-[21:41:02] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
-[21:41:02] [main/INFO]: Registered the cobblemon:berries registry
-[21:41:02] [main/INFO]: Loading Collective version 7.26.
-[21:41:02] [main/INFO]: Compression will use Java, encryption will use Java
-[21:41:02] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
-[21:41:02] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
-[21:41:02] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[21:41:04] [main/INFO]: Loaded 7 recipes
-[21:41:04] [main/INFO]: Loaded 1558 advancements
-[21:41:05] [main/INFO]: Loaded 921 moves
-[21:41:05] [main/INFO]: Loaded 310 abilities
-[21:41:06] [main/INFO]: Finished additions
-[21:41:06] [main/INFO]: Imported 185 held item IDs from showdown
-[21:41:06] [main/INFO]: Loaded 1018 Pokémon species
-[21:41:06] [main/INFO]: Loaded 32 spawn detail presets.
-[21:41:06] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
-[21:41:06] [main/ERROR]: Unknown preset name: underground.
-[21:41:06] [main/INFO]: Loaded 69 berries
-[21:41:07] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 12.51 ms
-[21:41:07] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[21:41:07] [Server thread/INFO]: Loading properties
-[21:41:07] [Server thread/INFO]: Default game type: SURVIVAL
-[21:41:07] [Server thread/INFO]: Generating keypair
-[21:41:07] [Server thread/INFO]: Starting Minecraft server on *:25565
-[21:41:07] [Server thread/INFO]: Using default channel type
-[21:41:07] [Server thread/INFO]: Preparing level "world"
-[21:41:08] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[21:41:09] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[21:41:09] [Worker-Main-12/INFO]: Preparing spawn area: 0%
-[21:41:09] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[21:41:09] [Worker-Main-1/INFO]: Preparing spawn area: 0%
-[21:41:10] [Worker-Main-23/INFO]: Preparing spawn area: 44%
-[21:41:10] [Server thread/INFO]: Time elapsed: 2183 ms
-[21:41:10] [Server thread/INFO]: Done (2.769s)! For help, type "help"
-[21:41:14] [User Authenticator #1/INFO]: UUID of player Irx99 is 46c353ef-21a8-4d3c-85d0-44553c30b77a
-[21:41:14] [Server thread/INFO]: Irx99[/81.34.60.106:56082] logged in with entity id 54 at (72.92491760384816, 72.0, -577.9477891738007)
-[21:41:14] [Netty Server IO #4/INFO]: [showmeyourskin] Client of Irx99 accepted server config.
-[21:41:14] [Server thread/INFO]: Irx99 joined the game
-[22:51:35] [Server thread/INFO]: Irx99 lost connection: Disconnected
-[22:51:35] [Server thread/INFO]: Irx99 left the game
+[19:58:47] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/D:/Repositorios/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
+[19:58:47] [main/INFO]: Compatibility level set to JAVA_17
+[19:58:48] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
+[19:58:48] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
+[19:58:48] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
+[19:58:48] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[19:58:48] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
+[19:58:48] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
+[19:58:48] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
+[19:58:48] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
+[19:58:49] [main/INFO]: ThreadTweak config initialized
+[19:58:56] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
+[19:58:56] [main/ERROR]: No data fixer registered for cobblemon:pokemon
+[19:58:56] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
+[19:58:56] [main/ERROR]: No data fixer registered for cobblemon:boat
+[19:58:56] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
+[19:58:57] [main/INFO]: Starting the Best Spawner...
+[19:58:57] [main/INFO]: Loaded 5 spawning condition types.
+[19:58:57] [main/INFO]: Loaded 5 spawning context types.
+[19:58:57] [main/INFO]: Loaded 1 spawn detail types.
+[19:58:57] [Cobblemon Showdown/INFO]: Starting showdown service...
+[19:59:00] [Cobblemon Showdown/INFO]: Showdown has been started!
+[19:59:00] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
+[19:59:00] [main/INFO]: Registered the cobblemon:species_features registry
+[19:59:00] [main/INFO]: Registered the cobblemon:global_species_features registry
+[19:59:00] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
+[19:59:00] [main/INFO]: Registered the cobblemon:moves registry
+[19:59:00] [main/INFO]: Registered the cobblemon:abilities registry
+[19:59:00] [main/INFO]: Registered the cobblemon:species registry
+[19:59:00] [main/INFO]: Registered the cobblemon:species_additions registry
+[19:59:00] [main/INFO]: Registered the cobblemon:pokeballs registry
+[19:59:00] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
+[19:59:00] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
+[19:59:00] [main/INFO]: Registered the cobblemon:mechanics registry
+[19:59:00] [main/INFO]: Registered the cobblemon:bag_items registry
+[19:59:00] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
+[19:59:00] [main/INFO]: Registered the cobblemon:berries registry
+[19:59:00] [main/INFO]: Loading Collective version 7.26.
+[19:59:00] [main/INFO]: Compression will use Java, encryption will use Java
+[19:59:00] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
+[19:59:00] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
+[19:59:00] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[19:59:02] [main/INFO]: Loaded 7 recipes
+[19:59:02] [main/INFO]: Loaded 1558 advancements
+[19:59:04] [main/INFO]: Loaded 921 moves
+[19:59:04] [main/INFO]: Loaded 310 abilities
+[19:59:05] [main/INFO]: Finished additions
+[19:59:05] [main/INFO]: Imported 185 held item IDs from showdown
+[19:59:05] [main/INFO]: Loaded 1018 Pokémon species
+[19:59:05] [main/INFO]: Loaded 32 spawn detail presets.
+[19:59:05] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
+[19:59:06] [main/ERROR]: Unknown preset name: underground.
+[19:59:06] [main/INFO]: Loaded 69 berries
+[19:59:06] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 11.69 ms
+[19:59:06] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[19:59:06] [Server thread/INFO]: Loading properties
+[19:59:06] [Server thread/INFO]: Default game type: SURVIVAL
+[19:59:06] [Server thread/INFO]: Generating keypair
+[19:59:06] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:59:06] [Server thread/INFO]: Using default channel type
+[19:59:06] [Server thread/INFO]: Preparing level "world"
+[19:59:07] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[19:59:08] [Worker-Main-20/INFO]: Preparing spawn area: 0%
+[19:59:08] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[19:59:08] [Worker-Main-20/INFO]: Preparing spawn area: 0%
+[19:59:08] [Worker-Main-20/INFO]: Preparing spawn area: 0%
+[19:59:09] [Worker-Main-8/INFO]: Preparing spawn area: 38%
+[19:59:09] [Server thread/INFO]: Time elapsed: 2217 ms
+[19:59:09] [Server thread/INFO]: Done (2.818s)! For help, type "help"
+[20:00:00] [User Authenticator #1/INFO]: UUID of player Irx99 is 46c353ef-21a8-4d3c-85d0-44553c30b77a
+[20:00:01] [Server thread/INFO]: Irx99[/81.34.60.106:60506] logged in with entity id 54 at (76.10332423765597, 72.0, -580.3940439468214)
+[20:00:01] [Netty Server IO #5/INFO]: [showmeyourskin] Client of Irx99 accepted server config.
+[20:00:01] [Server thread/INFO]: Irx99 joined the game
+[20:38:36] [Server thread/INFO]: Irx99 lost connection: Disconnected
+[20:38:36] [Server thread/INFO]: Irx99 left the game
