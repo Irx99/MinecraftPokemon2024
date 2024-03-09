@@ -774,6 +774,7 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:pillager": "2024-03-09 00:19:00 +0100",
       "minecraft:skeleton": "2024-02-24 00:40:06 +0100",
       "minecraft:spider": "2024-02-24 00:24:45 +0100",
       "minecraft:creeper": "2024-02-24 01:18:24 +0100",
@@ -1963,6 +1964,7 @@
   },
   "cobblemon:obtain_all_berries": {
     "criteria": {
+      "obtain_babiri_berry": "2024-03-09 00:29:15 +0100",
       "obtain_chilan_berry": "2024-02-25 01:18:38 +0100",
       "obtain_razz_berry": "2024-02-24 18:50:17 +0100",
       "obtain_oran_berry": "2024-02-24 18:51:39 +0100",
@@ -2829,6 +2831,12 @@
   "cobblemon:recipes/held/miracle_seed": {
     "criteria": {
       "has_leaf": "2024-02-28 22:42:05 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/rocky_helmet": {
+    "criteria": {
+      "has_stone": "2024-03-08 23:41:10 +0100"
     },
     "done": true
   },

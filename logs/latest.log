@@ -1,2 +1,122 @@
-[00:01:23] [Server thread/INFO]: Irx99 lost connection: Disconnected
-[00:01:23] [Server thread/INFO]: Irx99 left the game
+[00:02:03] [Server thread/INFO]: Tactical_July has made the advancement [What a Deal!]
+[00:04:35] [Server thread/WARN]: Player SrVictorVaz just tried to change non-editable sign
+[00:13:37] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[00:13:37] [Server thread/INFO]: SrVictorVaz left the game
+[00:14:11] [User Authenticator #5/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[00:14:11] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:50335] logged in with entity id 18919 at (-54.501669315120104, 124.0, -731.5325109070045)
+[00:14:11] [Server thread/INFO]: SrVictorVaz joined the game
+[00:14:11] [Netty Server IO #18/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[00:20:44] [Server thread/INFO]: rotation: 147.17978
+[00:28:50] [User Authenticator #6/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[00:28:50] [Server thread/INFO]: LucNaril[/90.163.116.184:49343] logged in with entity id 25983 at (107.03544666308474, 73.0, -677.9606210499381)
+[00:28:50] [Server thread/INFO]: LucNaril joined the game
+[00:28:50] [Netty Server IO #20/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[00:30:08] [Server thread/INFO]: LucNaril drowned
+[00:33:42] [User Authenticator #7/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[00:33:43] [Server thread/INFO]: 5ambero[/90.163.116.184:49160] logged in with entity id 28879 at (76.76154251634598, 63.0, -657.8857160442499)
+[00:33:43] [Server thread/INFO]: 5ambero joined the game
+[00:33:43] [Netty Server IO #23/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[00:35:37] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[00:35:37] [Server thread/INFO]: LucNaril left the game
+[00:35:42] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[00:35:42] [Server thread/INFO]: Tactical_July left the game
+[00:36:34] [User Authenticator #8/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[00:36:34] [Server thread/INFO]: LucNaril[/90.163.116.184:49653] logged in with entity id 30014 at (55.08003124517411, 64.5, -565.9354904829565)
+[00:36:34] [Server thread/INFO]: LucNaril joined the game
+[00:36:34] [Netty Server IO #26/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[00:36:36] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[00:36:36] [Server thread/INFO]: 5ambero left the game
+[00:37:46] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[00:37:46] [Server thread/INFO]: SrVictorVaz left the game
+[00:40:29] [User Authenticator #9/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[00:40:29] [Server thread/INFO]: Tactical_July[/90.163.116.184:61941] logged in with entity id 30797 at (35.780362939057795, 63.9375, -561.0119963188681)
+[00:40:29] [Server thread/INFO]: Tactical_July joined the game
+[00:40:29] [Netty Server IO #29/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[00:41:27] [User Authenticator #10/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[00:41:27] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:50435] logged in with entity id 30995 at (-64.38116874194039, 111.0, -763.9631147952028)
+[00:41:27] [Server thread/INFO]: SrVictorVaz joined the game
+[00:41:27] [Netty Server IO #30/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[00:43:58] [User Authenticator #11/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[00:43:58] [Server thread/INFO]: 5ambero[/90.163.116.184:50024] logged in with entity id 32669 at (78.61738769281762, 64.0, -661.8672371877877)
+[00:43:58] [Server thread/INFO]: 5ambero joined the game
+[00:43:58] [Netty Server IO #31/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[00:46:38] [Server thread/INFO]: Tactical_July was slain by Enderman
+[00:50:01] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[00:50:01] [Server thread/INFO]: 5ambero left the game
+[00:54:47] [User Authenticator #12/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[00:54:47] [Server thread/INFO]: 5ambero[/90.163.116.184:43822] logged in with entity id 38228 at (79.80430046476535, 64.875, -658.2905864299062)
+[00:54:47] [Server thread/INFO]: 5ambero joined the game
+[00:54:47] [Netty Server IO #35/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[00:58:26] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[00:58:26] [Server thread/INFO]: 5ambero left the game
+[01:05:36] [Server thread/INFO]: <SrVictorVaz> Linuz
+[01:08:43] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[01:08:43] [Server thread/INFO]: SrVictorVaz left the game
+[01:11:46] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[01:11:46] [Server thread/INFO]: Tactical_July left the game
+[01:11:46] [Server thread/WARN]: handleDisconnection() called twice
+[01:12:12] [User Authenticator #13/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[01:12:13] [Server thread/INFO]: Tactical_July[/90.163.116.184:62686] logged in with entity id 47891 at (92.69999998807907, -59.0, -426.54081252219953)
+[01:12:13] [Server thread/INFO]: Tactical_July joined the game
+[01:12:13] [Netty Server IO #37/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[01:12:28] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[01:12:28] [Server thread/INFO]: Tactical_July left the game
+[01:12:31] [User Authenticator #14/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[01:12:31] [Server thread/INFO]: Tactical_July[/90.163.116.184:62698] logged in with entity id 48141 at (92.69999998807907, -59.0, -426.54081252219953)
+[01:12:31] [Server thread/INFO]: Tactical_July joined the game
+[01:12:31] [Netty Server IO #39/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[01:12:53] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[01:12:53] [Server thread/INFO]: Tactical_July left the game
+[01:12:59] [User Authenticator #15/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[01:12:59] [Server thread/INFO]: Tactical_July[/90.163.116.184:62717] logged in with entity id 48283 at (96.53828329670505, -59.0, -426.4585772531985)
+[01:12:59] [Server thread/INFO]: Tactical_July joined the game
+[01:12:59] [Netty Server IO #41/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[01:13:09] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[01:13:09] [Server thread/INFO]: Tactical_July left the game
+[01:13:16] [User Authenticator #16/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[01:13:16] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:55867] logged in with entity id 48427 at (-61.76820345254036, 107.0, -735.6864165838485)
+[01:13:16] [Server thread/INFO]: SrVictorVaz joined the game
+[01:13:16] [Netty Server IO #44/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[01:13:21] [User Authenticator #17/INFO]: UUID of player 5ambero is d34d115d-3b91-425d-96d3-8ad86517a428
+[01:13:21] [Server thread/INFO]: 5ambero[/90.163.116.184:44830] logged in with entity id 48536 at (85.40613444925906, 67.0, -652.7660680676306)
+[01:13:21] [Server thread/INFO]: 5ambero joined the game
+[01:13:21] [Netty Server IO #46/INFO]: [showmeyourskin] Client of 5ambero accepted server config.
+[01:13:28] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[01:13:28] [Server thread/INFO]: SrVictorVaz left the game
+[01:13:30] [User Authenticator #18/INFO]: UUID of player SrVictorVaz is 4a4e083c-1136-49e1-baac-8718eccf2780
+[01:13:30] [Server thread/INFO]: SrVictorVaz[/90.163.116.184:56024] logged in with entity id 48575 at (-61.76820345254036, 107.0, -735.6864165838485)
+[01:13:30] [Server thread/INFO]: SrVictorVaz joined the game
+[01:13:30] [Netty Server IO #0/INFO]: [showmeyourskin] Client of SrVictorVaz accepted server config.
+[01:13:35] [Server thread/INFO]: SrVictorVaz lost connection: Disconnected
+[01:13:35] [Server thread/INFO]: SrVictorVaz left the game
+[01:14:07] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[01:14:07] [Server thread/INFO]: LucNaril left the game
+[01:14:10] [User Authenticator #19/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[01:14:10] [Server thread/INFO]: LucNaril[/90.163.116.184:50608] logged in with entity id 48855 at (92.17384143612831, 69.9375, -661.7408811753066)
+[01:14:10] [Netty Server IO #3/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[01:14:10] [Server thread/INFO]: LucNaril joined the game
+[01:15:50] [User Authenticator #20/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[01:15:50] [Server thread/INFO]: Tactical_July[/90.163.116.184:62998] logged in with entity id 49375 at (87.63871707112514, -59.0, -426.69999998807907)
+[01:15:50] [Server thread/INFO]: Tactical_July joined the game
+[01:15:50] [Netty Server IO #5/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[01:24:26] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[01:24:26] [Server thread/INFO]: Tactical_July left the game
+[01:34:35] [Server thread/INFO]: Irx99 has made the advancement [A Terrible Fortress]
+[01:35:22] [Server thread/INFO]: Irx99 has made the advancement [Into Fire]
+[01:38:53] [Server thread/INFO]: LucNaril has made the advancement [Into Fire]
+[01:39:23] [Server thread/INFO]: 5ambero has made the advancement [Into Fire]
+[01:47:34] [User Authenticator #21/INFO]: UUID of player Tactical_July is 0d2b54fb-8cca-4784-9dbd-2be2b39de0f2
+[01:47:34] [Server thread/INFO]: Tactical_July[/90.163.116.184:64271] logged in with entity id 58327 at (98.69999998807907, -59.0, -401.48759421195683)
+[01:47:34] [Server thread/INFO]: Tactical_July joined the game
+[01:47:34] [Netty Server IO #11/INFO]: [showmeyourskin] Client of Tactical_July accepted server config.
+[01:53:26] [Server thread/INFO]: LucNaril was slain by Blaze
+[01:57:10] [Server thread/INFO]: LucNaril was slain by Hoglin
+[01:57:18] [Server thread/INFO]: 5ambero fell off some twisting vines
+[02:08:33] [Server thread/INFO]: Irx99 lost connection: Disconnected
+[02:08:33] [Server thread/INFO]: Irx99 left the game
+[02:09:42] [Server thread/INFO]: 5ambero lost connection: Disconnected
+[02:09:42] [Server thread/INFO]: 5ambero left the game
+[02:10:39] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[02:10:39] [Server thread/INFO]: LucNaril left the game
+[02:10:42] [Server thread/INFO]: Tactical_July lost connection: Disconnected
+[02:10:42] [Server thread/INFO]: Tactical_July left the game

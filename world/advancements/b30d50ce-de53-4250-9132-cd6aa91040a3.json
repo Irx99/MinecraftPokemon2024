@@ -237,6 +237,7 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:blaze": "2024-03-09 01:37:15 +0100",
       "minecraft:skeleton": "2024-02-24 01:15:41 +0100",
       "minecraft:hoglin": "2024-02-27 23:18:19 +0100",
       "minecraft:spider": "2024-02-23 23:39:12 +0100",
@@ -715,6 +716,7 @@
       "baked_potato": "2024-02-24 23:16:53 +0100",
       "tropical_fish": "2024-02-28 00:53:43 +0100",
       "bread": "2024-02-24 20:03:20 +0100",
+      "golden_apple": "2024-03-09 01:44:39 +0100",
       "glow_berries": "2024-03-02 02:37:55 +0100",
       "beetroot": "2024-02-24 20:49:52 +0100",
       "cooked_rabbit": "2024-02-23 23:45:22 +0100",
@@ -3548,6 +3550,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/crimson_hanging_sign": {
+    "criteria": {
+      "has_stripped_logs": "2024-03-03 03:18:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stripped_crimson_hyphae": {
+    "criteria": {
+      "has_log": "2024-03-03 03:18:19 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/cherry_slab": {
     "criteria": {
       "has_planks": "2024-03-03 04:06:48 +0100"
@@ -3578,12 +3592,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crimson_hanging_sign": {
-    "criteria": {
-      "has_stripped_logs": "2024-03-03 03:18:19 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/cherry_fence_gate": {
     "criteria": {
       "has_planks": "2024-03-03 04:06:48 +0100"
@@ -3602,15 +3610,27 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/stripped_crimson_hyphae": {
-    "criteria": {
-      "has_log": "2024-03-03 03:18:19 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/cherry_door": {
     "criteria": {
       "has_planks": "2024-03-03 04:06:48 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/obtain_blaze_rod": {
+    "criteria": {
+      "blaze_rod": "2024-03-09 01:38:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2024-03-09 01:38:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/brewing_stand": {
+    "criteria": {
+      "has_blaze_rod": "2024-03-09 01:38:53 +0100"
     },
     "done": true
   },

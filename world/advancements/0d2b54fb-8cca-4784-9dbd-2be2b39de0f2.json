@@ -1481,6 +1481,7 @@
     "criteria": {
       "minecraft:pillager": "2024-02-25 14:00:05 +0100",
       "minecraft:skeleton": "2024-02-24 01:42:31 +0100",
+      "minecraft:hoglin": "2024-03-09 00:30:07 +0100",
       "minecraft:spider": "2024-02-24 18:24:55 +0100",
       "minecraft:creeper": "2024-02-25 01:50:08 +0100",
       "minecraft:enderman": "2024-02-24 18:38:36 +0100",
@@ -3167,6 +3168,229 @@
   "minecraft:adventure/voluntary_exile": {
     "criteria": {
       "voluntary_exile": "2024-03-02 03:04:33 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/cyan_dye": {
+    "criteria": {
+      "has_green_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_bed": {
+    "criteria": {
+      "has_needed_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_candle": {
+    "criteria": {
+      "has_green_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lime_dye": {
+    "criteria": {
+      "has_green_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_carpet": {
+    "criteria": {
+      "has_needed_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_wool": {
+    "criteria": {
+      "has_needed_dye": "2024-03-08 23:46:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/green_dye": {
+    "criteria": {
+      "has_the_recipe": "2024-03-08 23:48:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2024-03-08 23:57:40 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2024-03-08 23:57:40 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:crimson_forest": "2024-03-08 23:58:35 +0100",
+      "minecraft:nether_wastes": "2024-03-08 23:57:41 +0100"
+    },
+    "done": false
+  },
+  "minecraft:adventure/trade": {
+    "criteria": {
+      "traded": "2024-03-09 00:02:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/emerald_block": {
+    "criteria": {
+      "has_emerald": "2024-03-09 00:02:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diorite": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/granite": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_block": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/daylight_detector": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/observer": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/comparator": {
+    "criteria": {
+      "has_quartz": "2024-03-09 00:31:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_carpet": {
+    "criteria": {
+      "has_black_wool": "2024-03-09 00:43:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_banner": {
+    "criteria": {
+      "has_black_wool": "2024-03-09 00:43:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_bed": {
+    "criteria": {
+      "has_black_wool": "2024-03-09 00:43:42 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/utility_umbrella": {
+    "criteria": {
+      "has_wool": "2024-03-09 00:43:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_bed": {
+    "criteria": {
+      "has_gray_wool": "2024-03-09 00:43:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_carpet": {
+    "criteria": {
+      "has_gray_wool": "2024-03-09 00:43:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_banner": {
+    "criteria": {
+      "has_gray_wool": "2024-03-09 00:43:57 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/hard_stone": {
+    "criteria": {
+      "has_deepslate": "2024-03-09 00:49:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_from_smelting_deepslate_redstone_ore": {
+    "criteria": {
+      "has_deepslate_redstone_ore": "2024-03-09 00:50:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_from_blasting_deepslate_redstone_ore": {
+    "criteria": {
+      "has_deepslate_redstone_ore": "2024-03-09 00:50:23 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/evolution/upgrade": {
+    "criteria": {
+      "has_amethyst": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/spyglass": {
+    "criteria": {
+      "has_amethyst_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/scope_lens": {
+    "criteria": {
+      "has_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/zoom_lens": {
+    "criteria": {
+      "has_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/calibrated_sculk_sensor": {
+    "criteria": {
+      "has_amethyst_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/tinted_glass": {
+    "criteria": {
+      "has_amethyst_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/clear_amulet": {
+    "criteria": {
+      "has_amethyst": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/wide_lens": {
+    "criteria": {
+      "has_shard": "2024-03-09 01:07:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/amethyst_block": {
+    "criteria": {
+      "has_amethyst_shard": "2024-03-09 01:07:49 +0100"
     },
     "done": true
   },
