@@ -5038,21 +5038,15 @@
     },
     "done": true
   },
-  "minecraft:nether/obtain_blaze_rod": {
-    "criteria": {
-      "blaze_rod": "2024-03-09 01:35:22 +0100"
-    },
-    "done": true
-  },
   "cobblemon:recipes/held/toxic_orb": {
     "criteria": {
       "has_orb": "2024-03-09 00:47:01 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/brewing/blaze_powder": {
+  "cobblemon:recipes/held/life_orb": {
     "criteria": {
-      "has_blaze_rod": "2024-03-09 01:35:22 +0100"
+      "has_orb": "2024-03-09 00:47:01 +0100"
     },
     "done": true
   },
@@ -5062,9 +5056,15 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/life_orb": {
+  "minecraft:nether/obtain_blaze_rod": {
     "criteria": {
-      "has_orb": "2024-03-09 00:47:01 +0100"
+      "blaze_rod": "2024-03-09 01:35:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/blaze_powder": {
+    "criteria": {
+      "has_blaze_rod": "2024-03-09 01:35:22 +0100"
     },
     "done": true
   },
