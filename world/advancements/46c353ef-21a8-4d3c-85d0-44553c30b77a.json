@@ -43,6 +43,7 @@
       "minecraft:warm_ocean": "2024-02-26 17:46:24 +0100",
       "minecraft:flower_forest": "2024-02-24 00:37:40 +0100",
       "minecraft:old_growth_birch_forest": "2024-02-24 19:15:08 +0100",
+      "minecraft:deep_dark": "2024-03-11 11:56:04 +0100",
       "minecraft:meadow": "2024-02-25 21:01:25 +0100",
       "minecraft:savanna": "2024-02-26 17:26:40 +0100",
       "minecraft:plains": "2024-02-23 23:47:32 +0100"
@@ -5201,15 +5202,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/mangrove_stairs": {
+  "minecraft:recipes/decorations/bamboo_mosaic": {
     "criteria": {
-      "has_planks": "2024-03-10 23:19:25 +0100"
+      "has_bamboo_slab": "2024-03-10 22:13:38 +0100"
     },
     "done": true
   },
   "minecraft:recipes/redstone/mangrove_door": {
     "criteria": {
       "has_the_recipe": "2024-03-10 23:19:24 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mangrove_stairs": {
+    "criteria": {
+      "has_planks": "2024-03-10 23:19:25 +0100"
     },
     "done": true
   },
@@ -5222,12 +5229,6 @@
   "minecraft:recipes/decorations/mangrove_fence": {
     "criteria": {
       "has_planks": "2024-03-10 23:19:25 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_blasting_nether_gold_ore": {
-    "criteria": {
-      "has_nether_gold_ore": "2024-03-10 23:39:05 +0100"
     },
     "done": true
   },
@@ -5249,18 +5250,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/bamboo_mosaic": {
-    "criteria": {
-      "has_bamboo_slab": "2024-03-10 22:13:38 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_smelting_nether_gold_ore": {
-    "criteria": {
-      "has_nether_gold_ore": "2024-03-10 23:39:05 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/mangrove_button": {
     "criteria": {
       "has_planks": "2024-03-10 23:19:25 +0100"
@@ -5270,6 +5259,30 @@
   "minecraft:recipes/building_blocks/mangrove_slab": {
     "criteria": {
       "has_planks": "2024-03-10 23:19:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting_nether_gold_ore": {
+    "criteria": {
+      "has_nether_gold_ore": "2024-03-10 23:39:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_smelting_nether_gold_ore": {
+    "criteria": {
+      "has_nether_gold_ore": "2024-03-10 23:39:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coal_from_blasting_coal_ore": {
+    "criteria": {
+      "has_coal_ore": "2024-03-11 11:44:42 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coal_from_smelting_coal_ore": {
+    "criteria": {
+      "has_coal_ore": "2024-03-11 11:44:42 +0100"
     },
     "done": true
   },
