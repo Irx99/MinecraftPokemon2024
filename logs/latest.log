@@ -1,5 +1,5 @@
-[15:56:31] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
-[15:56:31] [main/INFO]: Loading 66 mods:
+[19:27:29] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.3
+[19:27:29] [main/INFO]: Loading 66 mods:
 	- appleskin 2.5.1+mc1.20
 	   \-- cloth-config 11.0.99
 	        \-- cloth-basic-math 0.6.1
@@ -79,213 +79,92 @@
 	- starlight 1.1.2+fabric.dbc156f
 	- superflatworldnoslimes 3.2
 	- threadtweak 1.20.2-0.1.1
-[15:56:32] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/Luc/Documents/Repositories/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
-[15:56:32] [main/INFO]: Compatibility level set to JAVA_17
-[15:56:32] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
-[15:56:32] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
-[15:56:32] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
-[15:56:32] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
-[15:56:32] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
-[15:56:32] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
-[15:56:32] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
-[15:56:33] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
-[15:56:33] [main/INFO]: ThreadTweak config initialized
-[15:56:41] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
-[15:56:42] [main/ERROR]: No data fixer registered for cobblemon:pokemon
-[15:56:42] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
-[15:56:42] [main/ERROR]: No data fixer registered for cobblemon:boat
-[15:56:42] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
-[15:56:43] [main/INFO]: Starting the Best Spawner...
-[15:56:43] [main/INFO]: Loaded 5 spawning condition types.
-[15:56:43] [main/INFO]: Loaded 5 spawning context types.
-[15:56:43] [main/INFO]: Loaded 1 spawn detail types.
-[15:56:44] [Cobblemon Showdown/INFO]: Starting showdown service...
-[15:56:47] [Cobblemon Showdown/INFO]: Showdown has been started!
-[15:56:47] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
-[15:56:47] [main/INFO]: Registered the cobblemon:species_features registry
-[15:56:47] [main/INFO]: Registered the cobblemon:global_species_features registry
-[15:56:47] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
-[15:56:47] [main/INFO]: Registered the cobblemon:moves registry
-[15:56:47] [main/INFO]: Registered the cobblemon:abilities registry
-[15:56:47] [main/INFO]: Registered the cobblemon:species registry
-[15:56:47] [main/INFO]: Registered the cobblemon:species_additions registry
-[15:56:47] [main/INFO]: Registered the cobblemon:pokeballs registry
-[15:56:47] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
-[15:56:47] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
-[15:56:47] [main/INFO]: Registered the cobblemon:mechanics registry
-[15:56:47] [main/INFO]: Registered the cobblemon:bag_items registry
-[15:56:47] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
-[15:56:48] [main/INFO]: Registered the cobblemon:berries registry
-[15:56:48] [main/INFO]: Loading Collective version 7.26.
-[15:56:48] [main/INFO]: Compression will use Java, encryption will use Java
-[15:56:48] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
-[15:56:48] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
-[15:56:48] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[15:56:52] [main/INFO]: Loaded 7 recipes
-[15:56:52] [main/INFO]: Loaded 1558 advancements
-[15:56:57] [main/INFO]: Loaded 921 moves
-[15:56:57] [main/INFO]: Loaded 310 abilities
-[15:56:58] [main/INFO]: Finished additions
-[15:56:59] [main/INFO]: Imported 185 held item IDs from showdown
-[15:56:59] [main/INFO]: Loaded 1018 Pokémon species
-[15:56:59] [main/INFO]: Loaded 32 spawn detail presets.
-[15:56:59] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
-[15:57:00] [main/ERROR]: Unknown preset name: underground.
-[15:57:00] [main/INFO]: Loaded 69 berries
-[15:57:01] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 30.49 ms
-[15:57:01] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[15:57:01] [Server thread/INFO]: Loading properties
-[15:57:01] [Server thread/INFO]: Default game type: SURVIVAL
-[15:57:01] [Server thread/INFO]: Generating keypair
-[15:57:01] [Server thread/INFO]: Starting Minecraft server on *:25565
-[15:57:01] [Server thread/INFO]: Using default channel type
-[15:57:01] [Server thread/INFO]: Preparing level "world"
-[15:57:02] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[15:57:05] [Worker-Main-16/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-16/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-16/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-16/INFO]: Preparing spawn area: 0%
-[15:57:05] [Worker-Main-4/INFO]: Preparing spawn area: 11%
-[15:57:06] [Worker-Main-3/INFO]: Preparing spawn area: 68%
-[15:57:06] [Server thread/INFO]: Time elapsed: 3719 ms
-[15:57:06] [Server thread/INFO]: Done (5.073s)! For help, type "help"
-[16:02:12] [User Authenticator #1/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
-[16:02:13] [Server thread/INFO]: LucNaril[/127.0.0.1:52051] logged in with entity id 53 at (107.1069543546803, 73.5625, -675.9352485851915)
-[16:02:13] [Netty Server IO #2/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
-[16:02:13] [Server thread/INFO]: LucNaril joined the game
-[17:51:35] [Server thread/INFO]: LucNaril lost connection: Disconnected
-[17:51:35] [Server thread/INFO]: LucNaril left the game
-[17:52:03] [Server thread/INFO]: /advancement (grant|revoke)
-[17:52:03] [Server thread/INFO]: /attribute <target> <attribute> (get|base|modifier)
-[17:52:03] [Server thread/INFO]: /execute (run|if|unless|as|at|store|positioned|rotated|facing|align|anchored|in|summon|on)
-[17:52:03] [Server thread/INFO]: /bossbar (add|remove|list|set|get)
-[17:52:03] [Server thread/INFO]: /clear [<targets>]
-[17:52:03] [Server thread/INFO]: /clone (<begin>|from)
-[17:52:03] [Server thread/INFO]: /damage <target> <amount> [<damageType>]
-[17:52:03] [Server thread/INFO]: /data (merge|get|remove|modify)
-[17:52:03] [Server thread/INFO]: /datapack (enable|disable|list)
-[17:52:03] [Server thread/INFO]: /debug (start|stop|function)
-[17:52:03] [Server thread/INFO]: /defaultgamemode <gamemode>
-[17:52:03] [Server thread/INFO]: /difficulty [peaceful|easy|normal|hard]
-[17:52:03] [Server thread/INFO]: /effect (clear|give)
-[17:52:03] [Server thread/INFO]: /me <action>
-[17:52:03] [Server thread/INFO]: /enchant <targets> <enchantment> [<level>]
-[17:52:03] [Server thread/INFO]: /experience (add|set|query)
-[17:52:03] [Server thread/INFO]: /xp -> experience
-[17:52:03] [Server thread/INFO]: /fill <from> <to> <block> [replace|keep|outline|hollow|destroy]
-[17:52:03] [Server thread/INFO]: /fillbiome <from> <to> <biome> [replace]
-[17:52:03] [Server thread/INFO]: /forceload (add|remove|query)
-[17:52:03] [Server thread/INFO]: /function <name>
-[17:52:03] [Server thread/INFO]: /gamemode <gamemode> [<target>]
-[17:52:03] [Server thread/INFO]: /gamerule (announceAdvancements|blockExplosionDropDecay|commandBlockOutput|commandModificationBlockLimit|disableElytraMovementCheck|disableRaids|doDaylightCycle|doEntityDrops|doFireTick|doImmediateRespawn|doInsomnia|doLimitedCrafting|doMobLoot|doMobSpawning|doPatrolSpawning|doPokemonLoot|doPokemonSpawning|doShinyStarters|doTileDrops|doTraderSpawning|doVinesSpread|doWardenSpawning|doWeatherCycle|drowningDamage|fallDamage|fireDamage|forgiveDeadPlayers|freezeDamage|globalSoundEvents|keepInventory|lavaSourceConversion|logAdminCommands|maxCommandChainLength|maxEntityCramming|mobExplosionDropDecay|mobGriefing|naturalRegeneration|playersSleepingPercentage|randomTickSpeed|reducedDebugInfo|sendCommandFeedback|showDeathMessages|snowAccumulationHeight|spawnRadius|spectatorsGenerateChunks|tntExplosionDropDecay|universalAnger|waterSourceConversion)
-[17:52:03] [Server thread/INFO]: /give <targets> <item> [<count>]
-[17:52:03] [Server thread/INFO]: /help [<command>]
-[17:52:03] [Server thread/INFO]: /item (replace|modify)
-[17:52:03] [Server thread/INFO]: /kick <targets> [<reason>]
-[17:52:03] [Server thread/INFO]: /kill [<targets>]
-[17:52:03] [Server thread/INFO]: /list [uuids]
-[17:52:03] [Server thread/INFO]: /locate (structure|biome|poi)
-[17:52:03] [Server thread/INFO]: /loot (replace|insert|give|spawn)
-[17:52:03] [Server thread/INFO]: /msg <targets> <message>
-[17:52:03] [Server thread/INFO]: /tell -> msg
-[17:52:03] [Server thread/INFO]: /w -> msg
-[17:52:03] [Server thread/INFO]: /particle <name> [<pos>]
-[17:52:03] [Server thread/INFO]: /place (feature|jigsaw|structure|template)
-[17:52:03] [Server thread/INFO]: /playsound <sound> (master|music|record|weather|block|hostile|neutral|player|ambient|voice)
-[17:52:03] [Server thread/INFO]: /reload
-[17:52:03] [Server thread/INFO]: /recipe (give|take)
-[17:52:03] [Server thread/INFO]: /return <value>
-[17:52:03] [Server thread/INFO]: /ride <target> (mount|dismount)
-[17:52:03] [Server thread/INFO]: /say <message>
-[17:52:03] [Server thread/INFO]: /schedule (function|clear)
-[17:52:03] [Server thread/INFO]: /scoreboard (objectives|players)
-[17:52:03] [Server thread/INFO]: /seed
-[17:52:03] [Server thread/INFO]: /setblock <pos> <block> [destroy|keep|replace]
-[17:52:03] [Server thread/INFO]: /spawnpoint [<targets>]
-[17:52:03] [Server thread/INFO]: /setworldspawn [<pos>]
-[17:52:03] [Server thread/INFO]: /spectate [<target>]
-[17:52:03] [Server thread/INFO]: /spreadplayers <center> <spreadDistance> <maxRange> (<respectTeams>|under)
-[17:52:03] [Server thread/INFO]: /stopsound <targets> [*|master|music|record|weather|block|hostile|neutral|player|ambient|voice]
-[17:52:03] [Server thread/INFO]: /summon <entity> [<pos>]
-[17:52:03] [Server thread/INFO]: /tag <targets> (add|remove|list)
-[17:52:03] [Server thread/INFO]: /team (list|add|remove|empty|join|leave|modify)
-[17:52:03] [Server thread/INFO]: /teammsg <message>
-[17:52:03] [Server thread/INFO]: /tm -> teammsg
-[17:52:03] [Server thread/INFO]: /teleport (<location>|<destination>|<targets>)
-[17:52:03] [Server thread/INFO]: /tp -> teleport
-[17:52:03] [Server thread/INFO]: /tellraw <targets> <message>
-[17:52:03] [Server thread/INFO]: /time (set|add|query)
-[17:52:03] [Server thread/INFO]: /title <targets> (clear|reset|title|subtitle|actionbar|times)
-[17:52:03] [Server thread/INFO]: /trigger <objective> [add|set]
-[17:52:03] [Server thread/INFO]: /weather (clear|rain|thunder)
-[17:52:03] [Server thread/INFO]: /worldborder (add|set|center|damage|get|warning)
-[17:52:03] [Server thread/INFO]: /jfr (start|stop)
-[17:52:03] [Server thread/INFO]: /ban-ip <target> [<reason>]
-[17:52:03] [Server thread/INFO]: /banlist [ips|players]
-[17:52:03] [Server thread/INFO]: /ban <targets> [<reason>]
-[17:52:03] [Server thread/INFO]: /deop <targets>
-[17:52:03] [Server thread/INFO]: /op <targets>
-[17:52:03] [Server thread/INFO]: /pardon <targets>
-[17:52:03] [Server thread/INFO]: /pardon-ip <target>
-[17:52:03] [Server thread/INFO]: /perf (start|stop)
-[17:52:03] [Server thread/INFO]: /save-all [flush]
-[17:52:03] [Server thread/INFO]: /save-off
-[17:52:03] [Server thread/INFO]: /save-on
-[17:52:03] [Server thread/INFO]: /setidletimeout <minutes>
-[17:52:03] [Server thread/INFO]: /stop
-[17:52:03] [Server thread/INFO]: /whitelist (on|off|list|add|remove|reload)
-[17:52:03] [Server thread/INFO]: /spawnpokemon <properties>
-[17:52:03] [Server thread/INFO]: /pokespawn <properties>
-[17:52:03] [Server thread/INFO]: /spawnpokemonat <pos> <properties>
-[17:52:03] [Server thread/INFO]: /pokespawnat <pos> <properties>
-[17:52:03] [Server thread/INFO]: /givepokemon <properties>
-[17:52:03] [Server thread/INFO]: /pokegive <properties>
-[17:52:03] [Server thread/INFO]: /givepokemonother <player> <properties>
-[17:52:03] [Server thread/INFO]: /pokegiveother <player> <properties>
-[17:52:03] [Server thread/INFO]: /takepokemon <player> <slot>
-[17:52:03] [Server thread/INFO]: /changescaleandsize <pokemon> [<scale>]
-[17:52:03] [Server thread/INFO]: /changewalkspeed [<pokemon>]
-[17:52:03] [Server thread/INFO]: /testcommand
-[17:52:03] [Server thread/INFO]: /reloadshowdown
-[17:52:03] [Server thread/INFO]: /pokemonedit <slot> <properties>
-[17:52:03] [Server thread/INFO]: /pokeedit <slot> <properties>
-[17:52:03] [Server thread/INFO]: /pokemoneditother <player> <slot> <properties>
-[17:52:03] [Server thread/INFO]: /pokeeditother <player> <slot> <properties>
-[17:52:03] [Server thread/INFO]: /teach <player> <slot> <move>
-[17:52:03] [Server thread/INFO]: /levelup <player> <slot>
-[17:52:03] [Server thread/INFO]: /healpokemon [<player>]
-[17:52:03] [Server thread/INFO]: /pokeheal [<player>]
-[17:52:03] [Server thread/INFO]: /stopbattle <player>
-[17:52:03] [Server thread/INFO]: /checkspawn
-[17:52:03] [Server thread/INFO]: /openstarterscreen <player>
-[17:52:03] [Server thread/INFO]: /friendship <slot>
-[17:52:03] [Server thread/INFO]: /held_item <target> <slot> <item>
-[17:52:03] [Server thread/INFO]: /pc
-[17:52:03] [Server thread/INFO]: /spawnpokemonfrompool [<amount>]
-[17:52:03] [Server thread/INFO]: /forcespawn [<amount>]
-[17:52:03] [Server thread/INFO]: /pokebox <player> <slot> [<box>]
-[17:52:03] [Server thread/INFO]: /pokeboxall <player> [<box>]
-[17:52:03] [Server thread/INFO]: /teststore <player> <store> <properties>
-[17:52:03] [Server thread/INFO]: /querylearnset <player> <slot> <move>
-[17:52:03] [Server thread/INFO]: /testpcslot <player> <box> <slot> <properties>
-[17:52:03] [Server thread/INFO]: /testpartyslot <player> <slot> <properties>
-[17:52:03] [Server thread/INFO]: /clearparty <player>
-[17:52:03] [Server thread/INFO]: /clearpc <player>
-[17:52:03] [Server thread/INFO]: /pokemonrestart [<reset_starters>]
-[17:52:03] [Server thread/INFO]: /pokerestart [<reset_starters>]
-[17:52:03] [Server thread/INFO]: /pokemonrestartother <player> [<reset_starters>]
-[17:52:03] [Server thread/INFO]: /pokerestartother <player> [<reset_starters>]
-[17:52:03] [Server thread/INFO]: /bedrockparticle <effect> (<target>|<world>)
-[17:53:35] [Server thread/INFO]: Stopping the server
-[17:53:35] [Server thread/INFO]: Stopping server
-[17:53:35] [Server thread/INFO]: Saving players
-[17:53:35] [Server thread/INFO]: Saving worlds
-[17:53:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[17:53:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[17:53:35] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[17:53:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[17:53:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17:53:35] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17:53:35] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:27:29] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/Luc/Documents/Repositories/MinecraftPokemon2024/libraries/net/fabricmc/sponge-mixin/0.12.5+mixin.0.8.5/sponge-mixin-0.12.5+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
+[19:27:29] [main/INFO]: Compatibility level set to JAVA_17
+[19:27:30] [main/INFO]: Loaded configuration file for Lithium: 115 options available, 2 override(s) found
+[19:27:30] [main/WARN]: Force-disabling mixin 'alloc.blockstate.StateMixin' as rule 'mixin.alloc.blockstate' (added by mods [ferritecore]) disables it and children
+[19:27:30] [main/WARN]: Force-disabling mixin 'world.player_chunk_tick.ThreadedAnvilChunkStorageMixin' as rule 'mixin.world.player_chunk_tick' (added by mods [krypton]) disables it and children
+[19:27:30] [main/WARN]: Error loading class: net/minecraft/class_310 (java.lang.ClassNotFoundException: net/minecraft/class_310)
+[19:27:30] [main/WARN]: @Mixin target net.minecraft.class_310 was not found monsters_in_the_closet.mixins.json:MinecraftClientMixin from mod monsters_in_the_closet
+[19:27:30] [main/INFO]: [MemoryLeakFix] Will be applying 1 memory leak fixes!
+[19:27:30] [main/INFO]: [MemoryLeakFix] Currently enabled memory leak fixes: [biomeTemperatureLeak]
+[19:27:30] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.2).
+[19:27:31] [main/INFO]: ThreadTweak config initialized
+[19:27:38] [main/INFO]: Booting LaxPermissionValidator, permissions will be checked using Minecrafts permission level system, see https://minecraft.fandom.com/wiki/Permission_level
+[19:27:38] [main/ERROR]: No data fixer registered for cobblemon:pokemon
+[19:27:38] [main/ERROR]: No data fixer registered for cobblemon:empty_pokeball
+[19:27:38] [main/ERROR]: No data fixer registered for cobblemon:boat
+[19:27:38] [main/ERROR]: No data fixer registered for cobblemon:chest_boat
+[19:27:39] [main/INFO]: Starting the Best Spawner...
+[19:27:39] [main/INFO]: Loaded 5 spawning condition types.
+[19:27:39] [main/INFO]: Loaded 5 spawning context types.
+[19:27:39] [main/INFO]: Loaded 1 spawn detail types.
+[19:27:40] [Cobblemon Showdown/INFO]: Starting showdown service...
+[19:27:43] [Cobblemon Showdown/INFO]: Showdown has been started!
+[19:27:43] [main/INFO]: Note: Cobblemon data registries are only loaded once per server instance as Pokémon species are not safe to reload.
+[19:27:43] [main/INFO]: Registered the cobblemon:species_features registry
+[19:27:43] [main/INFO]: Registered the cobblemon:global_species_features registry
+[19:27:43] [main/INFO]: Registered the cobblemon:species_feature_assignments registry
+[19:27:43] [main/INFO]: Registered the cobblemon:moves registry
+[19:27:43] [main/INFO]: Registered the cobblemon:abilities registry
+[19:27:43] [main/INFO]: Registered the cobblemon:species registry
+[19:27:43] [main/INFO]: Registered the cobblemon:species_additions registry
+[19:27:43] [main/INFO]: Registered the cobblemon:pokeballs registry
+[19:27:43] [main/INFO]: Registered the cobblemon:properties_tab_completion registry
+[19:27:43] [main/INFO]: Registered the cobblemon:spawn_detail_presets registry
+[19:27:43] [main/INFO]: Registered the cobblemon:mechanics registry
+[19:27:43] [main/INFO]: Registered the cobblemon:bag_items registry
+[19:27:43] [main/INFO]: Registered the cobblemon:spawn_pool_world registry
+[19:27:43] [main/INFO]: Registered the cobblemon:berries registry
+[19:27:43] [main/INFO]: Loading Collective version 7.26.
+[19:27:43] [main/INFO]: Compression will use Java, encryption will use Java
+[19:27:43] [main/INFO]: Krypton is now accelerating your Minecraft server's networking stack 🚀
+[19:27:43] [main/INFO]: SlimyFloor 1.20-1.2.8 loaded
+[19:27:43] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[19:27:45] [main/INFO]: Loaded 7 recipes
+[19:27:46] [main/INFO]: Loaded 1558 advancements
+[19:27:48] [main/INFO]: Loaded 921 moves
+[19:27:49] [main/INFO]: Loaded 310 abilities
+[19:27:49] [main/INFO]: Finished additions
+[19:27:50] [main/INFO]: Imported 185 held item IDs from showdown
+[19:27:50] [main/INFO]: Loaded 1018 Pokémon species
+[19:27:50] [main/INFO]: Loaded 32 spawn detail presets.
+[19:27:50] [main/INFO]: Starting dummy Showdown battle to force it to pre-load data.
+[19:27:50] [main/ERROR]: Unknown preset name: underground.
+[19:27:51] [main/INFO]: Loaded 69 berries
+[19:27:51] [main/INFO]: Applied 534 biome modifications to 64 of 64 new biomes in 18.62 ms
+[19:27:51] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[19:27:51] [Server thread/INFO]: Loading properties
+[19:27:51] [Server thread/INFO]: Default game type: SURVIVAL
+[19:27:51] [Server thread/INFO]: Generating keypair
+[19:27:51] [Server thread/INFO]: Starting Minecraft server on *:25565
+[19:27:51] [Server thread/INFO]: Using default channel type
+[19:27:51] [Server thread/INFO]: Preparing level "world"
+[19:27:53] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[19:27:55] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[19:27:55] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[19:27:55] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[19:27:55] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[19:27:55] [Worker-Main-9/INFO]: Preparing spawn area: 0%
+[19:27:55] [Worker-Main-7/INFO]: Preparing spawn area: 0%
+[19:27:56] [Worker-Main-21/INFO]: Preparing spawn area: 0%
+[19:27:56] [Worker-Main-8/INFO]: Preparing spawn area: 65%
+[19:27:57] [Server thread/INFO]: Time elapsed: 3708 ms
+[19:27:57] [Server thread/INFO]: Done (5.163s)! For help, type "help"
+[19:28:53] [User Authenticator #1/INFO]: UUID of player LucNaril is b30d50ce-de53-4250-9132-cd6aa91040a3
+[19:28:53] [Server thread/INFO]: LucNaril[/127.0.0.1:55733] logged in with entity id 53 at (107.01550552133747, 73.0, -676.8698663257776)
+[19:28:53] [Netty Server IO #2/INFO]: [showmeyourskin] Client of LucNaril accepted server config.
+[19:28:53] [Server thread/INFO]: LucNaril joined the game
+[19:29:46] [Server thread/INFO]: LucNaril lost connection: Disconnected
+[19:29:46] [Server thread/INFO]: LucNaril left the game
+[19:29:52] [Server thread/INFO]: Stopping the server
+[19:29:53] [Server thread/INFO]: Stopping server
+[19:29:53] [Server thread/INFO]: Saving players
+[19:29:53] [Server thread/INFO]: Saving worlds
+[19:29:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[19:29:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[19:29:53] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[19:29:53] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:29:53] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:29:53] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:29:53] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved

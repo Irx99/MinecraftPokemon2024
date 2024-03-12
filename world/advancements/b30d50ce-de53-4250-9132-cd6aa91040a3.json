@@ -3635,12 +3635,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/magma_block": {
-    "criteria": {
-      "has_magma_cream": "2024-03-12 16:45:55 +0100"
-    },
-    "done": true
-  },
   "cobblemon:recipes/evolution/magmarizer": {
     "criteria": {
       "has_blaze_powder": "2024-03-12 16:03:09 +0100"
@@ -3659,24 +3653,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/bone_meal_from_bone_block": {
-    "criteria": {
-      "has_bone_block": "2024-03-12 17:05:32 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/held/hard_stone": {
-    "criteria": {
-      "has_deepslate": "2024-03-12 17:42:06 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/food/honey_bottle": {
-    "criteria": {
-      "has_honey_block": "2024-03-12 17:25:50 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/ender_eye": {
     "criteria": {
       "has_blaze_powder": "2024-03-12 16:03:09 +0100"
@@ -3686,6 +3662,30 @@
   "cobblemon:recipes/held/focus_sash": {
     "criteria": {
       "has_powder": "2024-03-12 16:03:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magma_block": {
+    "criteria": {
+      "has_magma_cream": "2024-03-12 16:45:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal_from_bone_block": {
+    "criteria": {
+      "has_bone_block": "2024-03-12 17:05:32 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/honey_bottle": {
+    "criteria": {
+      "has_honey_block": "2024-03-12 17:25:50 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/hard_stone": {
+    "criteria": {
+      "has_deepslate": "2024-03-12 17:42:06 +0100"
     },
     "done": true
   },
