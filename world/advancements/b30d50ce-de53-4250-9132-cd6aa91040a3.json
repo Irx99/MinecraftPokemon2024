@@ -244,6 +244,7 @@
       "minecraft:spider": "2024-02-23 23:39:12 +0100",
       "minecraft:creeper": "2024-02-24 20:33:05 +0100",
       "minecraft:slime": "2024-02-24 20:16:22 +0100",
+      "minecraft:phantom": "2024-03-13 03:00:05 +0100",
       "minecraft:wither_skeleton": "2024-02-25 03:57:43 +0100",
       "minecraft:cave_spider": "2024-02-24 23:29:23 +0100",
       "minecraft:zombie": "2024-02-23 23:34:15 +0100",
@@ -3686,6 +3687,18 @@
   "cobblemon:recipes/held/hard_stone": {
     "criteria": {
       "has_deepslate": "2024-03-12 17:42:06 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/black_dye": {
+    "criteria": {
+      "has_ink_sac": "2024-03-13 02:06:12 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/grindstone": {
+    "criteria": {
+      "has_stone_slab": "2024-03-13 01:16:14 +0100"
     },
     "done": true
   },
