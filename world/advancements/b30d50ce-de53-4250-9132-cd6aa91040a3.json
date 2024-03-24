@@ -238,6 +238,7 @@
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "minecraft:blaze": "2024-03-09 01:37:15 +0100",
+      "minecraft:pillager": "2024-03-24 00:36:36 +0100",
       "minecraft:skeleton": "2024-02-24 01:15:41 +0100",
       "minecraft:hoglin": "2024-02-27 23:18:19 +0100",
       "minecraft:magma_cube": "2024-03-12 16:45:54 +0100",
@@ -3690,15 +3691,63 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/grindstone": {
+    "criteria": {
+      "has_stone_slab": "2024-03-13 01:16:14 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/black_dye": {
     "criteria": {
       "has_ink_sac": "2024-03-13 02:06:12 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/grindstone": {
+  "minecraft:recipes/decorations/brick_wall": {
     "criteria": {
-      "has_stone_slab": "2024-03-13 01:16:14 +0100"
+      "has_bricks": "2024-03-24 00:18:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_stairs": {
+    "criteria": {
+      "has_bricks": "2024-03-24 00:18:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_slab_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2024-03-24 00:18:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_stairs_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2024-03-24 00:18:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "criteria": {
+      "voluntary_exile": "2024-03-24 00:36:36 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/brick_slab": {
+    "criteria": {
+      "has_bricks": "2024-03-24 00:18:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_sunflower": {
+    "criteria": {
+      "has_sunflower": "2024-03-24 00:57:36 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/brick_wall_from_bricks_stonecutting": {
+    "criteria": {
+      "has_bricks": "2024-03-24 00:18:47 +0100"
     },
     "done": true
   },
