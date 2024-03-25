@@ -298,6 +298,7 @@
       "minecraft:witch": "2024-03-24 00:50:49 +0100",
       "minecraft:piglin": "2024-03-01 14:54:46 +0100",
       "minecraft:enderman": "2024-03-06 22:25:51 +0100",
+      "minecraft:silverfish": "2024-03-25 23:10:42 +0100",
       "minecraft:zombie": "2024-02-23 23:48:32 +0100",
       "minecraft:drowned": "2024-02-23 23:30:41 +0100",
       "minecraft:zombie_villager": "2024-03-24 00:49:34 +0100"
@@ -5488,33 +5489,51 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/copper_ingot_from_blasting_deepslate_copper_ore": {
-    "criteria": {
-      "has_deepslate_copper_ore": "2024-03-24 00:25:34 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/evolution/water_stone_from_smelting_deepslate_water_stone_ore": {
-    "criteria": {
-      "has_deepslate_water_stone_ore": "2024-03-24 00:29:59 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/redstone_from_smelting_deepslate_redstone_ore": {
     "criteria": {
       "has_deepslate_redstone_ore": "2024-03-24 00:25:20 +0100"
     },
     "done": true
   },
-  "cobblemon:recipes/evolution/water_stone_from_blasting_deepslate_water_stone_ore": {
+  "minecraft:recipes/redstone/redstone_from_blasting_deepslate_redstone_ore": {
     "criteria": {
-      "has_deepslate_water_stone_ore": "2024-03-24 00:29:59 +0100"
+      "has_deepslate_redstone_ore": "2024-03-24 00:25:20 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_blasting_deepslate_copper_ore": {
+    "criteria": {
+      "has_deepslate_copper_ore": "2024-03-24 00:25:34 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/copper_ingot_from_smelting_deepslate_copper_ore": {
+    "criteria": {
+      "has_deepslate_copper_ore": "2024-03-24 00:25:34 +0100"
     },
     "done": true
   },
   "minecraft:recipes/misc/iron_ingot_from_smelting_deepslate_iron_ore": {
     "criteria": {
       "has_deepslate_iron_ore": "2024-03-24 00:25:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_ingot_from_blasting_deepslate_iron_ore": {
+    "criteria": {
+      "has_deepslate_iron_ore": "2024-03-24 00:25:53 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting_deepslate_gold_ore": {
+    "criteria": {
+      "has_deepslate_gold_ore": "2024-03-24 00:27:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_smelting_deepslate_gold_ore": {
+    "criteria": {
+      "has_deepslate_gold_ore": "2024-03-24 00:27:02 +0100"
     },
     "done": true
   },
@@ -5530,33 +5549,75 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/gold_ingot_from_blasting_deepslate_gold_ore": {
+  "cobblemon:recipes/evolution/water_stone_from_smelting_deepslate_water_stone_ore": {
     "criteria": {
-      "has_deepslate_gold_ore": "2024-03-24 00:27:02 +0100"
+      "has_deepslate_water_stone_ore": "2024-03-24 00:29:59 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_ingot_from_blasting_deepslate_iron_ore": {
+  "cobblemon:recipes/evolution/water_stone_from_blasting_deepslate_water_stone_ore": {
     "criteria": {
-      "has_deepslate_iron_ore": "2024-03-24 00:25:53 +0100"
+      "has_deepslate_water_stone_ore": "2024-03-24 00:29:59 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/copper_ingot_from_smelting_deepslate_copper_ore": {
+  "minecraft:recipes/misc/eye_armor_trim_smithing_template_smithing_trim": {
     "criteria": {
-      "has_deepslate_copper_ore": "2024-03-24 00:25:34 +0100"
+      "has_smithing_trim_template": "2024-03-25 23:06:05 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/gold_ingot_from_smelting_deepslate_gold_ore": {
+  "cobblemon:recipes/evolution/magmarizer": {
     "criteria": {
-      "has_deepslate_gold_ore": "2024-03-24 00:27:02 +0100"
+      "has_blaze_powder": "2024-03-25 22:46:02 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/redstone_from_blasting_deepslate_redstone_ore": {
+  "minecraft:recipes/brewing/magma_cream": {
     "criteria": {
-      "has_deepslate_redstone_ore": "2024-03-24 00:25:20 +0100"
+      "has_blaze_powder": "2024-03-25 22:46:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2024-03-25 22:46:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/fire_charge": {
+    "criteria": {
+      "has_blaze_powder": "2024-03-25 22:46:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/eye_armor_trim_smithing_template": {
+    "criteria": {
+      "has_eye_armor_trim_smithing_template": "2024-03-25 23:06:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/ender_eye": {
+    "criteria": {
+      "has_blaze_powder": "2024-03-25 22:46:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/follow_ender_eye": {
+    "criteria": {
+      "in_stronghold": "2024-03-25 23:03:54 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2024-03-25 22:46:07 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/focus_sash": {
+    "criteria": {
+      "has_powder": "2024-03-25 22:46:02 +0100"
     },
     "done": true
   },
