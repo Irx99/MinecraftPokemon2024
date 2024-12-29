@@ -139,11 +139,7 @@ class FriendsDatabase {
       sent.add(request.receiver);
     }
     const receivedResults = await this.all("getReceived", [user.id]) || [];
-    if (!Array.isArray(receivedResults)) {
-      Monitor.crashlog(new Error("Malformed results received"), "A friends process", {
-        user: user.id,
-        result: JSON.stringify(receivedResults)
-      });
+    if (!receivedResults) {
       return { received, sent };
     }
     for (const request of receivedResults) {
@@ -166,7 +162,7 @@ class FriendsDatabase {
   async query(input) {
     const process2 = PM.acquire();
     if (!process2 || !import_config_loader.Config.usesqlite) {
-      return { result: null };
+      return null;
     }
     const result = await process2.query(input);
     if (result.error) {

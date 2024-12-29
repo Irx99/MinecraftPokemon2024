@@ -349,7 +349,8 @@ const Items = {
     },
     onDisableMove(pokemon) {
       for (const moveSlot of pokemon.moveSlots) {
-        if (this.dex.moves.get(moveSlot.move).category === "Status") {
+        const move = this.dex.moves.get(moveSlot.id);
+        if (move.category === "Status" && move.id !== "mefirst") {
           pokemon.disableMove(moveSlot.id);
         }
       }
@@ -480,8 +481,7 @@ const Items = {
       basePower: 10
     },
     num: 1111,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   bignugget: {
     name: "Big Nugget",
@@ -1092,8 +1092,7 @@ const Items = {
       basePower: 10
     },
     num: 1112,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   cobaberry: {
     name: "Coba Berry",
@@ -1478,8 +1477,7 @@ const Items = {
       basePower: 30
     },
     num: 235,
-    gen: 2,
-    isNonstandard: "Past"
+    gen: 2
   },
   dragoniumz: {
     name: "Dragonium Z",
@@ -1527,8 +1525,7 @@ const Items = {
       basePower: 50
     },
     num: 324,
-    gen: 4,
-    isNonstandard: "Past"
+    gen: 4
   },
   durinberry: {
     name: "Durin Berry",
@@ -1659,8 +1656,7 @@ const Items = {
       basePower: 80
     },
     num: 322,
-    gen: 4,
-    isNonstandard: "Past"
+    gen: 4
   },
   electricgem: {
     name: "Electric Gem",
@@ -1759,13 +1755,13 @@ const Items = {
     },
     onModifyDefPriority: 2,
     onModifyDef(def, pokemon) {
-      if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === "dipplin") {
+      if (pokemon.baseSpecies.nfe) {
         return this.chainModify(1.5);
       }
     },
     onModifySpDPriority: 2,
     onModifySpD(spd, pokemon) {
-      if (pokemon.baseSpecies.nfe || pokemon.baseSpecies.id === "dipplin") {
+      if (pokemon.baseSpecies.nfe) {
         return this.chainModify(1.5);
       }
     },
@@ -2046,8 +2042,7 @@ const Items = {
       basePower: 0
     },
     num: 1113,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   flyinggem: {
     name: "Flying Gem",
@@ -3289,8 +3284,7 @@ const Items = {
       basePower: 10
     },
     num: 1110,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   lucarionite: {
     name: "Lucarionite",
@@ -3457,8 +3451,7 @@ const Items = {
       basePower: 80
     },
     num: 323,
-    gen: 4,
-    isNonstandard: "Past"
+    gen: 4
   },
   magnet: {
     name: "Magnet",
@@ -3700,6 +3693,12 @@ const Items = {
     num: 758,
     gen: 6,
     isNonstandard: "Past"
+  },
+  metalalloy: {
+    name: "Metal Alloy",
+    spritenum: 761,
+    num: 2482,
+    gen: 9
   },
   metalcoat: {
     name: "Metal Coat",
@@ -4593,8 +4592,7 @@ const Items = {
       basePower: 80
     },
     num: 321,
-    gen: 4,
-    isNonstandard: "Past"
+    gen: 4
   },
   psychicgem: {
     name: "Psychic Gem",
@@ -4893,8 +4891,7 @@ const Items = {
       basePower: 10
     },
     num: 1115,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   rindoberry: {
     name: "Rindo Berry",
@@ -5562,8 +5559,7 @@ const Items = {
     },
     itemUser: ["Latios", "Latias"],
     num: 225,
-    gen: 3,
-    isNonstandard: "Past"
+    gen: 3
   },
   spelltag: {
     name: "Spell Tag",
@@ -5679,8 +5675,7 @@ const Items = {
       basePower: 10
     },
     num: 1114,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   steelixite: {
     name: "Steelixite",
@@ -5813,8 +5808,7 @@ const Items = {
       basePower: 10
     },
     num: 1109,
-    gen: 8,
-    isNonstandard: "Past"
+    gen: 8
   },
   sunstone: {
     name: "Sun Stone",
@@ -7073,8 +7067,7 @@ const Items = {
       basePower: 30
     },
     num: 252,
-    gen: 2,
-    isNonstandard: "Past"
+    gen: 2
   },
   utilityumbrella: {
     name: "Utility Umbrella",

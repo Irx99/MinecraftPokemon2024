@@ -23,6 +23,6 @@ __export(scripts_exports, {
 module.exports = __toCommonJS(scripts_exports);
 const Scripts = {
   gen: 9,
-  inherit: "gen9"
+  inherit: "gen9dlc1"
 };
 //# sourceMappingURL=scripts.js.map

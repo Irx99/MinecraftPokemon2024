@@ -415,6 +415,8 @@ const commands = {
       NU: 25,
       PUBL: 25,
       PU: 30,
+      ZUBL: 30,
+      ZU: 30,
       NFE: 30,
       LC: 30
     };
@@ -849,7 +851,9 @@ const commands = {
       throw new Chat.ErrorMessage(`Error: Pok\xE9mon ${target} not found.`);
     }
     if (!evo.prevo) {
-      const evoBaseSpecies = Dex.species.get(evo.baseSpecies);
+      const evoBaseSpecies = Dex.species.get(
+        (Array.isArray(evo.battleOnly) ? evo.battleOnly[0] : evo.battleOnly) || evo.changesFrom || evo.name
+      );
       if (!evoBaseSpecies.prevo)
         throw new Chat.ErrorMessage(`Error: ${evoBaseSpecies.name} is not an evolution.`);
       const prevoSpecies = Dex.species.get(evoBaseSpecies.prevo);

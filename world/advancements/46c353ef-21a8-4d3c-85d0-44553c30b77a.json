@@ -7,18 +7,31 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:cold_ocean": "2024-02-23 23:37:59 +0100",
       "minecraft:snowy_slopes": "2024-02-25 23:24:25 +0100",
       "minecraft:old_growth_pine_taiga": "2024-02-25 23:49:41 +0100",
+      "minecraft:forest": "2024-02-23 23:54:39 +0100",
       "minecraft:taiga": "2024-02-26 10:58:56 +0100",
       "minecraft:deep_ocean": "2024-02-23 23:47:02 +0100",
+      "minecraft:lush_caves": "2024-02-25 23:52:20 +0100",
+      "minecraft:deep_cold_ocean": "2024-02-23 23:46:43 +0100",
+      "minecraft:ice_spikes": "2024-02-26 11:19:53 +0100",
+      "minecraft:frozen_ocean": "2024-02-26 11:19:40 +0100",
+      "minecraft:desert": "2024-02-26 17:42:39 +0100",
       "minecraft:frozen_river": "2024-02-26 11:19:50 +0100",
+      "minecraft:deep_frozen_ocean": "2024-02-26 11:17:47 +0100",
+      "minecraft:ocean": "2024-02-23 23:47:09 +0100",
+      "minecraft:jungle": "2024-02-26 17:33:07 +0100",
       "minecraft:sunflower_plains": "2024-02-24 00:37:15 +0100",
       "minecraft:cherry_grove": "2024-02-24 20:01:23 +0100",
       "minecraft:birch_forest": "2024-02-24 19:17:59 +0100",
       "minecraft:windswept_hills": "2024-02-26 17:22:32 +0100",
+      "minecraft:old_growth_spruce_taiga": "2024-02-23 20:59:36 +0100",
       "minecraft:bamboo_jungle": "2024-02-26 17:40:08 +0100",
       "minecraft:wooded_badlands": "2024-02-26 17:45:01 +0100",
+      "minecraft:warm_ocean": "2024-02-26 17:46:24 +0100",
       "minecraft:badlands": "2024-02-26 17:45:35 +0100",
+      "minecraft:flower_forest": "2024-02-24 00:37:40 +0100",
       "minecraft:beach": "2024-02-23 23:25:38 +0100",
       "minecraft:dark_forest": "2024-02-24 19:15:26 +0100",
       "minecraft:mangrove_swamp": "2024-02-26 17:23:59 +0100",
@@ -28,22 +41,9 @@
       "minecraft:stony_shore": "2024-02-23 23:25:40 +0100",
       "minecraft:snowy_plains": "2024-02-26 11:18:54 +0100",
       "minecraft:dripstone_caves": "2024-02-25 21:01:23 +0100",
-      "minecraft:swamp": "2024-02-26 17:27:54 +0100",
-      "minecraft:cold_ocean": "2024-02-23 23:37:59 +0100",
-      "minecraft:forest": "2024-02-23 23:54:39 +0100",
-      "minecraft:lush_caves": "2024-02-25 23:52:20 +0100",
-      "minecraft:deep_cold_ocean": "2024-02-23 23:46:43 +0100",
-      "minecraft:ice_spikes": "2024-02-26 11:19:53 +0100",
-      "minecraft:frozen_ocean": "2024-02-26 11:19:40 +0100",
-      "minecraft:desert": "2024-02-26 17:42:39 +0100",
-      "minecraft:deep_frozen_ocean": "2024-02-26 11:17:47 +0100",
-      "minecraft:ocean": "2024-02-23 23:47:09 +0100",
-      "minecraft:jungle": "2024-02-26 17:33:07 +0100",
-      "minecraft:old_growth_spruce_taiga": "2024-02-23 20:59:36 +0100",
-      "minecraft:warm_ocean": "2024-02-26 17:46:24 +0100",
-      "minecraft:flower_forest": "2024-02-24 00:37:40 +0100",
       "minecraft:old_growth_birch_forest": "2024-02-24 19:15:08 +0100",
       "minecraft:deep_dark": "2024-03-11 11:56:04 +0100",
+      "minecraft:swamp": "2024-02-26 17:27:54 +0100",
       "minecraft:meadow": "2024-02-25 21:01:25 +0100",
       "minecraft:savanna": "2024-02-26 17:26:40 +0100",
       "minecraft:plains": "2024-02-23 23:47:32 +0100"
@@ -289,19 +289,19 @@
       "minecraft:pillager": "2024-02-25 14:28:46 +0100",
       "minecraft:blaze": "2024-03-09 01:35:21 +0100",
       "minecraft:skeleton": "2024-02-23 23:48:14 +0100",
+      "minecraft:witch": "2024-03-24 00:50:49 +0100",
       "minecraft:ghast": "2024-03-10 11:11:17 +0100",
       "minecraft:hoglin": "2024-03-01 14:45:34 +0100",
-      "minecraft:magma_cube": "2024-03-11 16:23:42 +0100",
-      "minecraft:spider": "2024-02-23 23:50:52 +0100",
-      "minecraft:creeper": "2024-02-25 00:06:48 +0100",
-      "minecraft:slime": "2024-02-25 22:13:36 +0100",
-      "minecraft:witch": "2024-03-24 00:50:49 +0100",
       "minecraft:piglin": "2024-03-01 14:54:46 +0100",
       "minecraft:enderman": "2024-03-06 22:25:51 +0100",
       "minecraft:silverfish": "2024-03-25 23:10:42 +0100",
+      "minecraft:magma_cube": "2024-03-11 16:23:42 +0100",
+      "minecraft:spider": "2024-02-23 23:50:52 +0100",
       "minecraft:zombie": "2024-02-23 23:48:32 +0100",
+      "minecraft:creeper": "2024-02-25 00:06:48 +0100",
       "minecraft:drowned": "2024-02-23 23:30:41 +0100",
-      "minecraft:zombie_villager": "2024-03-24 00:49:34 +0100"
+      "minecraft:zombie_villager": "2024-03-24 00:49:34 +0100",
+      "minecraft:slime": "2024-02-25 22:13:36 +0100"
     },
     "done": false
   },
@@ -362,17 +362,17 @@
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "cooked_porkchop": "2024-02-24 01:22:02 +0100",
-      "cooked_mutton": "2024-02-24 00:19:27 +0100",
-      "baked_potato": "2024-02-24 23:11:09 +0100",
       "apple": "2024-02-24 00:18:00 +0100",
-      "cooked_cod": "2024-02-24 19:11:26 +0100",
       "bread": "2024-02-24 18:59:51 +0100",
-      "rotten_flesh": "2024-02-23 23:34:16 +0100",
-      "dried_kelp": "2024-02-23 23:59:39 +0100",
-      "golden_carrot": "2024-02-26 23:37:21 +0100",
       "cooked_chicken": "2024-02-24 17:57:53 +0100",
+      "rotten_flesh": "2024-02-23 23:34:16 +0100",
+      "cooked_mutton": "2024-02-24 00:19:27 +0100",
+      "cooked_cod": "2024-02-24 19:11:26 +0100",
       "mushroom_stew": "2024-02-24 19:42:38 +0100",
-      "cooked_salmon": "2024-02-23 23:40:01 +0100"
+      "dried_kelp": "2024-02-23 23:59:39 +0100",
+      "baked_potato": "2024-02-24 23:11:09 +0100",
+      "cooked_salmon": "2024-02-23 23:40:01 +0100",
+      "golden_carrot": "2024-02-26 23:37:21 +0100"
     },
     "done": false
   },
@@ -1100,12 +1100,12 @@
   },
   "cobblemon:craft_all_balls": {
     "criteria": {
-      "verdant_ball": "2024-02-24 18:05:28 +0100",
-      "ultra_ball": "2024-02-24 18:05:20 +0100",
-      "poke_ball": "2024-02-24 01:17:21 +0100",
-      "citrine_ball": "2024-02-24 00:21:20 +0100",
       "roseate_ball": "2024-02-24 01:09:33 +0100",
-      "premier_ball": "2024-02-24 01:24:00 +0100"
+      "poke_ball": "2024-02-24 01:17:21 +0100",
+      "premier_ball": "2024-02-24 01:24:00 +0100",
+      "verdant_ball": "2024-02-24 18:05:28 +0100",
+      "citrine_ball": "2024-02-24 00:21:20 +0100",
+      "ultra_ball": "2024-02-24 18:05:20 +0100"
     },
     "done": false
   },
@@ -1386,12 +1386,6 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/throat_spray": {
-    "criteria": {
-      "has_bottle": "2024-02-24 00:52:19 +0100"
-    },
-    "done": true
-  },
   "minecraft:husbandry/safely_harvest_honey": {
     "criteria": {
       "safely_harvest_honey": "2024-02-24 00:53:30 +0100"
@@ -1609,14 +1603,14 @@
   },
   "cobblemon:obtain_all_berries": {
     "criteria": {
-      "obtain_charti_berry": "2024-02-28 09:58:50 +0100",
+      "obtain_persim_berry": "2024-02-24 01:30:01 +0100",
       "obtain_nanab_berry": "2024-03-09 02:04:10 +0100",
       "obtain_coba_berry": "2024-02-24 01:19:04 +0100",
-      "obtain_persim_berry": "2024-02-24 01:30:01 +0100",
+      "obtain_cheri_berry": "2024-02-29 19:18:11 +0100",
+      "obtain_oran_berry": "2024-02-24 01:18:31 +0100",
+      "obtain_charti_berry": "2024-02-28 09:58:50 +0100",
       "obtain_razz_berry": "2024-02-24 01:17:50 +0100",
       "obtain_pecha_berry": "2024-02-26 17:31:08 +0100",
-      "obtain_oran_berry": "2024-02-24 01:18:31 +0100",
-      "obtain_cheri_berry": "2024-02-29 19:18:11 +0100",
       "obtain_wepear_berry": "2024-02-24 01:07:56 +0100"
     },
     "done": false
@@ -3212,8 +3206,8 @@
   },
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
-      "minecraft:sheep": "2024-03-03 22:02:02 +0100",
-      "minecraft:cow": "2024-02-25 17:53:35 +0100"
+      "minecraft:cow": "2024-02-25 17:53:35 +0100",
+      "minecraft:sheep": "2024-03-03 22:02:02 +0100"
     },
     "done": false
   },
@@ -3836,12 +3830,6 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/luminous_moss": {
-    "criteria": {
-      "has_moss": "2024-02-26 12:09:30 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/moss_carpet": {
     "criteria": {
       "has_moss_block": "2024-02-26 12:09:30 +0100"
@@ -4457,12 +4445,6 @@
   "minecraft:recipes/building_blocks/tinted_glass": {
     "criteria": {
       "has_amethyst_shard": "2024-02-28 10:07:51 +0100"
-    },
-    "done": true
-  },
-  "cobblemon:recipes/held/clear_amulet": {
-    "criteria": {
-      "has_amethyst": "2024-02-28 10:07:51 +0100"
     },
     "done": true
   },
@@ -5561,12 +5543,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/eye_armor_trim_smithing_template_smithing_trim": {
-    "criteria": {
-      "has_smithing_trim_template": "2024-03-25 23:06:05 +0100"
-    },
-    "done": true
-  },
   "cobblemon:recipes/evolution/magmarizer": {
     "criteria": {
       "has_blaze_powder": "2024-03-25 22:46:02 +0100"
@@ -5579,21 +5555,9 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/end_crystal": {
-    "criteria": {
-      "has_ender_eye": "2024-03-25 22:46:07 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/fire_charge": {
     "criteria": {
       "has_blaze_powder": "2024-03-25 22:46:02 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/eye_armor_trim_smithing_template": {
-    "criteria": {
-      "has_eye_armor_trim_smithing_template": "2024-03-25 23:06:05 +0100"
     },
     "done": true
   },
@@ -5603,9 +5567,15 @@
     },
     "done": true
   },
-  "minecraft:story/follow_ender_eye": {
+  "cobblemon:recipes/held/focus_sash": {
     "criteria": {
-      "in_stronghold": "2024-03-25 23:03:54 +0100"
+      "has_powder": "2024-03-25 22:46:02 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2024-03-25 22:46:07 +0100"
     },
     "done": true
   },
@@ -5615,11 +5585,101 @@
     },
     "done": true
   },
-  "cobblemon:recipes/held/focus_sash": {
+  "minecraft:story/follow_ender_eye": {
     "criteria": {
-      "has_powder": "2024-03-25 22:46:02 +0100"
+      "in_stronghold": "2024-03-25 23:03:54 +0100"
     },
     "done": true
   },
-  "DataVersion": 3465
+  "minecraft:recipes/misc/eye_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2024-03-25 23:06:05 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/eye_armor_trim_smithing_template": {
+    "criteria": {
+      "has_eye_armor_trim_smithing_template": "2024-03-25 23:06:05 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_yellow": {
+    "criteria": {
+      "has_apricorn": "2024-12-29 13:47:31 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/copper_trapdoor": {
+    "criteria": {
+      "has_copper_ingot": "2024-12-29 13:48:16 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/cell_battery": {
+    "criteria": {
+      "has_copper": "2024-12-29 13:48:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/copper_door": {
+    "criteria": {
+      "has_copper_ingot": "2024-12-29 13:48:16 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_black": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_blue": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:craft_pokedex": {
+    "criteria": {
+      "requirement": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_green": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_white": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_red": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/pokedex_pink": {
+    "criteria": {
+      "has_pokedex": "2024-12-29 13:48:39 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/misc/ultra_rod": {
+    "criteria": {
+      "has_ball": "2024-12-29 14:13:09 +0100"
+    },
+    "done": false
+  },
+  "cobblemon:recipes/blocks/gilded_chests": {
+    "criteria": {
+      "has_gold": "2024-12-29 14:12:59 +0100"
+    },
+    "done": true
+  },
+  "DataVersion": 3955
 }

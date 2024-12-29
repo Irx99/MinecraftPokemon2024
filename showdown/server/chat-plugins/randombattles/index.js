@@ -105,7 +105,9 @@ const GEN_NAMES = {
   gen4: "[Gen 4]",
   gen5: "[Gen 5]",
   gen6: "[Gen 6]",
-  gen7: "[Gen 7]"
+  gen7: "[Gen 7]",
+  gen8: "[Gen 8]",
+  gen9: "[Gen 9]"
 };
 const STAT_NAMES = {
   hp: "HP",
@@ -156,10 +158,10 @@ function getSets(species, format = "gen9randombattle") {
   const setsFile = JSON.parse(
     (0, import_lib.FS)(`data/${dex.isBase ? "" : `mods/${dex.currentMod}/`}random-${isDoubles ? `doubles-` : ``}sets.json`).readIfExistsSync() || "{}"
   );
-  const sets = setsFile[species.id]?.sets;
-  if (!sets?.length)
+  const data = setsFile[species.id];
+  if (!data?.sets?.length)
     return null;
-  return sets;
+  return data;
 }
 function getData(species, format) {
   const dex = Dex.forFormat(format);
@@ -174,12 +176,34 @@ function getData(species, format) {
     return null;
   return data;
 }
+function getLevel(species, format) {
+  const dex = Dex.forFormat(format);
+  format = Dex.formats.get(format);
+  species = dex.species.get(species);
+  switch (format.id) {
+    case "gen2randombattle":
+      const levelScale = {
+        ZU: 81,
+        ZUBL: 79,
+        PU: 77,
+        PUBL: 75,
+        NU: 73,
+        NUBL: 71,
+        UU: 69,
+        UUBL: 67,
+        OU: 65,
+        Uber: 61
+      };
+      return levelScale[species.tier] || 80;
+  }
+  return 0;
+}
 function getRBYMoves(species) {
   species = Dex.mod(`gen1`).species.get(species);
   const data = getData(species, "gen1randombattle");
   if (!data)
     return false;
-  let buf = ``;
+  let buf = `<br/><b>Level</b>: ${data.level}`;
   if (data.comboMoves) {
     buf += `<br/><b>Combo moves</b>: `;
     buf += data.comboMoves.map(formatMove).sort().join(", ");
@@ -778,10 +802,16 @@ const commands = {
       return this.parse(`/help randombattles`);
     const { dex } = this.splitFormat(target, true);
     const isLetsGo = dex.currentMod === "gen7letsgo";
-    const species = dex.species.get(args[0]);
-    if (!species.exists) {
-      return this.errorReply(`Error: Pok\xE9mon '${args[0].trim()}' does not exist.`);
+    const searchResults = dex.dataSearch(args[0], ["Pokedex"]);
+    if (!searchResults || !searchResults.length) {
+      this.errorReply(`No Pok\xE9mon named '${args[0]}' was found${Dex.gen > dex.gen ? ` in Gen ${dex.gen}` : ""}. (Check your spelling?)`);
+      return;
     }
+    let inexactMsg = "";
+    if (searchResults[0].isInexact) {
+      inexactMsg = `No Pok\xE9mon named '${args[0]}' was found${Dex.gen > dex.gen ? ` in Gen ${dex.gen}` : ""}. Searching for '${searchResults[0].name}' instead.`;
+    }
+    const species = dex.species.get(searchResults[0].name);
     const extraFormatModifier = isLetsGo ? "letsgo" : dex.currentMod === "gen8bdsp" ? "bdsp" : "";
     const doublesModifier = isDoubles ? "doubles" : "";
     const noDMaxModifier = isNoDMax ? "nodmax" : "";
@@ -791,6 +821,7 @@ const commands = {
     if (dex.gen === 1) {
       const rbyMoves = getRBYMoves(species);
       if (!rbyMoves) {
+        this.sendReply(inexactMsg);
         return this.errorReply(`Error: ${species.name} has no Random Battle data in ${GEN_NAMES[toID(args[1])]}`);
       }
       movesets.push(`<span style="color:#999999;">Moves for ${species.name} in ${format.name}:</span>${rbyMoves}`);
@@ -798,6 +829,7 @@ const commands = {
     } else if (isLetsGo) {
       const lgpeMoves = getLetsGoMoves(species);
       if (!lgpeMoves) {
+        this.sendReply(inexactMsg);
         return this.errorReply(`Error: ${species.name} has no Random Battle data in [Gen 7 Let's Go]`);
       }
       movesets.push(`<span style="color:#999999;">Moves for ${species.name} in ${format.name}:</span><br />${lgpeMoves}`);
@@ -808,17 +840,19 @@ const commands = {
         setsToCheck.push(dex.species.get(`${args[0]}gmax`));
       if (species.otherFormes)
         setsToCheck.push(...species.otherFormes.map((pkmn) => dex.species.get(pkmn)));
-      if ([4, 5, 6, 9].includes(dex.gen) || dex.gen === 7 && !isDoubles) {
+      if ([3, 4, 5, 6, 9].includes(dex.gen) || dex.gen === 7 && !isDoubles) {
         for (const pokemon of setsToCheck) {
-          const sets = getSets(pokemon, format.id);
-          if (!sets)
+          const data = getSets(pokemon, format.id);
+          if (!data)
             continue;
+          const { sets, level } = data;
           let buf2 = `<span style="color:#999999;">Moves for ${pokemon.name} in ${format.name}:</span><br/>`;
+          buf2 += `<b>Level</b>: ${level}`;
           for (const set of sets) {
             buf2 += `<details><summary>${set.role}</summary>`;
             if (dex.gen === 9) {
               buf2 += `<b>Tera Type${Chat.plural(set.teraTypes)}</b>: ${set.teraTypes.join(", ")}<br/>`;
-            } else if ([4, 5, 6, 7].includes(dex.gen) && set.preferredTypes) {
+            } else if ([3, 4, 5, 6, 7].includes(dex.gen) && set.preferredTypes) {
               buf2 += `<b>Preferred Type${Chat.plural(set.preferredTypes)}</b>: ${set.preferredTypes.join(", ")}<br/>`;
             }
             buf2 += `<b>Moves</b>: ${set.movepool.sort().map(formatMove).join(", ")}</details>`;
@@ -852,25 +886,28 @@ const commands = {
           if (!data.moves || pokemon.isNonstandard === "Future")
             continue;
           let randomMoves = data.moves;
+          const level = data.level || getLevel(pokemon, format);
           if (isDoubles && data.doublesMoves)
             randomMoves = data.doublesMoves;
           if (isNoDMax && data.noDynamaxMoves)
             randomMoves = data.noDynamaxMoves;
           const m = randomMoves.slice().sort().map(formatMove);
           movesets.push(
-            `<details><summary><span style="color:#999999;">Moves for ${pokemon.name} in ${format.name}:<span style="color:#999999;"></summary>${m.join(`, `)}</details>`
+            `<details><summary><span style="color:#999999;">Moves for ${pokemon.name} in ${format.name}:<span style="color:#999999;"></summary>` + (level ? `<b>Level</b>: ${level}<br>` : "") + `${m.join(`, `)}</details>`
           );
           setCount++;
         }
       }
     }
     if (!movesets.length) {
+      this.sendReply(inexactMsg);
       return this.errorReply(`Error: ${species.name} has no Random Battle data in ${format.name}`);
     }
     let buf = movesets.join("<hr/>");
     if (setCount <= 2) {
       buf = buf.replace(/<details>/g, "<details open>");
     }
+    this.sendReply(inexactMsg);
     this.sendReplyBox(buf);
   },
   randombattleshelp: [
@@ -1009,7 +1046,7 @@ const commands = {
       throw new Chat.ErrorMessage(`Species ${species.name} does not exist in the specified format.`);
     }
     let setExists;
-    if ([4, 5, 6, 9].includes(dex.gen) || dex.gen === 7 && format.gameType !== "doubles") {
+    if ([3, 4, 5, 6, 9].includes(dex.gen) || dex.gen === 7 && format.gameType !== "doubles") {
       setExists = !!getSets(species, format);
     } else if (dex.gen === 7 && format.gameType === "doubles") {
       setExists = !!getData(species, format);

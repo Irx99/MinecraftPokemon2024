@@ -124,7 +124,7 @@ const commands = {
   },
   dexsearchhelp() {
     this.sendReply(
-      `|html| <details class="readmore"><summary><code>/dexsearch [parameter], [parameter], [parameter], ...</code>: searches for Pok\xE9mon that fulfill the selected criteria<br/>Search categories are: type, tier, color, moves, ability, gen, resists, weak, recovery, zrecovery, priority, stat, weight, height, egg group, pivot.<br/>Valid colors are: green, red, blue, white, brown, yellow, purple, pink, gray and black.<br/>Valid tiers are: Uber/OU/UUBL/UU/RUBL/RU/NUBL/NU/PUBL/PU/ZU/NFE/LC/CAP/CAP NFE/CAP LC.<br/>Valid doubles tiers are: DUber/DOU/DBL/DUU/DNU.</summary>Types can be searched for by either having the type precede <code>type</code> or just using the type itself as a parameter; e.g., both <code>fire type</code> and <code>fire</code> show all Fire types; however, using <code>psychic</code> as a parameter will show all Pok\xE9mon that learn the move Psychic and not Psychic types.<br/><code>resists</code> followed by a type or move will show Pok\xE9mon that resist that typing or move (e.g. <code>resists normal</code>).<br/><code>weak</code> followed by a type or move will show Pok\xE9mon that are weak to that typing or move (e.g. <code>weak fire</code>).<br/><code>asc</code> or <code>desc</code> following a stat will show the Pok\xE9mon in ascending or descending order of that stat respectively (e.g. <code>speed asc</code>).<br/>Inequality ranges use the characters <code>>=</code> for <code>\u2265</code> and <code><=</code> for <code>\u2264</code>; e.g., <code>hp <= 95</code> searches all Pok\xE9mon with HP less than or equal to 95.<br/>Parameters can be excluded through the use of <code>!</code>; e.g., <code>!water type</code> excludes all Water types.<br/>The parameter <code>mega</code> can be added to search for Mega Evolutions only, the parameter <code>gmax</code> can be added to search for Pok\xE9mon capable of Gigantamaxing only, and the parameter <code>Fully Evolved</code> (or <code>FE</code>) can be added to search for fully-evolved Pok\xE9mon.<br/><code>Alola</code>, <code>Galar</code>, <code>Therian</code>, <code>Totem</code>, or <code>Primal</code> can be used as parameters to search for those formes.<br/>Parameters separated with <code>|</code> will be searched as alternatives for each other; e.g., <code>trick | switcheroo</code> searches for all Pok\xE9mon that learn either Trick or Switcheroo.<br/>You can search for info in a specific generation by appending the generation to ds or by using the <code>maxgen</code> keyword; e.g. <code>/ds1 normal</code> or <code>/ds normal, maxgen1</code> searches for all Pok\xE9mon that were Normal type in Generation I.<br/>You can search for info in a specific mod by using <code>mod=[mod name]</code>; e.g. <code>/nds mod=ssb, protean</code>. All valid mod names are: <code>${dexesHelp}</code><br />By default, <code>/dexsearch</code> will search only Pok\xE9mon obtainable in the current generation. Add the parameter <code>unreleased</code> to include unreleased Pok\xE9mon. Add the parameter <code>natdex</code> (or use the command <code>/nds</code>) to include all past Pok\xE9mon.<br/>Searching for a Pok\xE9mon with both egg group and type parameters can be differentiated by adding the suffix <code>group</code> onto the egg group parameter; e.g., seaching for <code>grass, grass group</code> will show all Grass types in the Grass egg group.<br/>The parameter <code>monotype</code> will only show Pok\xE9mon that are single-typed.<br/>The order of the parameters does not matter.<br/>`
+      `|html| <details class="readmore"><summary><code>/dexsearch [parameter], [parameter], [parameter], ...</code>: searches for Pok\xE9mon that fulfill the selected criteria<br/>Search categories are: type, tier, color, moves, ability, gen, resists, weak, recovery, zrecovery, priority, stat, weight, height, egg group, pivot.<br/>Valid colors are: green, red, blue, white, brown, yellow, purple, pink, gray and black.<br/>Valid tiers are: Uber/OU/UUBL/UU/RUBL/RU/NUBL/NU/PUBL/PU/ZUBL/ZU/NFE/LC/CAP/CAP NFE/CAP LC.<br/>Valid doubles tiers are: DUber/DOU/DBL/DUU/DNU.</summary>Types can be searched for by either having the type precede <code>type</code> or just using the type itself as a parameter; e.g., both <code>fire type</code> and <code>fire</code> show all Fire types; however, using <code>psychic</code> as a parameter will show all Pok\xE9mon that learn the move Psychic and not Psychic types.<br/><code>resists</code> followed by a type or move will show Pok\xE9mon that resist that typing or move (e.g. <code>resists normal</code>).<br/><code>weak</code> followed by a type or move will show Pok\xE9mon that are weak to that typing or move (e.g. <code>weak fire</code>).<br/><code>asc</code> or <code>desc</code> following a stat will show the Pok\xE9mon in ascending or descending order of that stat respectively (e.g. <code>speed asc</code>).<br/>Inequality ranges use the characters <code>>=</code> for <code>\u2265</code> and <code><=</code> for <code>\u2264</code>; e.g., <code>hp <= 95</code> searches all Pok\xE9mon with HP less than or equal to 95.<br/>Parameters can be excluded through the use of <code>!</code>; e.g., <code>!water type</code> excludes all Water types.<br/>The parameter <code>mega</code> can be added to search for Mega Evolutions only, the parameter <code>gmax</code> can be added to search for Pok\xE9mon capable of Gigantamaxing only, and the parameter <code>Fully Evolved</code> (or <code>FE</code>) can be added to search for fully-evolved Pok\xE9mon.<br/><code>Alola</code>, <code>Galar</code>, <code>Therian</code>, <code>Totem</code>, or <code>Primal</code> can be used as parameters to search for those formes.<br/>Parameters separated with <code>|</code> will be searched as alternatives for each other; e.g., <code>trick | switcheroo</code> searches for all Pok\xE9mon that learn either Trick or Switcheroo.<br/>You can search for info in a specific generation by appending the generation to ds or by using the <code>maxgen</code> keyword; e.g. <code>/ds1 normal</code> or <code>/ds normal, maxgen1</code> searches for all Pok\xE9mon that were Normal type in Generation I.<br/>You can search for info in a specific mod by using <code>mod=[mod name]</code>; e.g. <code>/nds mod=ssb, protean</code>. All valid mod names are: <code>${dexesHelp}</code><br />By default, <code>/dexsearch</code> will search only Pok\xE9mon obtainable in the current generation. Add the parameter <code>unreleased</code> to include unreleased Pok\xE9mon. Add the parameter <code>natdex</code> (or use the command <code>/nds</code>) to include all past Pok\xE9mon.<br/>Searching for a Pok\xE9mon with both egg group and type parameters can be differentiated by adding the suffix <code>group</code> onto the egg group parameter; e.g., seaching for <code>grass, grass group</code> will show all Grass types in the Grass egg group.<br/>The parameter <code>monotype</code> will only show Pok\xE9mon that are single-typed.<br/>The order of the parameters does not matter.<br/>`
     );
   },
   rollmove: "randommove",
@@ -153,6 +153,12 @@ const commands = {
     }
     if (!qty)
       targetsBuffer.push("random1");
+    const defaultFormat = this.extractFormat(room?.settings.defaultFormat || room?.battle?.format);
+    if (!target.includes("mod=")) {
+      const dex = defaultFormat.dex;
+      if (dex)
+        targetsBuffer.push(`mod=${dex.currentMod}`);
+    }
     const response = await runSearch({
       target: targetsBuffer.join(","),
       cmd: "randmove",
@@ -208,6 +214,12 @@ const commands = {
     }
     if (!qty)
       targetsBuffer.push("random1");
+    const defaultFormat = this.extractFormat(room?.settings.defaultFormat || room?.battle?.format);
+    if (!target.includes("mod=")) {
+      const dex = defaultFormat.dex;
+      if (dex)
+        targetsBuffer.push(`mod=${dex.currentMod}`);
+    }
     const response = await runSearch({
       target: targetsBuffer.join(","),
       cmd: "randpoke",
@@ -352,7 +364,7 @@ const commands = {
   },
   movesearchhelp() {
     this.sendReplyBox(
-      `<code>/movesearch [parameter], [parameter], [parameter], ...</code>: searches for moves that fulfill the selected criteria.<br/><br/>Search categories are: type, category, gen, contest condition, flag, status inflicted, type boosted, Pok\xE9mon targeted, and numeric range for base power, pp, priority, and accuracy.<br/><br/><details class="readmore"><summary>Parameter Options</summary>- Types can be followed by <code> type</code> for clarity; e.g. <code>dragon type</code>.<br/>- Stat boosts must be preceded with <code>boosts </code>, and stat-lowering moves with <code>lowers </code>; e.g., <code>boosts attack</code> searches for moves that boost the Attack stat of either Pok\xE9mon.<br/>- Z-stat boosts must be preceded with <code>zboosts </code>; e.g. <code>zboosts accuracy</code> searches for all Status moves with Z-Effects that boost the user's accuracy. Moves that have a Z-Effect of fully restoring the user's health can be searched for with <code>zrecovery</code>.<br/>- <code>zmove</code>, <code>max</code>, or <code>gmax</code> as parameters will search for Z-Moves, Max Moves, and G-Max Moves respectively.<br/>- Move targets must be preceded with <code>targets </code>; e.g. <code>targets user</code> searches for moves that target the user.<br/>- Valid move targets are: one ally, user or ally, one adjacent opponent, all Pokemon, all adjacent Pokemon, all adjacent opponents, user and allies, user's side, user's team, any Pokemon, opponent's side, one adjacent Pokemon, random adjacent Pokemon, scripted, and user.<br/>- Valid flags are: allyanim, bypasssub (bypasses Substitute), bite, bullet, cantusetwice, charge, contact, dance, defrost, distance (can target any Pokemon in Triples), failcopycat, failencore, failinstruct, failmefirst, failmimic, futuremove, gravity, heal, highcrit, instruct, mefirst, mimic, mirror (reflected by Mirror Move), mustpressure, multihit, noassist, nonsky, noparentalbond, nosleeptalk, ohko, pivot, pledgecombo, powder, priority, protect, pulse, punch, recharge, recovery, reflectable, secondary, slicing, snatch, sound, and wind.<br/>- <code>protection</code> as a parameter will search protection moves like Protect, Detect, etc.<br/>- A search that includes <code>!protect</code> will show all moves that bypass protection.<br/></details><br/><details class="readmore"><summary>Parameter Filters</summary>- Inequality ranges use the characters <code>></code> and <code><</code>.<br/>- Parameters can be excluded through the use of <code>!</code>; e.g. <code>!water type</code> excludes all Water-type moves.<br/>- <code>asc</code> or <code>desc</code> following a move property will arrange the names in ascending or descending order of that property, respectively; e.g., <code>basepower asc</code> will arrange moves in ascending order of their base powers.<br/>- Parameters separated with <code>|</code> will be searched as alternatives for each other; e.g. <code>fire | water</code> searches for all moves that are either Fire type or Water type.<br/>- If a Pok\xE9mon is included as a parameter, only moves from its movepool will be included in the search.<br/>- You can search for info in a specific generation by appending the generation to ms; e.g. <code>/ms1 normal</code> searches for all moves that were Normal type in Generation I.<br/>- You can search for info in a specific mod by using <code>mod=[mod name]</code>; e.g. <code>/nms mod=ssb, dark, bp=100</code>. All valid mod names are: <code>${dexesHelp}</code><br />- <code>/ms</code> will search all non-dexited moves (clickable in that game); you can include dexited moves by using <code>/nms</code> or by adding <code>natdex</code> as a parameter.<br/>- The order of the parameters does not matter.</details>`
+      `<code>/movesearch [parameter], [parameter], [parameter], ...</code>: searches for moves that fulfill the selected criteria.<br/><br/>Search categories are: type, category, gen, contest condition, flag, status inflicted, type boosted, Pok\xE9mon targeted, and numeric range for base power, pp, priority, and accuracy.<br/><br/><details class="readmore"><summary>Parameter Options</summary>- Types can be followed by <code> type</code> for clarity; e.g. <code>dragon type</code>.<br/>- Stat boosts must be preceded with <code>boosts </code>, and stat-lowering moves with <code>lowers </code>; e.g., <code>boosts attack</code> searches for moves that boost the Attack stat of either Pok\xE9mon.<br/>- Z-stat boosts must be preceded with <code>zboosts </code>; e.g. <code>zboosts accuracy</code> searches for all Status moves with Z-Effects that boost the user's accuracy. Moves that have a Z-Effect of fully restoring the user's health can be searched for with <code>zrecovery</code>.<br/>- <code>zmove</code>, <code>max</code>, or <code>gmax</code> as parameters will search for Z-Moves, Max Moves, and G-Max Moves respectively.<br/>- Move targets must be preceded with <code>targets </code>; e.g. <code>targets user</code> searches for moves that target the user.<br/>- Valid move targets are: one ally, user or ally, one adjacent opponent, all Pokemon, all adjacent Pokemon, all adjacent opponents, user and allies, user's side, user's team, any Pokemon, opponent's side, one adjacent Pokemon, random adjacent Pokemon, scripted, and user.<br/>- Valid flags are: allyanim, bypasssub (bypasses Substitute), bite, bullet, cantusetwice, charge, contact, dance, defrost, distance (can target any Pokemon in Triples), failcopycat, failencore, failinstruct, failmefirst, failmimic, futuremove, gravity, heal, highcrit, instruct, metronome, mimic, mirror (reflected by Mirror Move), mustpressure, multihit, noassist, nonsky, noparentalbond, nosleeptalk, ohko, pivot, pledgecombo, powder, priority, protect, pulse, punch, recharge, recovery, reflectable, secondary, slicing, snatch, sound, and wind.<br/>- <code>protection</code> as a parameter will search protection moves like Protect, Detect, etc.<br/>- A search that includes <code>!protect</code> will show all moves that bypass protection.<br/></details><br/><details class="readmore"><summary>Parameter Filters</summary>- Inequality ranges use the characters <code>></code> and <code><</code>.<br/>- Parameters can be excluded through the use of <code>!</code>; e.g. <code>!water type</code> excludes all Water-type moves.<br/>- <code>asc</code> or <code>desc</code> following a move property will arrange the names in ascending or descending order of that property, respectively; e.g., <code>basepower asc</code> will arrange moves in ascending order of their base powers.<br/>- Parameters separated with <code>|</code> will be searched as alternatives for each other; e.g. <code>fire | water</code> searches for all moves that are either Fire type or Water type.<br/>- If a Pok\xE9mon is included as a parameter, only moves from its movepool will be included in the search.<br/>- You can search for info in a specific generation by appending the generation to ms; e.g. <code>/ms1 normal</code> searches for all moves that were Normal type in Generation I.<br/>- You can search for info in a specific mod by using <code>mod=[mod name]</code>; e.g. <code>/nms mod=ssb, dark, bp=100</code>. All valid mod names are: <code>${dexesHelp}</code><br />- <code>/ms</code> will search all non-dexited moves (clickable in that game); you can include dexited moves by using <code>/nms</code> or by adding <code>natdex</code> as a parameter.<br/>- The order of the parameters does not matter.</details>`
     );
   },
   isearch: "itemsearch",
@@ -371,7 +383,7 @@ const commands = {
     target = target.slice(0, 300);
     const targetGen = parseInt(cmd2[cmd2.length - 1]);
     if (targetGen)
-      target += ` maxgen${targetGen}`;
+      target = `maxgen${targetGen} ${target}`;
     const response = await runSearch({
       target,
       cmd: "itemsearch",
@@ -645,10 +657,6 @@ function runDexsearch(target, cmd2, canAll, message, isTest) {
     caplc: "CAP LC",
     capnfe: "CAP NFE"
   });
-  if (mod.gen === 3) {
-    allTiers.zu = "ZU";
-    allTiers.zubl = "ZUBL";
-  }
   const allDoublesTiers = Object.assign(/* @__PURE__ */ Object.create(null), {
     doublesubers: "DUber",
     doublesuber: "DUber",
@@ -1189,8 +1197,6 @@ function runDexsearch(target, cmd2, canAll, message, isTest) {
         let tier = dex[mon].tier;
         if (nationalSearch)
           tier = dex[mon].natDexTier;
-        if (tier === "(PU)")
-          tier = "ZU";
         if (tier.startsWith("("))
           tier = tier.slice(1, -1);
         if (alts.tiers[tier])
@@ -1469,6 +1475,7 @@ function runMovesearch(target, cmd2, canAll, message, isTest) {
     "futuremove",
     "gravity",
     "heal",
+    "metronome",
     "mirror",
     "mustpressure",
     "noassist",
@@ -1964,46 +1971,10 @@ function runMovesearch(target, cmd2, canAll, message, isTest) {
       error: "No search parameters other than 'all' were found. Try '/help movesearch' for more information on this command."
     };
   }
-  const getFullLearnsetOfPokemon = (species, natDex) => {
-    let usedSpecies = import_lib.Utils.deepClone(species);
-    let usedSpeciesLearnset = import_lib.Utils.deepClone(mod.species.getLearnset(usedSpecies.id));
-    if (!usedSpeciesLearnset) {
-      usedSpecies = import_lib.Utils.deepClone(mod.species.get(usedSpecies.baseSpecies));
-      usedSpeciesLearnset = import_lib.Utils.deepClone(mod.species.getLearnset(usedSpecies.id) || {});
-    }
-    const lsetData = /* @__PURE__ */ new Set();
-    for (const move in usedSpeciesLearnset) {
-      const learnset = mod.species.getLearnset(usedSpecies.id);
-      if (!learnset)
-        break;
-      const sources = learnset[move];
-      for (const learned of sources) {
-        const sourceGen = parseInt(learned.charAt(0));
-        if (sourceGen <= mod.gen && (mod.gen < 9 || sourceGen >= 9 || natDex))
-          lsetData.add(move);
-      }
-    }
-    while (usedSpecies.prevo) {
-      usedSpecies = import_lib.Utils.deepClone(mod.species.get(usedSpecies.prevo));
-      usedSpeciesLearnset = import_lib.Utils.deepClone(mod.species.getLearnset(usedSpecies.id));
-      for (const move in usedSpeciesLearnset) {
-        const learnset = mod.species.getLearnset(usedSpecies.id);
-        if (!learnset)
-          break;
-        const sources = learnset[move];
-        for (const learned of sources) {
-          const sourceGen = parseInt(learned.charAt(0));
-          if (sourceGen <= mod.gen && (mod.gen < 9 || sourceGen === 9 || natDex))
-            lsetData.add(move);
-        }
-      }
-    }
-    return lsetData;
-  };
   const validMoves = new Set(Object.keys(mod.data.Moves));
   for (const mon of targetMons) {
     const species = mod.species.get(mon.name);
-    const lsetData = getFullLearnsetOfPokemon(species, !!nationalSearch);
+    const lsetData = mod.species.getMovePool(species.id, !!nationalSearch);
     if (mon.shouldBeExcluded) {
       for (const move of lsetData) {
         validMoves.delete(move);
@@ -2020,7 +1991,7 @@ function runMovesearch(target, cmd2, canAll, message, isTest) {
   for (const moveid of validMoves) {
     const move = mod.moves.get(moveid);
     if (move.gen <= mod.gen) {
-      if (!nationalSearch && move.isNonstandard && move.isNonstandard !== "Gigantamax" || nationalSearch && move.isNonstandard && !["Gigantamax", "Past"].includes(move.isNonstandard)) {
+      if (!nationalSearch && move.isNonstandard && move.isNonstandard !== "Gigantamax" || nationalSearch && move.isNonstandard && !["Gigantamax", "Past", "Unobtainable"].includes(move.isNonstandard)) {
         continue;
       } else {
         dex[moveid] = move;

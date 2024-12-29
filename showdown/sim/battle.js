@@ -116,9 +116,8 @@ class Battle {
     this.formatData = { id: format.id };
     this.gameType = format.gameType || "singles";
     this.field = new import_field.Field(this);
-    const isFourPlayer = this.gameType === "multi" || this.gameType === "freeforall";
-    this.sides = Array(isFourPlayer ? 4 : 2).fill(null);
-    this.activePerHalf = this.gameType === "triples" ? 3 : isFourPlayer || this.gameType === "doubles" ? 2 : 1;
+    this.sides = Array(format.playerCount).fill(null);
+    this.activePerHalf = this.gameType === "triples" ? 3 : format.playerCount > 2 || this.gameType === "doubles" ? 2 : 1;
     this.prng = options.prng || new import_prng.PRNG(options.seed || void 0);
     this.prngSeed = this.prng.startingSeed.slice();
     this.rated = options.rated || !!options.rated;
@@ -614,8 +613,8 @@ class Battle {
       if (effect.effectType === "Status" && effectHolder.status !== effect.id) {
         continue;
       }
-      if (effect.effectType === "Ability" && effect.isBreakable !== false && this.suppressingAbility(effectHolder)) {
-        if (effect.isBreakable) {
+      if (effect.effectType === "Ability" && effect.flags["breakable"] && this.suppressingAbility(effectHolder)) {
+        if (effect.flags["breakable"]) {
           this.debug(eventid + " handler suppressed by Mold Breaker");
           continue;
         }
@@ -2224,7 +2223,7 @@ class Battle {
       case "start": {
         for (const side of this.sides) {
           if (side.pokemonLeft)
-            side.pokemonLeft = side.pokemon.length;
+            side.pokemonLeft = side.pokemon.filter((pk) => !pk.fainted).length;
         }
         this.add("start");
         for (const pokemon of this.getAllPokemon()) {

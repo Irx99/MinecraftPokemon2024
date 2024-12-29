@@ -385,7 +385,6 @@ const _ProcessManager = class {
     this.crashedProcesses = [];
     this.crashTime = 0;
     this.crashRespawnCount = 0;
-    this.module = module2;
     this.filename = module2.filename;
     this.basename = path.basename(module2.filename);
     this.isParentProcess = process.mainModule !== module2 || !process.send;

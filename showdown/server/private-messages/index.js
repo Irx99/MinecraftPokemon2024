@@ -59,6 +59,9 @@ const PrivateMessages = new class {
   getSettings(userid) {
     return PM.get(import_database.statements.getSettings, [toID(userid)]);
   }
+  deleteSettings(userid) {
+    return PM.run(import_database.statements.deleteSettings, [toID(userid)]);
+  }
   async checkCanSend(to, from) {
     from = toID(from);
     to = toID(to);
@@ -129,11 +132,9 @@ const PrivateMessages = new class {
   async sendReceived(user) {
     const userid = toID(user);
     const messages = await this.fetchUnseen(userid);
-    const serverTimezone = -new Date().getTimezoneOffset() / 60;
-    const gmtStr = serverTimezone >= 0 ? `+${serverTimezone}` : serverTimezone;
     for (const { message, time, sender } of messages) {
       user.send(
-        `|pm|${this.getIdentity(sender)}|${this.getIdentity(user)}|${message} __[sent offline, ${Chat.toTimestamp(new Date(time))} GMT ${gmtStr}]__`
+        `|pm|${this.getIdentity(sender)}|${this.getIdentity(user)}|/html ${import_lib.Utils.escapeHTML(message)} __[sent offline, <time>${new Date(time).toISOString()}</time>]__`
       );
     }
   }
@@ -203,7 +204,7 @@ const PrivateMessages = new class {
       buf += `<div class="pm-log"><div class="pm-buttonbar">`;
       for (const { message, time } of messages) {
         buf += `<div class="chat chatmessage-${toID(sender)}">&nbsp;&nbsp;`;
-        buf += `<small>[${Chat.toTimestamp(new Date(time))}] </small>`;
+        buf += `<small>[<time>${new Date(time).toISOString()}</time>] </small>`;
         buf += import_lib.Utils.html`<small>${group}</small>`;
         buf += import_lib.Utils.html`<span class="username" data-roomgroup="${group}" data-name="${name}"><username>${name}</username></span>: `;
         buf += `<em>${message}</em></div>`;

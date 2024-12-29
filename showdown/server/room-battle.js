@@ -1,9 +1,7 @@
 "use strict";
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -17,18 +15,9 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var room_battle_exports = {};
 __export(room_battle_exports, {
-  BestOfGame: () => BestOfGame,
   PM: () => PM,
   RoomBattle: () => RoomBattle,
   RoomBattlePlayer: () => RoomBattlePlayer,
@@ -36,10 +25,10 @@ __export(room_battle_exports, {
   RoomBattleTimer: () => RoomBattleTimer
 });
 module.exports = __toCommonJS(room_battle_exports);
-var import_lib = require("../lib");
 var import_child_process = require("child_process");
+var import_lib = require("../lib");
 var import_battle_stream = require("../sim/battle-stream");
-var RoomGames = __toESM(require("./room-game"));
+var import_room_game = require("./room-game");
 /**
  * Room Battle
  * Pokemon Showdown - http://pokemonshowdown.com/
@@ -63,10 +52,9 @@ const DISCONNECTION_TIME = 60;
 const DISCONNECTION_BANK_TIME = 300;
 const TIMER_COOLDOWN = 20 * SECONDS;
 const LOCKDOWN_PERIOD = 30 * 60 * 1e3;
-class RoomBattlePlayer extends RoomGames.RoomGamePlayer {
+class RoomBattlePlayer extends import_room_game.RoomGamePlayer {
   constructor(user, game, num) {
     super(user, game, num);
-    this.hitDisconnectLimit = false;
     if (typeof user === "string")
       user = null;
     this.slot = `p${num}`;
@@ -74,12 +62,12 @@ class RoomBattlePlayer extends RoomGames.RoomGamePlayer {
     this.request = { rqid: 0, request: "", isWait: "cantUndo", choice: "" };
     this.wantsTie = false;
     this.wantsOpenTeamSheets = null;
-    this.active = true;
+    this.active = !!user?.connected;
     this.eliminated = false;
     this.secondsLeft = 1;
     this.turnSecondsLeft = 1;
     this.dcSecondsLeft = 1;
-    this.connected = true;
+    this.knownActive = true;
     this.invite = "";
     this.hasTeam = false;
     if (user) {
@@ -92,43 +80,18 @@ class RoomBattlePlayer extends RoomGames.RoomGamePlayer {
       }
     }
   }
-  getUser() {
-    return this.id && Users.get(this.id) || null;
-  }
-  unlinkUser() {
+  destroy() {
     const user = this.getUser();
     if (user) {
-      for (const connection of user.connections) {
-        Sockets.channelMove(connection.worker, this.game.roomid, 0, connection.socketid);
-      }
-      user.games.delete(this.game.roomid);
-      user.updateSearch();
+      this.updateChannel(user, 0);
     }
-    this.id = "";
-    this.connected = false;
+    this.knownActive = false;
     this.active = false;
   }
-  updateChannel(user) {
-    if (user instanceof Users.Connection) {
-      Sockets.channelMove(user.worker, this.game.roomid, this.channelIndex, user.socketid);
-      return;
+  updateChannel(user, channel = this.channelIndex) {
+    for (const connection of user.connections || [user]) {
+      Sockets.channelMove(connection.worker, this.game.roomid, channel, connection.socketid);
     }
-    for (const connection of user.connections) {
-      Sockets.channelMove(connection.worker, this.game.roomid, this.channelIndex, connection.socketid);
-    }
-  }
-  toString() {
-    return this.id;
-  }
-  send(data) {
-    const user = this.getUser();
-    if (user)
-      user.send(data);
-  }
-  sendRoom(data) {
-    const user = this.getUser();
-    if (user)
-      user.sendTo(this.game.roomid, data);
   }
 }
 class RoomBattleTimer {
@@ -194,6 +157,7 @@ class RoomBattleTimer {
     this.timerRequesters.add(userid);
     const requestedBy = requester ? ` (requested by ${requester.name})` : ``;
     this.battle.room.add(`|inactive|Battle timer is ON: inactive players will automatically lose when time's up.${requestedBy}`).update();
+    this.checkActivity();
     this.nextRequest();
     return true;
   }
@@ -271,9 +235,7 @@ class RoomBattleTimer {
       let grace = player.secondsLeft - this.settings.starting;
       if (grace < 0)
         grace = 0;
-      if (player) {
-        player.sendRoom(`|inactive|Time left: ${secondsLeft} sec this turn | ${player.secondsLeft - grace} sec total` + (grace ? ` | ${grace} sec grace` : ``));
-      }
+      player.sendRoom(`|inactive|Time left: ${secondsLeft} sec this turn | ${player.secondsLeft - grace} sec total` + (grace ? ` | ${grace} sec grace` : ``));
       if (secondsLeft <= 30 && secondsLeft < this.settings.starting) {
         room.add(`|inactive|${player.name} has ${secondsLeft} seconds left this turn.`);
       }
@@ -294,7 +256,7 @@ class RoomBattleTimer {
     for (const player of this.battle.players) {
       if (player.request.isWait)
         continue;
-      if (player.connected) {
+      if (player.knownActive) {
         player.secondsLeft -= TICK_TIME;
         player.turnSecondsLeft -= TICK_TIME;
       } else {
@@ -306,13 +268,12 @@ class RoomBattleTimer {
       }
       const dcSecondsLeft = player.dcSecondsLeft;
       if (dcSecondsLeft <= 0) {
-        player.hitDisconnectLimit = true;
         player.turnSecondsLeft = 0;
       }
       const secondsLeft = player.turnSecondsLeft;
       if (!secondsLeft)
         continue;
-      if (!player.connected && (dcSecondsLeft <= secondsLeft || this.settings.dcTimerBank)) {
+      if (!player.knownActive && (dcSecondsLeft <= secondsLeft || this.settings.dcTimerBank)) {
         if (dcSecondsLeft % 30 === 0 || dcSecondsLeft <= 20) {
           room.add(`|inactive|${player.name} has ${dcSecondsLeft} seconds to reconnect!`);
         }
@@ -334,11 +295,11 @@ class RoomBattleTimer {
     if (this.battle.ended)
       return;
     for (const player of this.battle.players) {
-      const isConnected = !!player?.active;
-      if (isConnected === player.connected)
+      const isActive = !!player.active;
+      if (isActive === player.knownActive)
         continue;
-      if (!isConnected) {
-        player.connected = false;
+      if (!isActive) {
+        player.knownActive = false;
         if (!this.settings.dcTimerBank) {
           if (this.settings.dcTimer) {
             player.dcSecondsLeft = DISCONNECTION_TIME;
@@ -361,7 +322,7 @@ class RoomBattleTimer {
           this.battle.room.add(`|inactive|${player.name} disconnected${msg}`).update();
         }
       } else {
-        player.connected = true;
+        player.knownActive = true;
         if (this.timerRequesters.size) {
           let timeLeft = ``;
           if (!player.request.isWait) {
@@ -383,15 +344,14 @@ class RoomBattleTimer {
     }
     let didSomething = false;
     for (const player of players) {
+      if (!player.id)
+        continue;
       if (player.turnSecondsLeft > 0)
         continue;
-      if (this.settings.timeoutAutoChoose && player.secondsLeft > 0 && player.connected) {
+      if (this.settings.timeoutAutoChoose && player.secondsLeft > 0 && player.knownActive) {
         void this.battle.stream.write(`>${player.slot} default`);
         didSomething = true;
       } else {
-        if (!player.connected) {
-          player.hitDisconnectLimit = true;
-        }
         this.battle.forfeitPlayer(player, " lost due to inactivity.");
         return true;
       }
@@ -399,13 +359,34 @@ class RoomBattleTimer {
     return didSomething;
   }
 }
-class RoomBattle extends RoomGames.RoomGame {
+class RoomBattle extends import_room_game.RoomGame {
   constructor(room, options) {
     super(room);
-    this.forcedSettings = {};
-    const format = Dex.formats.get(options.format, true);
     this.gameid = "battle";
-    this.room = room;
+    /**
+     * userid that requested extraction -> playerids that accepted the extraction
+     */
+    this.allowExtraction = {};
+    this.started = false;
+    this.active = false;
+    this.replaySaved = false;
+    this.forcedSettings = {};
+    this.p1 = null;
+    this.p2 = null;
+    this.p3 = null;
+    this.p4 = null;
+    this.inviteOnlySetter = null;
+    this.logData = null;
+    this.endType = "normal";
+    /**
+     * If the battle is ended: an array of the number of Pokemon left for each side.
+     */
+    this.score = null;
+    this.inputLog = null;
+    this.turn = 0;
+    this.rqid = 1;
+    this.requestCount = 0;
+    const format = Dex.formats.get(options.format, true);
     this.title = format.name;
     this.options = options;
     if (!this.title.endsWith(" Battle"))
@@ -416,31 +397,9 @@ class RoomBattle extends RoomGames.RoomGame {
     this.challengeType = options.challengeType || "challenge";
     this.rated = options.rated === true ? 1 : options.rated || 0;
     this.ladder = typeof format.rated === "string" ? toID(format.rated) : options.format;
-    this.missingBattleStartMessage = !!options.inputLog || options.delayedStart || false;
-    this.started = false;
-    this.ended = false;
-    this.active = false;
-    this.replaySaved = false;
-    this.playerCap = this.gameType === "multi" || this.gameType === "freeforall" ? 4 : 2;
-    this.p1 = null;
-    this.p2 = null;
-    this.p3 = null;
-    this.p4 = null;
-    this.inviteOnlySetter = null;
-    this.needsRejoin = options.restored ? new Set(options.players) : null;
-    this.allowExtraction = {};
-    this.logData = null;
-    this.endType = "normal";
-    this.score = null;
-    this.inputLog = null;
-    this.turn = 0;
-    this.rqid = 1;
-    this.requestCount = 0;
+    this.playerCap = format.playerCount;
     this.stream = PM.createStream();
-    let ratedMessage = "";
-    if (options.ratedMessage) {
-      ratedMessage = options.ratedMessage;
-    }
+    let ratedMessage = options.ratedMessage || "";
     if (this.rated) {
       ratedMessage = "Rated battle";
     } else if (this.room.tour) {
@@ -459,11 +418,27 @@ class RoomBattle extends RoomGames.RoomGame {
       void this.stream.write(`>start ` + JSON.stringify(battleOptions));
     }
     void this.listen();
-    this.addPlayer(options.p1?.user || null, options.p1);
-    this.addPlayer(options.p2?.user || null, options.p2);
-    if (this.playerCap > 2) {
-      this.addPlayer(options.p3?.user || null, options.p3);
-      this.addPlayer(options.p4?.user || null, options.p4);
+    if (options.players.length > this.playerCap) {
+      throw new Error(`${options.players.length} players passed to battle ${room.roomid} but ${this.playerCap} players expected`);
+    }
+    for (let i = 0; i < this.playerCap; i++) {
+      const p = options.players[i];
+      const player = this.addPlayer(p?.user || null, p || null);
+      if (!player)
+        throw new Error(`failed to create player ${i + 1} in ${room.roomid}`);
+    }
+    if (options.inputLog) {
+      let scanIndex = 0;
+      for (const player of this.players) {
+        const nameIndex1 = options.inputLog.indexOf(`"name":"`, scanIndex);
+        const nameIndex2 = options.inputLog.indexOf(`"`, nameIndex1 + 8);
+        if (nameIndex1 < 0 || nameIndex2 < 0)
+          break;
+        scanIndex = nameIndex2 + 1;
+        const name = options.inputLog.slice(nameIndex1 + 8, nameIndex2);
+        player.name = name;
+        player.hasTeam = true;
+      }
     }
     this.timer = new RoomBattleTimer(this);
     if (Config.forcetimer || this.format.includes("blitz"))
@@ -471,20 +446,7 @@ class RoomBattle extends RoomGames.RoomGame {
     this.start();
   }
   checkActive() {
-    let active = true;
-    if (this.ended || !this.started) {
-      active = false;
-    } else if (!this.p1?.active) {
-      active = false;
-    } else if (!this.p2?.active) {
-      active = false;
-    } else if (this.playerCap > 2) {
-      if (!this.p3?.active) {
-        active = false;
-      } else if (!this.p4?.active) {
-        active = false;
-      }
-    }
+    const active = this.started && !this.ended && this.players.every((p) => p.active);
     Rooms.global.battleCount += (active ? 1 : 0) - (this.active ? 1 : 0);
     this.room.active = active;
     this.active = active;
@@ -533,50 +495,35 @@ class RoomBattle extends RoomGames.RoomGame {
     void this.stream.write(`>${player.slot} undo`);
   }
   joinGame(user, slot, playerOpts) {
-    if (this.needsRejoin?.size && !this.needsRejoin.has(user.id)) {
-      user.popup(`All the original players in this battle must join first.`);
-      return false;
-    }
     if (user.id in this.playerTable) {
       user.popup(`You have already joined this battle.`);
       return false;
     }
-    const validSlots = [];
-    for (const player of this.players) {
-      if (!player.id)
-        validSlots.push(player.slot);
-    }
+    const validSlots = this.players.filter((player) => !player.id).map((player) => player.slot);
     if (slot && !validSlots.includes(slot)) {
       user.popup(`This battle already has a user in slot ${slot}.`);
       return false;
     }
     if (!validSlots.length) {
-      user.popup(`This battle already has two players.`);
+      user.popup(`This battle already has ${this.playerCap} players.`);
       return false;
     }
+    slot ?? (slot = this.players.find((player) => player.invite === user.id)?.slot);
     if (!slot && validSlots.length > 1) {
       user.popup(`Which slot would you like to join into? Use something like \`/joingame ${validSlots[0]}\``);
       return false;
     }
-    if (!slot)
-      slot = validSlots[0];
+    slot ?? (slot = validSlots[0]);
     if (this[slot].invite === user.id) {
       this.room.auth.set(user.id, Users.PLAYER_SYMBOL);
     } else if (!user.can("joinbattle", null, this.room)) {
       user.popup(`You must be set as a player to join a battle you didn't start. Ask a player to use /addplayer on you to join this battle.`);
       return false;
     }
-    this.updatePlayer(this[slot], user, playerOpts);
-    this.needsRejoin?.delete(user.id);
-    if (validSlots.length - 1 < 1 && this.missingBattleStartMessage) {
-      const users = this.players.map((player) => {
-        const u = player.getUser();
-        if (!u)
-          throw new Error(`User ${player.name} not found on ${this.roomid} battle creation`);
-        return u;
-      });
+    this.setPlayerUser(this[slot], user, playerOpts);
+    if (validSlots.length - 1 <= 0) {
+      const users = this.players.map((player) => player.getUser()).filter(Boolean);
       Rooms.global.onCreateBattleRoom(users, this.room, { rated: this.rated });
-      this.missingBattleStartMessage = false;
       this.started = true;
       this.room.add(`|uhtmlchange|invites|`);
     } else if (!this.started && this.invitesFull()) {
@@ -601,7 +548,6 @@ class RoomBattle extends RoomGames.RoomGame {
     }
     Chat.runHandlers("onBattleLeave", user, this.room);
     this.updatePlayer(player, null);
-    this.room.auth.set(user.id, "+");
     this.room.update();
     return true;
   }
@@ -628,7 +574,7 @@ class RoomBattle extends RoomGames.RoomGame {
       if (!disconnected)
         Monitor.crashlog(new Error(`Sim stream interrupted`), `A sim stream`);
       this.started = true;
-      this.ended = true;
+      this.setEnded();
       this.checkActive();
     }
   }
@@ -677,12 +623,10 @@ class RoomBattle extends RoomGames.RoomGame {
             choice: ""
           };
           this.requestCount++;
-          if (player)
-            player.sendRoom(`|request|${requestJSON}`);
+          player?.sendRoom(`|request|${requestJSON}`);
           break;
         }
-        if (player)
-          player.sendRoom(lines[2]);
+        player?.sendRoom(lines[2]);
         break;
       }
       case "error": {
@@ -698,58 +642,59 @@ class RoomBattle extends RoomGames.RoomGame {
         this.score = this.logData.score;
         this.inputLog = this.logData.inputLog;
         this.started = true;
-        if (!this.ended) {
-          this.ended = true;
-          void this.onEnd(this.logData.winner);
-          this.clearPlayers();
-        }
-        this.checkActive();
+        void this.end(this.logData.winner);
         break;
     }
   }
-  async onEnd(winner) {
+  end(winnerName) {
+    if (this.ended)
+      return;
+    this.setEnded();
+    this.checkActive();
     this.timer.end();
     let p1score = 0.5;
-    const winnerid = toID(winner);
-    const p1name = this.p1.name;
-    const p2name = this.p2.name;
-    const p1id = toID(p1name);
-    const p2id = toID(p2name);
-    if (winnerid === p1id) {
+    const winnerid = toID(winnerName);
+    if (winnerid === this.p1.id) {
       p1score = 1;
-    } else if (winnerid === p2id) {
+    } else if (winnerid === this.p2.id) {
       p1score = 0;
     }
-    Chat.runHandlers("onBattleEnd", this, winnerid, [p1id, p2id, this.p3?.id, this.p4?.id].filter(Boolean));
-    if (this.room.rated && !this.options.isSubBattle) {
-      this.room.rated = 0;
-      winner = Users.get(winnerid);
-      if (winner && !winner.registered) {
-        this.room.sendUser(winner, "|askreg|" + winner.id);
-      }
-      const [score, p1rating, p2rating] = await Ladders(this.ladder).updateRating(p1name, p2name, p1score, this.room);
-      void this.logBattle(score, p1rating, p2rating);
-      Chat.runHandlers("onBattleRanked", this, winnerid, [p1rating, p2rating], [p1id, p2id]);
+    Chat.runHandlers("onBattleEnd", this, winnerid, this.players.map((p) => p.id));
+    if (this.room.rated && !this.options.isBestOfSubBattle) {
+      void this.updateLadder(p1score, winnerid);
     } else if (Config.logchallenges) {
       void this.logBattle(p1score);
-    } else if (!this.options.isSubBattle) {
+    } else if (!this.options.isBestOfSubBattle) {
       this.logData = null;
     }
-    if (this.replaySaved || Config.autosavereplays) {
-      const uploader = Users.get(winnerid || p1id);
-      if (uploader?.connections[0]) {
-        Chat.parse("/savereplay silent", this.room, uploader, uploader.connections[0]);
-      }
-    }
-    const parentGame = this.room.parent && this.room.parent.game;
-    if (parentGame?.onBattleWin) {
-      parentGame.onBattleWin(this.room, winnerid);
-    }
+    this.room.parent?.game?.onBattleWin?.(this.room, winnerid);
     if (this.room.hideReplay) {
       this.room.settings.modjoin = "%";
       this.room.setPrivate("hidden");
     }
     this.room.update();
+    for (const player of this.players) {
+      player.getUser()?.games.delete(this.roomid);
+    }
+    if (this.replaySaved || Config.autosavereplays) {
+      const options = Config.autosavereplays === "private" ? void 0 : "silent";
+      return this.room.uploadReplay(void 0, void 0, options);
+    }
+  }
+  async updateLadder(p1score, winnerid) {
+    this.room.rated = 0;
+    const winner = Users.get(winnerid);
+    if (winner && !winner.registered) {
+      this.room.sendUser(winner, "|askreg|" + winner.id);
+    }
+    const [score, p1rating, p2rating] = await Ladders(this.ladder).updateRating(
+      this.p1.name,
+      this.p2.name,
+      p1score,
+      this.room
+    );
+    void this.logBattle(score, p1rating, p2rating);
+    Chat.runHandlers("onBattleRanked", this, winnerid, [p1rating, p2rating], [this.p1.id, this.p2.id]);
   }
   async logBattle(p1score, p1rating = null, p2rating = null, p3rating = null, p4rating = null) {
     if (Dex.formats.get(this.format, true).noLog)
@@ -768,6 +713,8 @@ class RoomBattle extends RoomGames.RoomGame {
       }
     }
     logData.p1rating = p1rating;
+    if (this.replaySaved)
+      logData.replaySaved = this.replaySaved;
     logData.p2rating = p2rating;
     if (this.playerCap > 2) {
       logData.p3rating = p3rating;
@@ -788,6 +735,10 @@ class RoomBattle extends RoomGames.RoomGame {
     await (0, import_lib.FS)(`${logpath}${this.room.getReplayData().id}.log.json`).write(JSON.stringify(logData));
   }
   onConnect(user, connection = null) {
+    if (this.ended && this.room.parent?.game?.constructor.name === "BestOfGame") {
+      const parentGame = this.room.parent.game;
+      parentGame.playerTable[user.id]?.updateReadyButton();
+    }
     const player = this.playerTable[user.id];
     if (!player)
       return;
@@ -805,9 +756,6 @@ class RoomBattle extends RoomGames.RoomGame {
     }
     if (!player.active)
       this.onJoin(user);
-  }
-  onUpdateConnection(user, connection = null) {
-    this.onConnect(user, connection);
   }
   onRename(user, oldUserid, isJoining, isForceRenamed) {
     if (user.id === oldUserid)
@@ -892,15 +840,14 @@ class RoomBattle extends RoomGames.RoomGame {
     return this.forfeitPlayer(this.playerTable[user], message);
   }
   forfeitPlayer(player, message = "") {
-    if (this.ended || !this.started)
+    if (this.ended || !this.started || player.eliminated)
       return false;
-    if (!message)
-      message = " forfeited.";
-    this.room.add(`|-message|${player.name}${message}`);
+    player.eliminated = true;
+    this.room.add(`|-message|${player.name}${message || " forfeited."}`);
     this.endType = "forfeit";
     if (this.playerCap > 2) {
       player.sendRoom(`|request|null`);
-      this.removePlayer(player);
+      this.setPlayerUser(player, null);
     }
     void this.stream.write(`>forcelose ${player.slot}`);
     return true;
@@ -911,6 +858,8 @@ class RoomBattle extends RoomGames.RoomGame {
    */
   addPlayer(user, playerOpts) {
     const player = super.addPlayer(user);
+    if (typeof user === "string")
+      user = null;
     if (!player)
       return null;
     const slot = player.slot;
@@ -935,17 +884,15 @@ class RoomBattle extends RoomGames.RoomGame {
   checkPrivacySettings(options) {
     let inviteOnly = false;
     const privacySetter = /* @__PURE__ */ new Set([]);
-    for (const p of ["p1", "p2", "p3", "p4"]) {
-      const playerOptions = options[p];
-      if (playerOptions) {
-        if (playerOptions.inviteOnly) {
+    for (const p of options.players) {
+      if (p.user) {
+        if (p.inviteOnly) {
           inviteOnly = true;
-          privacySetter.add(playerOptions.user.id);
-        } else if (playerOptions.hidden) {
-          privacySetter.add(playerOptions.user.id);
+          privacySetter.add(p.user.id);
+        } else if (p.hidden) {
+          privacySetter.add(p.user.id);
         }
-        if (playerOptions.user)
-          this.checkForcedUserSettings(playerOptions.user);
+        this.checkForcedUserSettings(p.user);
       }
     }
     if (privacySetter.size) {
@@ -994,11 +941,16 @@ class RoomBattle extends RoomGames.RoomGame {
     const num = this.players.length + 1;
     return new RoomBattlePlayer(user, this, num);
   }
-  updatePlayer(player, user, playerOpts) {
-    super.updatePlayer(player, user);
+  setPlayerUser(player, user, playerOpts) {
+    if (user === null && this.room.auth.get(player.id) === Users.PLAYER_SYMBOL) {
+      this.room.auth.set(player.id, "+");
+    }
+    super.setPlayerUser(player, user);
     player.invite = "";
     const slot = player.slot;
     if (user) {
+      player.active = user.inRooms.has(this.roomid);
+      player.knownActive = true;
       const options = {
         name: player.name,
         avatar: user.avatar,
@@ -1009,6 +961,8 @@ class RoomBattle extends RoomGames.RoomGame {
         player.hasTeam = true;
       this.room.add(`|player|${slot}|${player.name}|${user.avatar}`);
     } else {
+      player.active = false;
+      player.knownActive = false;
       const options = {
         name: ""
       };
@@ -1017,17 +971,6 @@ class RoomBattle extends RoomGames.RoomGame {
     }
   }
   start() {
-    const users = this.players.map((player) => {
-      const user = player.getUser();
-      if (!user && !this.missingBattleStartMessage) {
-        throw new Error(`User ${player.name} not found on ${this.roomid} battle creation`);
-      }
-      return user;
-    });
-    if (!this.missingBattleStartMessage) {
-      Rooms.global.onCreateBattleRoom(users, this.room, { rated: this.rated });
-      this.started = true;
-    }
     if (this.gameType === "multi") {
       this.room.title = `Team ${this.p1.name} vs. Team ${this.p2.name}`;
     } else if (this.gameType === "freeforall") {
@@ -1043,7 +986,21 @@ class RoomBattle extends RoomGames.RoomGame {
         `|html|<div class="broadcast-blue"><strong>${format.name} is currently suspecting ${suspectTest.suspect}! For information on how to participate check out the <a href="${suspectTest.url}">suspect thread</a>.</strong></div>`
       ).update();
     }
-    if (this.missingBattleStartMessage === "multi") {
+    if (this.options.inputLog && this.players.every((player) => player.hasTeam)) {
+      this.started = true;
+    }
+    const delayStart = this.options.delayedStart || !!this.options.inputLog;
+    const users = this.players.map((player) => {
+      const user = player.getUser();
+      if (!user && !delayStart) {
+        throw new Error(`User ${player.id} not found on ${this.roomid} battle creation`);
+      }
+      return user;
+    });
+    if (!delayStart) {
+      Rooms.global.onCreateBattleRoom(users, this.room, { rated: this.rated });
+      this.started = true;
+    } else if (delayStart === "multi") {
       this.room.add(`|uhtml|invites|<div class="broadcast broadcast-blue"><strong>This is a 4-player challenge battle</strong><br />The players will need to add more players before the battle can start.</div>`);
     }
   }
@@ -1069,12 +1026,11 @@ class RoomBattle extends RoomGames.RoomGame {
       `|uhtmlchange|invites|<div class="broadcast broadcast-blue"><strong>This battle needs more players to start</strong><br /><br />${playerForms.join(``)}</div>`
     );
   }
-  clearPlayers() {
-    for (const player of this.players) {
-      player.unlinkUser();
-    }
-  }
   destroy() {
+    if (!this.ended) {
+      this.setEnded();
+      this.room.parent?.game?.onBattleWin?.(this.room, "");
+    }
     for (const player of this.players) {
       player.destroy();
     }
@@ -1084,7 +1040,6 @@ class RoomBattle extends RoomGames.RoomGame {
     this.p2 = null;
     this.p3 = null;
     this.p4 = null;
-    this.ended = true;
     void this.stream.destroy();
     if (this.active) {
       Rooms.global.battleCount += -1;
@@ -1102,6 +1057,9 @@ class RoomBattle extends RoomGames.RoomGame {
     const player = this.playerTable[id];
     if (!player)
       return;
+    return this.getPlayerTeam(player);
+  }
+  async getPlayerTeam(player) {
     void this.stream.write(`>requestteam ${player.slot}`);
     const teamDataPromise = new Promise((resolve, reject) => {
       if (!this.dataResolvers)
@@ -1131,355 +1089,6 @@ class RoomBattle extends RoomGames.RoomGame {
     });
     const result = await logPromise;
     return result;
-  }
-}
-class BestOfGame extends RoomGames.RoomGame {
-  constructor(room, options) {
-    super(room, false);
-    this.score = null;
-    this.wins = { p1: 0, p2: 0 };
-    this.ready = null;
-    this.ties = 0;
-    this.games = [];
-    this.allowRenames = false;
-    this.playerNum = 0;
-    this.winner = null;
-    this.waitingBattle = null;
-    this.nextBattleTimerStart = null;
-    this.nextBattleTimer = null;
-    this.ended = false;
-    this.needsTimer = false;
-    this.teams = {};
-    this.format = Dex.formats.get(options.format);
-    this.bestOf = Number(Dex.formats.getRuleTable(this.format).valueRules.get("bestof"));
-    this.winThreshold = Math.floor(this.bestOf / 2) + 1;
-    this.title = this.format.name;
-    if (!toID(this.title).includes("bestof")) {
-      this.title += ` (Best-of-${this.bestOf})`;
-    }
-    this.options = options;
-    options.isSubBattle = true;
-    if (!options.players && (options.p1 || options.p2)) {
-      options.players = [options.p1?.user, options.p2?.user].map(toID);
-    }
-    for (const userid of options.players || []) {
-      const player = this.makePlayer(userid);
-      this.playerTable[userid] = player;
-      this.room.auth.set(userid, Users.PLAYER_SYMBOL);
-      this[`p${player.num}`] = userid;
-    }
-    process.nextTick(() => this.nextGame());
-  }
-  onConnect(user) {
-    const player = this.playerTable[user.id];
-    if (player) {
-      player.sendRoom("|cantleave|");
-    }
-  }
-  makePlayer(userid) {
-    return new RoomGames.RoomGamePlayer(Users.get(userid) || userid, this, ++this.playerNum);
-  }
-  cleanup() {
-    this.waitingBattle = null;
-    if (this.ready)
-      this.ready = null;
-    if (this.nextBattleTimer) {
-      clearInterval(this.nextBattleTimer);
-      this.nextBattleTimerStart = null;
-    }
-    this.nextBattleTimerStart = null;
-    this.nextBattleTimer = null;
-  }
-  nextGame() {
-    if (this.waitingBattle) {
-      this.waitingBattle.room.add(`Both players are ready! Starting next match!`).update();
-    }
-    this.cleanup();
-    const battle = Rooms.createBattle(this.options);
-    if (!battle)
-      throw new Error("Failed to create battle for " + this.title);
-    battle.setParent(this.room);
-    this.games.push({
-      battle,
-      winner: null,
-      rated: battle.rated
-    });
-    battle.rated = 0;
-    if (this.needsTimer) {
-      battle.battle?.timer.start();
-    }
-    battle.add(
-      `|html|View the match progress at <a href="/${this.roomid}">${this.roomid}</a>`
-    ).update();
-    this.updateDisplay();
-    this.room.add(`|html|<h2>Game ${this.games.length}</h2>`);
-    this.room.add(`|html|<a href="/${battle.roomid}">${battle.title}</a>`);
-    this.room.update();
-  }
-  updateDisplay() {
-    const p1name = this.name(this.p1);
-    const p2name = this.name(this.p2);
-    let buf = import_lib.Utils.html`<br /><strong>${p1name} and ${p2name}'s Best-of-${this.bestOf} progress:</strong><br />`;
-    buf += "<table>";
-    for (const k of ["p1", "p2"]) {
-      const userid = this[k];
-      buf += `<tr><td>${this.name(userid)}: </td><td>`;
-      for (let i = 0; i < this.bestOf; i++) {
-        if (this.games[i]?.winner === userid) {
-          buf += `<i class="fa fa-circle"></i>`;
-        } else {
-          buf += `<i class="fa fa-circle-o"></i>`;
-        }
-        if (i !== this.bestOf - 1) {
-          buf += ` `;
-        }
-      }
-      buf += `</td></tr>`;
-    }
-    buf += `</table><br /><br />`;
-    buf += `<table><tr>`;
-    for (const userid of [this.p1, null, this.p2]) {
-      if (userid === null) {
-        buf += `<td></td>`;
-        continue;
-      }
-      buf += `<td><center><strong>${this.name(userid)}</strong></center></td>`;
-    }
-    buf += `</tr><tr>`;
-    for (const [i, userid] of [this.p1, null, this.p2].entries()) {
-      if (userid === null) {
-        buf += `<td></td>`;
-        continue;
-      }
-      let name = Users.get(userid)?.avatar;
-      if (!name || typeof name === "number")
-        name = "unknownf";
-      const url = Chat.plugins.avatars?.Avatars.src(name) || `https://${Config.routes.client}/sprites/trainers/${name}.png`;
-      buf += `<td><center>`;
-      buf += `<img class="trainersprite"${!i ? ' style="transform: scaleX(-1)"' : ""} src="${url}" />`;
-      buf += `</center></td>`;
-    }
-    buf += `</tr><tr>`;
-    for (const [i, slot] of ["p1", null, "p2"].entries()) {
-      if (slot === null) {
-        buf += `<td> vs </td>`;
-        continue;
-      }
-      const team = Teams.unpack(this.options[slot]?.team || "");
-      if (!team || !Dex.formats.getRuleTable(this.format).has("teampreview")) {
-        buf += `<td>`;
-        buf += `<psicon pokemon="unknown" /> `.repeat(3);
-        buf += `<br />`;
-        buf += `<psicon pokemon="unknown" /> `.repeat(3);
-        buf += `</td>`;
-        continue;
-      }
-      const style = !i ? ' style="transform: scaleX(-1)"' : "";
-      buf += `<td>`;
-      for (const [j, set] of team.entries()) {
-        if (j % 3 === 0 && j > 1)
-          buf += `<br />`;
-        buf += `<psicon pokemon="${set.species}"${style}/>`;
-      }
-      buf += `</td>`;
-    }
-    buf += `</tr></table>`;
-    this.room.add(`|fieldhtml|<center>${buf}</center>`);
-    buf = this.games.map(({ battle, winner }, index) => {
-      let progress = `in progress`;
-      if (winner)
-        progress = `winner: ${this.name(winner)}`;
-      if (winner === "")
-        progress = `tied`;
-      return import_lib.Utils.html`<p>Game ${index + 1}: <a href="/${battle.roomid}">${battle.title} - ${progress}</a></p>`;
-    }).join("");
-    if (this.winner) {
-      buf += import_lib.Utils.html`<p>${this.name(this.winner)} won!</p>`;
-    } else if (this.winner === "") {
-      buf += `<p>The battle was tied.</p>`;
-    }
-    this.room.add(`|controlshtml|<center>${buf}</center>`);
-    this.room.update();
-  }
-  startTimer() {
-    this.needsTimer = true;
-    for (const { battle } of this.games) {
-      battle.battle?.timer.start();
-    }
-  }
-  onBattleWin(room, winnerid) {
-    const loser = this.p1 === winnerid ? this.p2 : this.p1;
-    const loserPlayer = room.battle.playerTable[loser];
-    if (loserPlayer?.hitDisconnectLimit) {
-      this.room.add(`${this.name(loser)} lost the series due to inactivity.`);
-      return this.onEnd(winnerid);
-    }
-    if (this.ended)
-      return;
-    let isTie = false;
-    if (this.p1 === winnerid) {
-      this.wins.p1++;
-    } else if (this.p2 === winnerid) {
-      this.wins.p2++;
-    } else {
-      this.ties++;
-      isTie = true;
-      this.winThreshold = Math.floor((this.bestOf - this.ties) / 2) + 1;
-    }
-    this.games[this.games.length - 1].winner = isTie ? "" : winnerid;
-    this.room.add(
-      `|html|${winnerid ? `${this.name(winnerid)} won game ${this.games.length}!` : `Game ${this.games.length} was a tie`}`
-    ).update();
-    for (const k in this.wins) {
-      if (this.wins[k] >= this.winThreshold) {
-        return this.onEnd(this[k]);
-      }
-    }
-    if (this.games.length >= this.bestOf)
-      return this.onEnd("");
-    setImmediate(() => this.promptNextGame(room));
-  }
-  promptNextGame(room) {
-    if (!room.battle || this.winner)
-      return;
-    const cmd2 = `/msgroom ${this.room.roomid},/confirmready`;
-    for (const userid in room.battle.playerTable) {
-      const player = room.battle.playerTable[userid];
-      player.id = userid;
-      const name = import_lib.Utils.escapeHTML(this.name(userid));
-      const button = `|c|&|/uhtml prompt-${userid},<button class="button notifying" name="send" value="${cmd2}">I'm ready!</button>`;
-      const prompt = `|c|&|/log Are you ready for game ${this.games.length + 1}, ${name}?`;
-      player.sendRoom(prompt);
-      player.sendRoom(button);
-      this.playerTable[userid].sendRoom(prompt);
-      this.playerTable[userid].sendRoom(button);
-    }
-    this.waitingBattle = room.battle;
-    this.ready = { p1: false, p2: false };
-    this.nextBattleTimerStart = Date.now();
-    this.nextBattleTimer = setInterval(() => this.pokeNextBattleTimer(), 1e4);
-  }
-  pokeNextBattleTimer() {
-    if (!this.nextBattleTimerStart || !this.nextBattleTimer)
-      return;
-    if (Date.now() - this.nextBattleTimerStart >= 6e4) {
-      return this.nextGame();
-    }
-    for (const k of ["p1", "p2"]) {
-      if (!this.ready[k]) {
-        const diff = this.nextBattleTimerStart + 6e4 - Date.now();
-        this.waitingBattle?.room.add(
-          `|inactive|${this.name(this[k])} has ${Chat.toDurationString(diff + 100)} to confirm battle start!`
-        );
-      }
-    }
-    this.waitingBattle?.room.update();
-    this.room.update();
-  }
-  confirmReady(user) {
-    if (![this.p1, this.p2].includes(user)) {
-      throw new Chat.ErrorMessage("You aren't a player in this best-of set.");
-    }
-    const battle = this.waitingBattle;
-    if (!this.ready || !battle) {
-      throw new Chat.ErrorMessage("The battle is not currently waiting for ready confirmation.");
-    }
-    this.ready[user === this.p1 ? "p1" : "p2"] = true;
-    const readyMsg = import_lib.Utils.html`|c|&|/uhtml prompt-${user},${this.name(user)} is ready for game ${this.games.length + 1}!`;
-    battle.room.add(readyMsg).update();
-    if (Object.values(this.ready).filter(Boolean).length === 2) {
-      this.nextGame();
-    }
-  }
-  getLatestBattle() {
-    return this.games[this.games.length - 1].battle.battle;
-  }
-  name(str) {
-    return Users.get(str)?.name || str;
-  }
-  win(targetUser) {
-    targetUser = toID(targetUser);
-    if (!this.playerTable[targetUser])
-      return false;
-    return this.onEnd(targetUser);
-  }
-  tie() {
-    return this.onEnd("");
-  }
-  async onEnd(winner) {
-    this.cleanup();
-    this.room.add(`|allowleave|`).update();
-    if (winner) {
-      this.winner = winner;
-      this.room.add(`|win|${this.name(winner)}`);
-    } else {
-      this.winner = "";
-      this.room.add(`|tie`);
-    }
-    this.updateDisplay();
-    this.room.update();
-    this.score = [this.wins.p1, this.wins.p2];
-    const parentGame = this.room.parent && this.room.parent.game;
-    if (parentGame?.onBattleWin) {
-      parentGame.onBattleWin(this.room, winner);
-    }
-    let p1score = 0.5;
-    if (winner === this.p1) {
-      p1score = 1;
-    } else if (winner === this.p2) {
-      p1score = 0;
-    }
-    for (const k in this.playerTable) {
-      this.playerTable[k].unlinkUser();
-      Users.get(k)?.updateSearch();
-    }
-    const { rated, battle: room } = this.games[this.games.length - 1];
-    const battle = room.battle;
-    if (rated) {
-      room.rated = rated;
-      const winnerUser = Users.get(winner);
-      if (winnerUser && !winnerUser.registered) {
-        this.room.sendUser(winnerUser, "|askreg|" + winner);
-      }
-      const [score, p1rating, p2rating] = await Ladders(battle.ladder).updateRating(
-        this.name(this.p1),
-        this.name(this.p2),
-        p1score,
-        battle.room
-      );
-      void battle.logBattle(score, p1rating, p2rating);
-      Chat.runHandlers("onBattleRanked", battle, winner, [p1rating, p2rating], [this.p1, this.p2]);
-    }
-  }
-  forfeit(user, message = "") {
-    if (typeof user !== "string")
-      user = user.id;
-    else
-      user = toID(user);
-    if (!(user in this.playerTable))
-      return false;
-    this.winner = user === this.p1 ? this.p2 : this.p1;
-    this.room.add(import_lib.Utils.html`${this.name(user)} forfeited.`);
-    this.ended = true;
-    void this.onEnd(this.winner);
-    for (const { battle } of this.games) {
-      if (!battle.battle || battle.battle.ended)
-        continue;
-      battle.battle.forfeit(user, message);
-    }
-    return true;
-  }
-  destroy() {
-    this.cleanup();
-    for (const k in this.playerTable) {
-      this.playerTable[k].unlinkUser();
-      delete this.playerTable[k];
-    }
-    for (const [i, entry] of this.games.entries()) {
-      entry.battle.setParent(null);
-      entry.battle.destroy();
-      this.games.splice(i, 1);
-    }
   }
 }
 class RoomBattleStream extends import_battle_stream.BattleStream {
@@ -1530,6 +1139,7 @@ const PM = new import_lib.ProcessManager.StreamProcessManager(module, () => new 
   }
 });
 if (!PM.isParentProcess) {
+  require("source-map-support").install();
   global.Config = require("./config-loader").Config;
   global.Dex = require("../sim/dex").Dex;
   global.Monitor = {

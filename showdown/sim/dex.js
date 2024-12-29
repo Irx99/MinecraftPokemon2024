@@ -121,6 +121,7 @@ class ModdedDex {
     this.parentMod = "";
     this.modsLoaded = false;
     this.deepClone = import_lib.Utils.deepClone;
+    this.deepFreeze = import_lib.Utils.deepFreeze;
     this.isBase = mod === "base";
     this.currentMod = mod;
     this.dataDir = this.isBase ? DATA_DIR : MODS_DIR + "/" + this.currentMod;
@@ -438,7 +439,6 @@ class ModdedDex {
       "gen2",
       "gen2stadium2",
       "gen3",
-      "gen3hoenngaiden",
       "gen4",
       "gen4pt",
       "gen5",
@@ -452,11 +452,12 @@ class ModdedDex {
       "gen8",
       "gen8bdsp",
       "gen8dlc1",
-      "gen8joltemons",
       "gen8linked",
+      "gen9dlc1",
       "gen9predlc",
       "gennext",
       "mixandmega",
+      "moderngen1",
       "partnersincrime",
       "pokebilities",
       "potd",
@@ -466,6 +467,7 @@ class ModdedDex {
       "ssb",
       "thecardgame",
       "trademarked",
+      "vaporemons",
       CobblemonCache.MOD_ID
     ];
     if (!this.isBase)

@@ -415,7 +415,7 @@ class RandomBDSPTeams extends import_random_teams.RandomGen8Teams {
     }
     return { cull: false };
   }
-  shouldCullAbility(ability, types, moves, abilities, counter, movePool, teamDetails, species, isDoubles) {
+  shouldCullAbility(ability, types, moves, abilities, counter, movePool, teamDetails, species, preferredType, role, isDoubles) {
     if ([
       "Flare Boost",
       "Hydration",

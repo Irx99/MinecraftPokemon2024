@@ -728,7 +728,7 @@ class Searcher {
     return { average: collected, days: stats };
   }
   async dayStats(room, day) {
-    const cached = this.roomstatsCache.get(day);
+    const cached = this.roomstatsCache.get(room + "-" + day);
     if (cached)
       return cached;
     const results = {
@@ -793,7 +793,7 @@ class Searcher {
     results.linesPerUser = results.totalLines / Object.keys(results.users).length || 0;
     results.averagePresent = results.averagePresent / userstatCount;
     if (day !== LogReader.today()) {
-      this.roomstatsCache.set(day, results);
+      this.roomstatsCache.set(room + "-" + day, results);
     }
     return results;
   }
@@ -1446,6 +1446,9 @@ const pages = {
 const commands = {
   chatlogs: "chatlog",
   cl: "chatlog",
+  roomlog: "chatlog",
+  rl: "chatlog",
+  roomlogs: "chatlog",
   chatlog(target, room, user) {
     const [tarRoom, ...opts] = target.split(",");
     const targetRoom = tarRoom ? Rooms.search(tarRoom) : room;

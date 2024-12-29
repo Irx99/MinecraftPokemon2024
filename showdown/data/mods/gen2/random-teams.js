@@ -33,10 +33,20 @@ __export(random_teams_exports, {
 });
 module.exports = __toCommonJS(random_teams_exports);
 var import_random_teams = __toESM(require("../gen3/random-teams"));
+const NO_STAB = [
+  "explosion",
+  "icywind",
+  "machpunch",
+  "pursuit",
+  "quickattack",
+  "reversal",
+  "selfdestruct"
+];
 class RandomGen2Teams extends import_random_teams.default {
   constructor(format, prng) {
     super(format, prng);
     this.randomData = require("./random-data.json");
+    this.noStab = NO_STAB;
     this.moveEnforcementCheckers = {
       Electric: (movePool, moves, abilities, types, counter) => !counter.get("Electric"),
       Fire: (movePool, moves, abilities, types, counter) => !counter.get("Fire"),
@@ -148,7 +158,7 @@ class RandomGen2Teams extends import_random_teams.default {
   randomSet(species, teamDetails = {}) {
     species = this.dex.species.get(species);
     const data = this.randomData[species.id];
-    const movePool = (data.moves || Object.keys(this.dex.species.getLearnset(species.id))).slice();
+    const movePool = [...data.moves || this.dex.species.getMovePool(species.id)];
     const rejectedPool = [];
     const moves = /* @__PURE__ */ new Set();
     let ivs = { hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30 };
@@ -245,15 +255,7 @@ class RandomGen2Teams extends import_random_teams.default {
       if (ivs.def === 28 || ivs.def === 24)
         ivs.hp -= 8;
     }
-    const levelScale = {
-      NU: 73,
-      NUBL: 71,
-      UU: 69,
-      UUBL: 67,
-      OU: 65,
-      Uber: 61
-    };
-    const level = this.adjustLevel || data.level || levelScale[species.tier] || 80;
+    const level = this.getLevel(species);
     return {
       name: species.name,
       species: species.name,

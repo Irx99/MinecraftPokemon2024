@@ -42,7 +42,7 @@ const Scripts = {
           break;
         }
       }
-      return !!(this.battle.gen >= 5 && !this.isActive || (this.volatiles["gastroacid"] || neutralizinggas && (this.ability !== "neutralizinggas" || this.m.innates?.some((k) => k === "neutralizinggas"))) && !this.getAbility().isPermanent);
+      return !!(this.battle.gen >= 5 && !this.isActive || (this.volatiles["gastroacid"] || neutralizinggas && (this.ability !== "neutralizinggas" || this.m.innates?.some((k) => k === "neutralizinggas"))) && !this.getAbility().flags["cantsuppress"]);
     },
     hasAbility(ability) {
       if (this.ignoringAbility())

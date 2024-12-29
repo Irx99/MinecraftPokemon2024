@@ -93,6 +93,10 @@ function getSpeciesName(set, format) {
     return "Keldeo";
   } else if (species === "Zarude-Dada") {
     return "Zarude";
+  } else if (species === "Polteageist-Antique") {
+    return "Polteageist";
+  } else if (species === "Sinistcha-Masterpiece") {
+    return "Sinistcha";
   } else if (species === "Squawkabilly-Blue") {
     return "Squawkabilly";
   } else if (species === "Squawkabilly-White") {
@@ -113,6 +117,8 @@ function getSpeciesName(set, format) {
     return "Toxtricity";
   } else if (species.startsWith("Tatsugiri-")) {
     return "Tatsugiri";
+  } else if (species.startsWith("Alcremie-")) {
+    return "Alcremie";
   } else if (species === "Zacian" && item.name === "Rusted Sword") {
     return "Zacian-Crowned";
   } else if (species === "Zamazenta" && item.name === "Rusted Shield") {
@@ -153,11 +159,11 @@ async function collectStats(battle, winner, players) {
   } else if (format.gameType === "doubles") {
     eloFloor = 1300;
   }
-  if (!formatData || battle.rated < eloFloor)
+  if (!formatData || battle.rated < eloFloor || !winner)
     return;
   checkRollover();
-  for (const p of players) {
-    const team = await battle.getTeam(p);
+  for (const p of battle.players) {
+    const team = await battle.getPlayerTeam(p);
     if (!team)
       return;
     const mons = team.map((f) => getSpeciesName(f, format));
@@ -165,7 +171,7 @@ async function collectStats(battle, winner, players) {
       if (!formatData.mons[mon])
         formatData.mons[mon] = { timesGenerated: 0, numWins: 0 };
       formatData.mons[mon].timesGenerated++;
-      if (toID(winner) === toID(p)) {
+      if (toID(winner) === toID(p.name)) {
         formatData.mons[mon].numWins++;
       }
     }

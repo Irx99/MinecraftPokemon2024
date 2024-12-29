@@ -321,10 +321,6 @@ const Items = {
     inherit: true,
     isNonstandard: "Past"
   },
-  souldew: {
-    inherit: true,
-    isNonstandard: null
-  },
   splashplate: {
     inherit: true,
     isNonstandard: "Past"

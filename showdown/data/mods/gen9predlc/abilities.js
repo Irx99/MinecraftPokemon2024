@@ -24,11 +24,15 @@ module.exports = __toCommonJS(abilities_exports);
 const Abilities = {
   commander: {
     inherit: true,
-    isPermanent: true
+    flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 }
+  },
+  gulpmissile: {
+    inherit: true,
+    flags: { cantsuppress: 1, notransform: 1 }
   },
   hadronengine: {
     inherit: true,
-    isPermanent: true
+    flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 }
   },
   illuminate: {
     inherit: true,
@@ -36,7 +40,7 @@ const Abilities = {
     },
     onModifyMove() {
     },
-    isBreakable: void 0,
+    flags: {},
     rating: 0
   },
   mindseye: {
@@ -45,7 +49,7 @@ const Abilities = {
   },
   orichalcumpulse: {
     inherit: true,
-    isPermanent: true
+    flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 }
   },
   supersweetsyrup: {
     inherit: true,

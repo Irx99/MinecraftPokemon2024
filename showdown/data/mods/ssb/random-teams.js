@@ -1091,16 +1091,6 @@ const ssbSets = {
     nature: "Timid",
     shiny: true
   },
-  Rach: {
-    species: "Spinda",
-    ability: "BURN IT DOWN!",
-    item: "Leftovers",
-    gender: "F",
-    moves: ["Extreme Speed", "Recover", "Knock Off"],
-    signatureMove: "Spinda Wheel",
-    evs: { hp: 252, atk: 4, def: 252 },
-    nature: "Impish"
-  },
   Rage: {
     species: "Espeon",
     ability: "Inversion Surge",

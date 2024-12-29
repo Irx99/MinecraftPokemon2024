@@ -191,7 +191,7 @@ class RandomGen6Teams extends import_random_teams2.default {
       Ghost: (movePool, moves, abilities, types, counter) => !counter.get("Ghost"),
       Grass: (movePool, moves, abilities, types, counter, species) => !counter.get("Grass") && (species.baseStats.atk >= 100 || movePool.includes("leafstorm")),
       Ground: (movePool, moves, abilities, types, counter) => !counter.get("Ground"),
-      Ice: (movePool, moves, abilities, types, counter) => !counter.get("Ice") || movePool.includes("blizzard") || abilities.has("Refrigerate") && (movePool.includes("return") || movePool.includes("hypervoice")),
+      Ice: (movePool, moves, abilities, types, counter) => !counter.get("Ice") || !moves.has("blizzard") && movePool.includes("freezedry") || abilities.has("Refrigerate") && (movePool.includes("return") || movePool.includes("hypervoice")),
       Normal: (movePool) => movePool.includes("boomburst"),
       Poison: (movePool, moves, abilities, types, counter) => !counter.get("Poison"),
       Psychic: (movePool, moves, abilities, types, counter) => !counter.get("Psychic") && (types.has("Fighting") || movePool.includes("calmmind")),
@@ -200,7 +200,7 @@ class RandomGen6Teams extends import_random_teams2.default {
       Water: (movePool, moves, abilities, types, counter) => !counter.get("Water")
     };
   }
-  cullMovePool(types, moves, abilities, counter, movePool, teamDetails, species, isLead, isDoubles, preferredType, role) {
+  cullMovePool(types, moves, abilities, counter, movePool, teamDetails, species, isLead, preferredType, role) {
     let hasHiddenPower = false;
     for (const move of moves) {
       if (move.startsWith("hiddenpower"))
@@ -290,7 +290,7 @@ class RandomGen6Teams extends import_random_teams2.default {
       [SETUP, HAZARDS],
       [SETUP, badWithSetup],
       [PHYSICAL_SETUP, PHYSICAL_SETUP],
-      [SPEED_SETUP, ["quickattack", "suckerpunch"]],
+      [SPEED_SETUP, "quickattack"],
       ["defog", HAZARDS],
       [["fakeout", "uturn"], ["switcheroo", "trick"]],
       ["substitute", PIVOT_MOVES],
@@ -335,15 +335,17 @@ class RandomGen6Teams extends import_random_teams2.default {
       this.incompatibleMoves(moves, movePool, "knockoff", ["pursuit", "suckerpunch"]);
     }
     const statusInflictingMoves = ["thunderwave", "toxic", "willowisp", "yawn"];
-    if (!abilities.has("Prankster")) {
+    if (!abilities.has("Prankster") && role !== "Staller") {
       this.incompatibleMoves(moves, movePool, statusInflictingMoves, statusInflictingMoves);
     }
+    if (abilities.has("Guts"))
+      this.incompatibleMoves(moves, movePool, "protect", "swordsdance");
     if (species.id === "beedrillmega") {
       this.incompatibleMoves(moves, movePool, "drillrun", "knockoff");
     }
   }
   // Generate random moveset for a given species, role, preferred type.
-  randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, preferredType, role) {
+  randomMoveset(types, abilities, teamDetails, species, isLead, movePool, preferredType, role) {
     const moves = /* @__PURE__ */ new Set();
     let counter = this.newQueryMoves(moves, species, preferredType, abilities);
     this.cullMovePool(
@@ -355,7 +357,6 @@ class RandomGen6Teams extends import_random_teams2.default {
       teamDetails,
       species,
       isLead,
-      isDoubles,
       preferredType,
       role
     );
@@ -370,7 +371,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -401,7 +401,6 @@ class RandomGen6Teams extends import_random_teams2.default {
         teamDetails,
         species,
         isLead,
-        isDoubles,
         movePool,
         preferredType,
         role
@@ -416,13 +415,12 @@ class RandomGen6Teams extends import_random_teams2.default {
         teamDetails,
         species,
         isLead,
-        isDoubles,
         movePool,
         preferredType,
         role
       );
     }
-    for (const moveid of ["seismictoss", "spore", "stickyweb"]) {
+    for (const moveid of ["blizzard", "seismictoss", "spore", "stickyweb"]) {
       if (movePool.includes(moveid)) {
         counter = this.addMove(
           moveid,
@@ -432,7 +430,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -448,7 +445,6 @@ class RandomGen6Teams extends import_random_teams2.default {
         teamDetails,
         species,
         isLead,
-        isDoubles,
         movePool,
         preferredType,
         role
@@ -463,7 +459,6 @@ class RandomGen6Teams extends import_random_teams2.default {
         teamDetails,
         species,
         isLead,
-        isDoubles,
         movePool,
         preferredType,
         role
@@ -479,7 +474,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -494,7 +488,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -520,7 +513,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -548,7 +540,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -574,7 +565,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -600,7 +590,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -615,7 +604,6 @@ class RandomGen6Teams extends import_random_teams2.default {
             teamDetails,
             species,
             isLead,
-            isDoubles,
             movePool,
             preferredType,
             role
@@ -635,7 +623,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -654,7 +641,6 @@ class RandomGen6Teams extends import_random_teams2.default {
             teamDetails,
             species,
             isLead,
-            isDoubles,
             movePool,
             preferredType,
             role
@@ -674,7 +660,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -698,7 +683,6 @@ class RandomGen6Teams extends import_random_teams2.default {
           teamDetails,
           species,
           isLead,
-          isDoubles,
           movePool,
           preferredType,
           role
@@ -727,7 +711,6 @@ class RandomGen6Teams extends import_random_teams2.default {
             teamDetails,
             species,
             isLead,
-            isDoubles,
             movePool,
             preferredType,
             role
@@ -745,7 +728,6 @@ class RandomGen6Teams extends import_random_teams2.default {
         teamDetails,
         species,
         isLead,
-        isDoubles,
         movePool,
         preferredType,
         role
@@ -760,7 +742,6 @@ class RandomGen6Teams extends import_random_teams2.default {
             teamDetails,
             species,
             isLead,
-            isDoubles,
             movePool,
             preferredType,
             role
@@ -775,7 +756,6 @@ class RandomGen6Teams extends import_random_teams2.default {
             teamDetails,
             species,
             isLead,
-            isDoubles,
             movePool,
             preferredType,
             role
@@ -785,17 +765,17 @@ class RandomGen6Teams extends import_random_teams2.default {
     }
     return moves;
   }
-  shouldCullAbility(ability, types, moves, abilities, counter, movePool, teamDetails, species, isDoubles, preferredType, role) {
+  shouldCullAbility(ability, types, moves, abilities, counter, movePool, teamDetails, species, preferredType, role) {
     switch (ability) {
       case "Flare Boost":
       case "Gluttony":
       case "Harvest":
-      case "Hyper Cutter":
       case "Ice Body":
       case "Magician":
       case "Moody":
       case "Pressure":
       case "Sand Veil":
+      case "Sniper":
       case "Snow Cloak":
       case "Steadfast":
         return true;
@@ -839,7 +819,9 @@ class RandomGen6Teams extends import_random_teams2.default {
         return species.baseSpecies === "Basculin" || species.id === "pangoro" || abilities.has("Sheer Force");
       case "Oblivious":
       case "Prankster":
-        return !counter.get("Status");
+        return !counter.get("Status") || species.id === "tornadus" && moves.has("bulkup");
+      case "Overcoat":
+        return types.has("Grass");
       case "Overgrow":
         return !counter.get("Grass");
       case "Synchronize":
@@ -867,7 +849,7 @@ class RandomGen6Teams extends import_random_teams2.default {
       case "Sturdy":
         return !!counter.get("recoil") && !counter.get("recovery") || species.id === "steelix" && !!counter.get("sheerforce");
       case "Swarm":
-        return !counter.get("Bug") || !!species.isMega;
+        return !counter.get("Bug") && !moves.has("uturn") || !!species.isMega;
       case "Technician":
         return !counter.get("technician") || moves.has("tailslap") || !!species.isMega;
       case "Tinted Lens":
@@ -883,7 +865,7 @@ class RandomGen6Teams extends import_random_teams2.default {
     }
     return false;
   }
-  getAbility(types, moves, abilities, counter, movePool, teamDetails, species, isDoubles, preferredType, role) {
+  getAbility(types, moves, abilities, counter, movePool, teamDetails, species, preferredType, role) {
     if (species.battleOnly && !species.requiredAbility) {
       abilities = new Set(Object.values(this.dex.species.get(species.battleOnly).abilities));
     }
@@ -897,20 +879,28 @@ class RandomGen6Teams extends import_random_teams2.default {
       return role === "Wallbreaker" ? "Analytic" : "Natural Cure";
     if (species.id === "ninetales")
       return "Drought";
+    if (species.id === "pinsirmega")
+      return "Hyper Cutter";
     if (species.id === "ninjask" || species.id === "seviper")
       return "Infiltrator";
+    if (species.id === "lucariomega")
+      return "Justified";
+    if (species.id === "gligar")
+      return "Immunity";
     if (species.id === "arcanine")
       return "Intimidate";
-    if (species.id === "rampardos" && role === "Bulky Attacker")
-      return "Mold Breaker";
     if (species.baseSpecies === "Altaria")
       return "Natural Cure";
     if (species.id === "ambipom" && !counter.get("technician"))
       return "Pickup";
-    if (["dusknoir", "vespiquen", "wailord"].includes(species.id))
+    if (species.id === "muk")
+      return "Poison Touch";
+    if (["dusknoir", "vespiquen"].includes(species.id))
       return "Pressure";
     if (species.id === "druddigon" && role === "Bulky Support")
       return "Rough Skin";
+    if (species.id === "pangoro" && !counter.get("ironfist"))
+      return "Scrappy";
     if (species.id === "stunfisk")
       return "Static";
     if (species.id === "breloom")
@@ -942,7 +932,6 @@ class RandomGen6Teams extends import_random_teams2.default {
         movePool,
         teamDetails,
         species,
-        isDoubles,
         preferredType,
         role
       )) {
@@ -1042,10 +1031,12 @@ class RandomGen6Teams extends import_random_teams2.default {
     if (ability === "Magic Guard" && role !== "Bulky Support") {
       return moves.has("counter") ? "Focus Sash" : "Life Orb";
     }
+    if (species.id === "rampardos" && role === "Fast Attacker")
+      return "Choice Scarf";
     if (ability === "Sheer Force" && counter.get("sheerforce"))
       return "Life Orb";
     if (ability === "Unburden")
-      return "Sitrus Berry";
+      return species.id === "hitmonlee" ? "White Herb" : "Sitrus Berry";
     if (moves.has("acrobatics"))
       return "";
     if (moves.has("lightscreen") && moves.has("reflect"))
@@ -1104,15 +1095,9 @@ class RandomGen6Teams extends import_random_teams2.default {
       return "Life Orb";
     return "Leftovers";
   }
-  randomSet(species, teamDetails = {}, isLead = false, isDoubles = false) {
+  randomSet(species, teamDetails = {}, isLead = false) {
     species = this.dex.species.get(species);
-    let forme = species.name;
-    if (typeof species.battleOnly === "string") {
-      forme = species.battleOnly;
-    }
-    if (species.cosmeticFormes) {
-      forme = this.sample([species.name].concat(species.cosmeticFormes));
-    }
+    const forme = this.getForme(species);
     const sets = this.randomSets[species.id]["sets"];
     const possibleSets = [];
     for (const set2 of sets)
@@ -1136,7 +1121,6 @@ class RandomGen6Teams extends import_random_teams2.default {
       teamDetails,
       species,
       isLead,
-      isDoubles,
       movePool,
       preferredType,
       role
@@ -1150,7 +1134,6 @@ class RandomGen6Teams extends import_random_teams2.default {
       movePool,
       teamDetails,
       species,
-      false,
       preferredType,
       role
     );
@@ -1161,7 +1144,7 @@ class RandomGen6Teams extends import_random_teams2.default {
     if (item === "Leftovers" && types.includes("Poison")) {
       item = "Black Sludge";
     }
-    const level = this.adjustLevel || this.randomSets[species.id]["level"] || (species.nfe ? 90 : 80);
+    const level = this.getLevel(species);
     if (!counter.get("Physical") && !moves.has("copycat") && !moves.has("transform")) {
       evs.atk = 0;
       ivs.atk = 0;

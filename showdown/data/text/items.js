@@ -1132,6 +1132,10 @@ const ItemsText = {
     name: "Metagrossite",
     desc: "If held by a Metagross, this item allows it to Mega Evolve in battle."
   },
+  metalalloy: {
+    name: "Metal Alloy",
+    desc: "Evolves Duraludon into Archaludon when used."
+  },
   metalcoat: {
     name: "Metal Coat",
     desc: "Holder's Steel-type attacks have 1.2x power. Evolves Onix into Steelix and Scyther into Scizor when traded.",

@@ -801,8 +801,7 @@ class RandomGen7DoublesTeams extends import_random_teams.RandomGen8Teams {
       forme = this.sample([species.name].concat(species.cosmeticFormes));
     }
     const data = this.randomDoublesData[species.id];
-    const randMoves = data.moves;
-    const movePool = (randMoves || Object.keys(Dex.species.getLearnset(species.id))).slice();
+    const movePool = [...data.moves || this.dex.species.getMovePool(species.id)];
     if (this.format.gameType === "multi") {
       const allySwitch = movePool.indexOf("allyswitch");
       if (allySwitch > -1) {
@@ -953,6 +952,15 @@ class RandomGen7DoublesTeams extends import_random_teams.RandomGen8Teams {
     if (item === "Leftovers" && types.has("Poison")) {
       item = "Black Sludge";
     }
+    if (species.baseSpecies === "Basculin") {
+      forme = "Basculin" + this.sample(["", "-Blue-Striped"]);
+    }
+    if (species.baseSpecies === "Keldeo") {
+      forme = "Keldeo" + this.sample(["", "-Resolute"]);
+    }
+    if (species.baseSpecies === "Magearna") {
+      forme = "Magearna" + this.sample(["", "-Original"]);
+    }
     let level;
     if (this.adjustLevel) {
       level = this.adjustLevel;
@@ -1065,20 +1073,18 @@ class RandomGen7DoublesTeams extends import_random_teams.RandomGen8Teams {
         const baseSpecies = this.sampleNoReplace(baseSpeciesPool);
         const currentSpeciesPool = [];
         let canMega = false;
-        for (const poke of pokemonPool) {
+        for (const poke of pokemonPool[baseSpecies]) {
           const species2 = this.dex.species.get(poke);
-          if (!hasMega && species2.baseSpecies === baseSpecies && species2.isMega)
+          if (!hasMega && species2.isMega)
             canMega = true;
         }
-        for (const poke of pokemonPool) {
+        for (const poke of pokemonPool[baseSpecies]) {
           const species2 = this.dex.species.get(poke);
-          if (species2.baseSpecies === baseSpecies) {
-            if (hasMega && species2.isMega)
-              continue;
-            if (canMega && !species2.isMega)
-              continue;
-            currentSpeciesPool.push(species2);
-          }
+          if (hasMega && species2.isMega)
+            continue;
+          if (canMega && !species2.isMega)
+            continue;
+          currentSpeciesPool.push(species2);
         }
         const species = this.sample(currentSpeciesPool);
         if (!species.exists)

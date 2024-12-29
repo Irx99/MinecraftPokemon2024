@@ -76,8 +76,13 @@ const Scripts = {
         baseDamage = this.battle.modify(baseDamage, move.critModifier || 2);
       }
       baseDamage = Math.floor(this.battle.runEvent("ModifyDamagePhase2", pokemon, target, move, baseDamage));
-      if (move.forceSTAB || type !== "???" && pokemon.hasType(type)) {
-        baseDamage = this.battle.modify(baseDamage, move.stab || 1.5);
+      if (type !== "???") {
+        let stab = 1;
+        if (move.forceSTAB || pokemon.hasType(type)) {
+          stab = 1.5;
+        }
+        stab = this.battle.runEvent("ModifySTAB", pokemon, target, move, stab);
+        baseDamage = this.battle.modify(baseDamage, stab);
       }
       let typeMod = target.runEffectiveness(move);
       typeMod = this.battle.clampIntRange(typeMod, -6, 6);

@@ -448,6 +448,9 @@ const Scripts = {
       if (pokemon.illusion?.species.baseSpecies === "Ogerpon") {
         this.battle.singleEvent("End", this.dex.abilities.get("Illusion"), pokemon.abilityState, pokemon);
       }
+      if (pokemon.illusion?.species.baseSpecies === "Terapagos") {
+        this.battle.singleEvent("End", this.dex.abilities.get("Illusion"), pokemon.abilityState, pokemon);
+      }
       let type = pokemon.teraType;
       if (pokemon.species.baseSpecies !== "Ogerpon" && pokemon.getItem().name.endsWith("Mask")) {
         type = this.dex.species.get(pokemon.getItem().forcedForme).forceTeraType;
@@ -479,9 +482,8 @@ const Scripts = {
           }
         }
       }
-      if (pokemon.species.baseSpecies === "Ogerpon") {
-        const tera = pokemon.species.id === "ogerpon" ? "tealtera" : "tera";
-        pokemon.formeChange(pokemon.species.id + tera, pokemon.getItem(), true);
+      if (pokemon.species.name === "Terapagos-Terastal" && type === "Stellar") {
+        pokemon.formeChange("Terapagos-Stellar", null, true);
       }
       this.battle.runEvent("AfterTerastallization", pokemon);
     },

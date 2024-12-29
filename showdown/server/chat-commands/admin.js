@@ -143,7 +143,7 @@ const commands = {
     }
     if (!species.exists)
       return this.errorReply(`Pokemon "${target2}" not found.`);
-    if (!Dex.species.getLearnset(species.id)) {
+    if (!Dex.species.getFullLearnset(species.id).length) {
       return this.errorReply(`That Pokemon has no learnset and cannot be used as the PotD.`);
     }
     Config.potd = species.id;
@@ -951,7 +951,7 @@ ${e.stack}`);
 exports.Learnsets = {
 ` + Object.entries(Dex.data.Learnsets).map(([id, entry]) => `	${id}: {learnset: {
 ` + import_lib.Utils.sortBy(
-      Object.entries(Dex.species.getLearnsetData(id)),
+      Object.entries(Dex.species.getLearnsetData(id).learnset),
       ([moveid]) => moveid
     ).map(([moveid, sources]) => `		${moveid}: ["` + sources.join(`", "`) + `"],
 `).join("") + `	}},
@@ -1143,6 +1143,28 @@ exports.Learnsets = {
   endemergencyhelp: [
     `/endemergency - Turns off emergency mode. Requires: &`
   ],
+  remainingbattles() {
+    this.checkCan("lockdown");
+    if (!Rooms.global.lockdown) {
+      return this.errorReply("The server is not under lockdown right now.");
+    }
+    const battleRooms = [...Rooms.rooms.values()].filter((x) => x.battle?.rated && !x.battle?.ended);
+    let buf = `Total remaining rated battles: <b>${battleRooms.length}</b>`;
+    if (battleRooms.length > 10)
+      buf += `<details><summary>View all battles</summary>`;
+    for (const battle2 of battleRooms) {
+      buf += `<br />`;
+      buf += `<a href="${battle2.roomid}">${battle2.title}</a>`;
+      if (battle2.settings.isPrivate)
+        buf += " (Private)";
+    }
+    if (battleRooms.length > 10)
+      buf += `</details>`;
+    this.sendReplyBox(buf);
+  },
+  remainingbattleshelp: [
+    `/remainingbattles - View a list of the remaining battles during lockdown. Requires: &`
+  ],
   async savebattles(target2, room2, user2) {
     this.checkCan("rangeban");
     this.sendReply(`Saving battles...`);
@@ -1202,6 +1224,11 @@ exports.Learnsets = {
   ],
   refreshpage(target2, room2, user2) {
     this.checkCan("lockdown");
+    if (user2.lastCommand !== "refreshpage") {
+      user2.lastCommand = "refreshpage";
+      this.errorReply(`Are you sure you wish to refresh the page for every user online?`);
+      return this.errorReply(`If you are sure, please type /refreshpage again to confirm.`);
+    }
     Rooms.global.sendAll("|refresh|");
     this.stafflog(`${user2.name} used /refreshpage`);
   },
@@ -1245,7 +1272,7 @@ exports.Learnsets = {
     if (err) {
       Rooms.global.notifyRooms(
         ["staff", "development"],
-        `|c|&|/log ${user2.name} used /updateloginserver - but something failed while updating.`
+        `|c|${user2.getIdentity()}|/log ${user2.name} used /updateloginserver - but something failed while updating.`
       );
       return this.errorReply(err.message + "\n" + err.stack);
     }
@@ -1264,7 +1291,7 @@ exports.Learnsets = {
     }
     Rooms.global.notifyRooms(
       ["staff", "development"],
-      `|c|&|/log ${message}`
+      `|c|${user2.getIdentity()}|/log ${message}`
     );
   },
   updateloginserverhelp: [
@@ -1279,7 +1306,7 @@ exports.Learnsets = {
     if (err) {
       Rooms.global.notifyRooms(
         ["staff", "development"],
-        `|c|&|/log ${user2.name} used /updateclient - but something failed while updating.`
+        `|c|${user2.getIdentity()}|/log ${user2.name} used /updateclient - but something failed while updating.`
       );
       return this.errorReply(err.message + "\n" + err.stack);
     }
@@ -1298,7 +1325,7 @@ exports.Learnsets = {
     }
     Rooms.global.notifyRooms(
       ["staff", "development"],
-      `|c|&|/log ${message}`
+      `|c|${user2.getIdentity()}|/log ${message}`
     );
   },
   updateclienthelp: [

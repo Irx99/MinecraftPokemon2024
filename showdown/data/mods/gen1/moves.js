@@ -201,7 +201,8 @@ const Moves = {
         return false;
       }
       return 2 * this.lastDamage;
-    }
+    },
+    flags: { contact: 1, protect: 1, metronome: 1 }
   },
   crabhammer: {
     inherit: true,
@@ -230,7 +231,7 @@ const Moves = {
     name: "Disable",
     pp: 20,
     priority: 0,
-    flags: { protect: 1, mirror: 1, bypasssub: 1 },
+    flags: { protect: 1, mirror: 1, bypasssub: 1, metronome: 1 },
     volatileStatus: "disable",
     onTryHit(target) {
       return target.moveSlots.some((ms) => ms.pp > 0) && !("disable" in target.volatiles) && void 0;
@@ -450,7 +451,7 @@ const Moves = {
     name: "Light Screen",
     pp: 30,
     priority: 0,
-    flags: {},
+    flags: { metronome: 1 },
     volatileStatus: "lightscreen",
     onTryHit(pokemon) {
       if (pokemon.volatiles["lightscreen"]) {
@@ -465,12 +466,9 @@ const Moves = {
     target: "self",
     type: "Psychic"
   },
-  metronome: {
-    inherit: true,
-    noMetronome: ["Metronome", "Struggle"]
-  },
   mimic: {
     inherit: true,
+    flags: { protect: 1, bypasssub: 1, metronome: 1 },
     onHit(target, source) {
       const moveslot = source.moves.indexOf("mimic");
       if (moveslot < 0)
@@ -629,7 +627,7 @@ const Moves = {
     name: "Reflect",
     pp: 20,
     priority: 0,
-    flags: {},
+    flags: { metronome: 1 },
     volatileStatus: "reflect",
     onTryHit(pokemon) {
       if (pokemon.volatiles["reflect"]) {
@@ -778,6 +776,7 @@ const Moves = {
     name: "Substitute",
     pp: 10,
     priority: 0,
+    flags: { metronome: 1 },
     volatileStatus: "substitute",
     onTryHit(target) {
       if (target.volatiles["substitute"]) {
@@ -867,8 +866,7 @@ const Moves = {
     },
     secondary: null,
     target: "self",
-    type: "Normal",
-    flags: {}
+    type: "Normal"
   },
   superfang: {
     inherit: true,

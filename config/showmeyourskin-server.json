@@ -1,4 +1,5 @@
 {
   "allowNotShowInCombat": false,
-  "allowNotShowNameTag": false
+  "allowNotShowNameTag": false,
+  "allowNotForceElytraWhenFlying": false
 }
