@@ -8,29 +8,30 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 24,
+    "totalCaptureCount": 38,
     "totalEggsCollected": 0,
     "totalEggsHatched": 0,
     "totalEvolvedCount": 1,
-    "totalBattleVictoryCount": 41,
+    "totalBattleVictoryCount": 49,
     "totalPvPBattleVictoryCount": 1,
-    "totalPvWBattleVictoryCount": 40,
+    "totalPvWBattleVictoryCount": 48,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
     "totalTypeCaptureCounts": {
-      "grass": 3,
+      "grass": 4,
       "fairy": 2,
-      "normal": 7,
-      "water": 5,
-      "fire": 1,
-      "electric": 2,
+      "normal": 13,
+      "water": 6,
+      "fire": 2,
+      "electric": 3,
       "rock": 2,
       "ground": 2,
-      "bug": 2,
+      "bug": 3,
       "psychic": 2,
-      "flying": 3,
-      "poison": 1
+      "flying": 5,
+      "poison": 3,
+      "ghost": 2
     },
     "totalDefeatedCounts": {
       "cobblemon:patrat": 2,
@@ -51,7 +52,8 @@
       "cobblemon:staryu": 1,
       "cobblemon:kakuna": 1,
       "cobblemon:zigzagoon": 1,
-      "cobblemon:spinarak": 1
+      "cobblemon:spinarak": 1,
+      "cobblemon:ponyta": 1
     },
     "aspectsCollected": {
       "cobblemon:oddish": [
@@ -59,6 +61,39 @@
       ],
       "cobblemon:ledyba": [
         "female"
+      ],
+      "cobblemon:eevee": [
+        "male"
+      ],
+      "cobblemon:sunkern": [
+        "male"
+      ],
+      "cobblemon:wiglett": [
+        "male"
+      ],
+      "cobblemon:ponyta": [
+        "female"
+      ],
+      "cobblemon:gastly": [
+        "male"
+      ],
+      "cobblemon:pidgey": [
+        "female"
+      ],
+      "cobblemon:farfetchd": [
+        "male"
+      ],
+      "cobblemon:pichu": [
+        "female"
+      ],
+      "cobblemon:caterpie": [
+        "male"
+      ],
+      "cobblemon:gimmighoul": [
+        "genderless"
+      ],
+      "cobblemon:koffing": [
+        "male"
       ]
     }
   }

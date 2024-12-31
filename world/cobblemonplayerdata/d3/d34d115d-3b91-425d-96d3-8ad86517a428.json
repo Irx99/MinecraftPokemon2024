@@ -8,30 +8,31 @@
   "battleTheme": "cobblemon:battle.pvp.default",
   "extraData": {},
   "advancementData": {
-    "totalCaptureCount": 47,
+    "totalCaptureCount": 60,
+    "totalEggsCollected": 0,
     "totalEggsHatched": 0,
-    "totalEvolvedCount": 11,
-    "totalBattleVictoryCount": 227,
+    "totalEvolvedCount": 12,
+    "totalBattleVictoryCount": 242,
     "totalPvPBattleVictoryCount": 0,
-    "totalPvWBattleVictoryCount": 227,
+    "totalPvWBattleVictoryCount": 242,
     "totalPvNBattleVictoryCount": 0,
     "totalShinyCaptureCount": 0,
     "totalTradedCount": 0,
     "totalTypeCaptureCounts": {
       "electric": 4,
-      "normal": 20,
-      "flying": 6,
+      "normal": 25,
+      "flying": 7,
       "rock": 2,
-      "ground": 3,
+      "ground": 4,
       "bug": 5,
-      "grass": 3,
-      "fairy": 3,
+      "grass": 4,
+      "fairy": 4,
       "poison": 3,
       "fire": 4,
-      "water": 4,
+      "water": 7,
       "dark": 1,
-      "ghost": 3,
-      "psychic": 1,
+      "ghost": 4,
+      "psychic": 2,
       "ice": 1
     },
     "totalDefeatedCounts": {
@@ -41,7 +42,7 @@
       "cobblemon:metapod": 2,
       "cobblemon:pidgey": 10,
       "cobblemon:fletchling": 2,
-      "cobblemon:elekid": 1,
+      "cobblemon:elekid": 2,
       "cobblemon:electrode": 2,
       "cobblemon:butterfree": 2,
       "cobblemon:spinarak": 1,
@@ -66,7 +67,7 @@
       "cobblemon:goldeen": 1,
       "cobblemon:tauros": 1,
       "cobblemon:pidgeotto": 3,
-      "cobblemon:wooloo": 6,
+      "cobblemon:wooloo": 7,
       "cobblemon:jigglypuff": 1,
       "cobblemon:deerling": 4,
       "cobblemon:cutiefly": 1,
@@ -111,8 +112,55 @@
       "cobblemon:gurdurr": 1,
       "cobblemon:haunter": 1,
       "cobblemon:murkrow": 1,
-      "cobblemon:golem": 1
+      "cobblemon:golem": 1,
+      "cobblemon:sentret": 1,
+      "cobblemon:rapidash": 1
     },
-    "aspectsCollected": {}
+    "aspectsCollected": {
+      "cobblemon:drifloon": [
+        "female"
+      ],
+      "cobblemon:poliwag": [
+        "female"
+      ],
+      "cobblemon:bouffalant": [
+        "female"
+      ],
+      "cobblemon:wooloo": [
+        "female"
+      ],
+      "cobblemon:eevee": [
+        "male"
+      ],
+      "cobblemon:lickitung": [
+        "male"
+      ],
+      "cobblemon:poliwhirl": [
+        "male"
+      ],
+      "cobblemon:hypno": [
+        "male"
+      ],
+      "cobblemon:vaporeon": [
+        "male"
+      ],
+      "cobblemon:lilligant": [
+        "female"
+      ],
+      "cobblemon:miltank": [
+        "female",
+        "milkable"
+      ],
+      "cobblemon:dachsbun": [
+        "female"
+      ],
+      "cobblemon:diglett": [
+        "male"
+      ],
+      "cobblemon:magikarp": [
+        "female",
+        "gyarados-eye-color-red"
+      ]
+    }
   }
 }

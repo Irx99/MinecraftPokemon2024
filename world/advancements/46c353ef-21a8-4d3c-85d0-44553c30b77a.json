@@ -362,17 +362,18 @@
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "cooked_porkchop": "2024-02-24 01:22:02 +0100",
-      "apple": "2024-02-24 00:18:00 +0100",
       "bread": "2024-02-24 18:59:51 +0100",
-      "cooked_chicken": "2024-02-24 17:57:53 +0100",
       "rotten_flesh": "2024-02-23 23:34:16 +0100",
       "cooked_mutton": "2024-02-24 00:19:27 +0100",
+      "dried_kelp": "2024-02-23 23:59:39 +0100",
+      "cooked_beef": "2024-12-30 23:24:18 +0100",
+      "baked_potato": "2024-02-24 23:11:09 +0100",
+      "golden_carrot": "2024-02-26 23:37:21 +0100",
+      "apple": "2024-02-24 00:18:00 +0100",
+      "cooked_chicken": "2024-02-24 17:57:53 +0100",
       "cooked_cod": "2024-02-24 19:11:26 +0100",
       "mushroom_stew": "2024-02-24 19:42:38 +0100",
-      "dried_kelp": "2024-02-23 23:59:39 +0100",
-      "baked_potato": "2024-02-24 23:11:09 +0100",
-      "cooked_salmon": "2024-02-23 23:40:01 +0100",
-      "golden_carrot": "2024-02-26 23:37:21 +0100"
+      "cooked_salmon": "2024-02-23 23:40:01 +0100"
     },
     "done": false
   },
@@ -5669,15 +5670,129 @@
     },
     "done": true
   },
+  "cobblemon:recipes/blocks/gilded_chests": {
+    "criteria": {
+      "has_gold": "2024-12-29 14:12:59 +0100"
+    },
+    "done": true
+  },
   "cobblemon:recipes/misc/ultra_rod": {
     "criteria": {
       "has_ball": "2024-12-29 14:13:09 +0100"
     },
     "done": false
   },
-  "cobblemon:recipes/blocks/gilded_chests": {
+  "cobblemon:recipes/misc/relic_coin_pouch": {
     "criteria": {
-      "has_gold": "2024-12-29 14:12:59 +0100"
+      "has_coin": "2024-12-31 00:07:47 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_poke_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/sun_stone_block": {
+    "criteria": {
+      "has_sun_stone": "2024-12-31 00:08:37 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_great_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:obtain_tumblestone": {
+    "criteria": {
+      "check_inv": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_citrine_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/leaf_stone_block": {
+    "criteria": {
+      "has_leaf_stone": "2024-12-31 00:55:40 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_roseate_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/water_stone_block": {
+    "criteria": {
+      "has_water_stone": "2024-12-31 00:08:41 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_slate_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_ultra_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/damp_rock": {
+    "criteria": {
+      "has_stone": "2024-12-31 00:08:41 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/heat_rock": {
+    "criteria": {
+      "has_stone": "2024-12-31 00:08:41 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_azure_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_ivory_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:obtain_fossil": {
+    "criteria": {
+      "check_inv": "2024-12-31 00:30:51 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/held/terrain_extender": {
+    "criteria": {
+      "has_bucket": "2024-12-30 23:25:54 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/balls/ancient_verdant_ball": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
+    },
+    "done": true
+  },
+  "cobblemon:recipes/blocks/tumblestone_block": {
+    "criteria": {
+      "has_tumblestone": "2024-12-31 00:27:26 +0100"
     },
     "done": true
   },
